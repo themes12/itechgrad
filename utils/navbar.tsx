@@ -2,42 +2,16 @@ import { navbar } from "@/types/navbar";
 
 export const navItems: navbar[] = [
     {
-        title: "about",
-        type: "dropdown",
-        options: [
-            {
-                title: "history",
-                href: "#"
-            },
-            {
-                title: "vision",
-                href: "#"
-            },
-            {
-                title: "head of department",
-                href: "#"
-            },
-            {
-                title: "staff",
-                href: "#"
-            },
-        ]
-    },
-    {
         title: "program",
         type: "dropdown",
         options: [
             {
-                title: "mater's degree 66",
-                href: "#"
-            },
-            {
-                title: "mater's degree 61",
-                href: "#"
+                title: "mater's degree",
+                href: "/program/master-degree"
             },
             {
                 title: "PHD",
-                href: "#"
+                href: "/program/phd"
             }
         ]
     },
@@ -47,17 +21,18 @@ export const navItems: navbar[] = [
         options: [
             {
                 title: "กระบวนวิชา ป.โท",
-                href: "#"
+                href: "/courses/master-degree-course"
             },
             {
                 title: "กระบวนวิชา ป.เอก",
-                href: "#"
+                href: "/courses/phd-course"
             }
         ]
     },
     {
         title: "research",
         type: "button",
+        href: "/research"
     },
     {
         title: "announcement",
@@ -65,16 +40,48 @@ export const navItems: navbar[] = [
         options: [
             {
                title: "announcement",
-               href: "#" 
+               href: "/announcement" 
             },
             {
                 title: "congratulations",
-                href: "#" 
+                href: "/congratulations" 
             },
             {
                 title: "news",
-                href: "#" 
+                href: "/news" 
             },
         ]
-    }
+    },
+    {
+        title: "staff",
+        type: "dropdown",
+        options: [
+            {
+                title: "academic staff",
+                href: "/staff/academic"
+            },
+            {
+                title: "supporting staff",
+                href: "/staff/supporting-staff"
+            }
+        ]
+    },
+    {
+        title: "about",
+        type: "dropdown",
+        options: [
+            {
+                title: "history",
+                href: "/about/history"
+            },
+            {
+                title: "vision",
+                href: "/about/vision"
+            },
+            {
+                title: "head of department",
+                href: "/about/head-of-department"
+            },
+        ]
+    },
 ]
