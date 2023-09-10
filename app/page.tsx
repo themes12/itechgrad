@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image'
 import Spline from '@splinetool/react-spline';
+import { Button } from "@nextui-org/react";
 
 export default function Home() {
   return (
@@ -12,12 +13,15 @@ export default function Home() {
       <div className="flex flex-col sm:flex-row mt-16 justify-evenly mx-10 lg:mx-20 gap-x-10 gap-y-2">
         <div className="w-1/2 lg:w-5/12">
           <h5 className="font-normal text-[#515151] text-lg">Department of Computer Science <br /> Faculty of Science, Chiang Mai University</h5>
+          <Button className="mt-10 px-7 text-xl font-medium text-white bg-[#262626] hover:bg-[#515151]" radius="md" size="lg">
+            View program
+          </Button>
         </div>
-        <div className="w-1/2 lg:w-7/12 bg-slate-200 rounded-3xl">
+        <div className="w-1/2 lg:w-7/12">
           <Spline scene="https://prod.spline.design/TXvSKMFlAWim57Di/scene.splinecode" />
         </div>
       </div>
-      
+
     </main>
   )
 }
