@@ -38,7 +38,10 @@ const NavbarHeader = (props: Props) => {
                 aria-label="navbar"
                 height="3.5rem"
             >
-                <NavbarContent className="gap-4 w-full md:w-fit" justify="center">
+                <NavbarContent
+                    className="gap-4 w-full md:w-fit"
+                    justify="center"
+                >
                     <NavbarMenuToggle
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         className="md:hidden"
@@ -65,8 +68,10 @@ const NavbarHeader = (props: Props) => {
                                 "w-8 h-6 text-xs font-semibold",
                                 "group-data-[selected=true]:ml-6",
                             ],
-                            startContent: "ml-0.5 text-xs font-semibold text-[#BCBCBC]",
-                            endContent: "mr-0.5 text-xs font-semibold text-[#BCBCBC]",
+                            startContent:
+                                "ml-0.5 text-xs font-semibold text-[#BCBCBC]",
+                            endContent:
+                                "mr-0.5 text-xs font-semibold text-[#BCBCBC]",
                         }}
                         thumbIcon={({ isSelected, className }) =>
                             isSelected ? (
@@ -75,7 +80,6 @@ const NavbarHeader = (props: Props) => {
                                 <span className="text-[#E8A721]">EN</span>
                             )
                         }
-
                         size="lg"
                         color="default"
                         startContent={<span>EN</span>}
@@ -85,7 +89,10 @@ const NavbarHeader = (props: Props) => {
                 <NavbarMenu className="uppercase bg-[#F4F4F4] gap-0">
                     {navItems.map((item, index) =>
                         item.type === "dropdown" ? (
-                            <NavbarMenuItem className="text-primary" key={item.title}>
+                            <NavbarMenuItem
+                                className="text-primary"
+                                key={item.title}
+                            >
                                 <h4 className="text-black">{item.title}</h4>
                                 <Listbox
                                     aria-label={`${item.title} list`}
@@ -97,7 +104,11 @@ const NavbarHeader = (props: Props) => {
                                             <ListboxItem
                                                 className="p-1"
                                                 key={value.title}
-                                                onPress={() => router.push(value.href ?? "#")}
+                                                onPress={() =>
+                                                    router.push(
+                                                        value.href ?? "#"
+                                                    )
+                                                }
                                             >
                                                 {value.title}
                                             </ListboxItem>
@@ -108,12 +119,6 @@ const NavbarHeader = (props: Props) => {
                                 </Listbox>
                             </NavbarMenuItem>
                         ) : (
-                            //     <NavbarMenuItem key={item.title}>
-                            //     <Link className="w-full" href={item.href ?? "#"} size="lg">
-                            //         {item.title}
-                            //     </Link>
-                            // </NavbarMenuItem>
-
                             <NavbarMenuItem key={item.title}>
                                 <Link
                                     className="w-full text-black"
@@ -125,6 +130,32 @@ const NavbarHeader = (props: Props) => {
                             </NavbarMenuItem>
                         )
                     )}
+                    <Switch
+                        className="block xxs:hidden"
+                        classNames={{
+                            wrapper:
+                                "w-16 h-8 mr-2 bg-[#262626] group-data-[selected=true]:bg-[#262626]",
+                            thumb: [
+                                "w-8 h-6 text-xs font-semibold",
+                                "group-data-[selected=true]:ml-6",
+                            ],
+                            startContent:
+                                "ml-0.5 text-xs font-semibold text-[#BCBCBC]",
+                            endContent:
+                                "mr-0.5 text-xs font-semibold text-[#BCBCBC]",
+                        }}
+                        thumbIcon={({ isSelected, className }) =>
+                            isSelected ? (
+                                <span className="text-[#4E5BA6]">TH</span>
+                            ) : (
+                                <span className="text-[#E8A721]">EN</span>
+                            )
+                        }
+                        size="lg"
+                        color="default"
+                        startContent={<span>EN</span>}
+                        endContent={<span>TH</span>}
+                    ></Switch>
                 </NavbarMenu>
             </Navbar>
             <Navbar
@@ -143,7 +174,9 @@ const NavbarHeader = (props: Props) => {
                                         <Button
                                             // disableRipple
                                             className="px-2 py-0.5 bg-transparent data-[hover=true]:bg-[#e8e8e8] text-sm font-medium uppercase"
-                                            endContent={<ChevronDownIcon className="w-5 h-5" />}
+                                            endContent={
+                                                <ChevronDownIcon className="w-5 h-5" />
+                                            }
                                             radius="sm"
                                             variant="light"
                                         >
@@ -163,7 +196,11 @@ const NavbarHeader = (props: Props) => {
                                                 className="capitalize"
                                                 key={value.title}
                                                 aria-label={value.title}
-                                                onPress={() => router.push(value.href ?? "#")}
+                                                onPress={() =>
+                                                    router.push(
+                                                        value.href ?? "#"
+                                                    )
+                                                }
                                             >
                                                 {value.title}
                                             </DropdownItem>
