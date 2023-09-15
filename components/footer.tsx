@@ -5,7 +5,7 @@ type Props = {};
 const Footer = (props: Props) => {
     return (
         <footer className="px-12 py-10 bg-[#1C2022] text-white">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-4">
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-4">
                 <h5 className="text-[#FDD85D] font-semibold text-xl">
                     Computer Science CMU
                 </h5>
@@ -54,7 +54,7 @@ const Footer = (props: Props) => {
                         </a>
                     </p>
                 </div>
-            </div>
+            </div> */}
         </footer>
     );
 };

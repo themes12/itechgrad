@@ -19,16 +19,12 @@ const Carousal = ({ children }: { children: React.ReactNode[] }) => {
                 spaceBetween={20}
                 loop
                 slidesPerView={1}
-                breakpoints={{
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                }}
+                // breakpoints={{
+                //     768: {
+                //         slidesPerView: 2,
+                //         spaceBetween: 20,
+                //     },
+                // }}
                 onBeforeInit={(swiper) => {
                     swiperRef.current = swiper;
                 }}
@@ -40,16 +36,18 @@ const Carousal = ({ children }: { children: React.ReactNode[] }) => {
             <Button
                 // ref={navigationPrevRef}
                 onClick={() => swiperRef.current?.slidePrev()}
-                color="primary"
-                className="z-10 absolute inset-y-[155px] -left-6 rounded-full min-w-unit-12 h-unit-12 px-unit-0"
-                startContent={<ChevronLeftIcon className="w-7 h-7" />}
+                className="bg-[#6E6E6E] z-10 absolute inset-y-[155px] -left-6 rounded-full min-w-unit-12 h-unit-12 px-unit-0"
+                startContent={
+                    <ChevronLeftIcon className="w-7 h-7 text-white" />
+                }
             ></Button>
             <Button
                 // ref={navigationNextRef}
                 onClick={() => swiperRef.current?.slideNext()}
-                color="primary"
-                className="z-10 absolute inset-y-[155px] -right-6 rounded-full min-w-unit-12 h-unit-12 px-unit-0"
-                startContent={<ChevronRightIcon className="w-7 h-7" />}
+                className="bg-[#6E6E6E] z-10 absolute inset-y-[155px] -right-6 rounded-full min-w-unit-12 h-unit-12 px-unit-0"
+                startContent={
+                    <ChevronRightIcon className="w-7 h-7 text-white" />
+                }
             ></Button>
         </div>
     );
