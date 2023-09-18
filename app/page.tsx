@@ -180,12 +180,12 @@ export default function Home() {
                     </div>
                 </div>
             </Section>
-            <Section className="py-4">
+            <Section>
                 <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9">
                     <SectionText name="Congratulations" />
                     <div className="mb-24 relative mt-8">
                         <Image
-                            className="z-0 w-full h-full object-cover rounded-lg"
+                            className="z-0 w-full h-full object-cover rounded-lg aspect-video"
                             src="/congratulation.svg"
                             alt=""
                         />
@@ -201,7 +201,7 @@ export default function Home() {
                     </div>
                 </div>
             </Section>
-            <Section className="py-4">
+            <Section>
                 <div className="flex flex-col md:flex-row justify-end space-y-5 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9">
                     <div className="block w-full md:relative md:w-2/3 lg:w-3/4 h-96 my-auto">
                         <div className="block md:absolute -right-7 w-full h-full">
@@ -284,14 +284,6 @@ export default function Home() {
                                         height="32"
                                         src="https://img.icons8.com/color/32/instagram-new--v1.png"
                                         alt="instagram-new--v1"
-                                    />
-                                </button>
-                                <button>
-                                    <Image
-                                        width="32"
-                                        height="32"
-                                        src="https://img.icons8.com/color/32/twitter--v1.png"
-                                        alt="twitter--v1"
                                     />
                                 </button>
                             </div>
