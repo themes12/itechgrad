@@ -1,0 +1,77 @@
+/* Style for table header */
+.table-header {
+    display: flex;
+    background-color: #b3d6f4;
+    color: #818a92;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  /* Style for table columns */
+  .table-column {
+    font-size: 16px;
+    text-align: center;
+    background-color: #b3d6f4;
+    padding: 15px;
+    margin: auto;
+  }
+  
+  .table-row{
+    margin-bottom: 10px;
+  }
+  /* Style for the first cell in each row */
+  /* .table-cell-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 90px;
+    padding: 20px;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background-color: #005870;
+    color: var(--foundation-white-white-50, var(--text-color, #FFF));
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20px; } */
+  
+  
+
+.table-cell-2{
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for English course names */
+.english-course-name {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+}
+
+/* Style for Thai course names */
+.thai-course-name {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  padding: 20px;
+}
+  /* Style for the third cell in each row */
+  .table-cell-3 {
+    font-size: 14px;
+    text-align: center;
+    color: #818a92;
+  }
+  

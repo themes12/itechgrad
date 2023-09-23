@@ -10,15 +10,8 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
-import {StyleSheet, View, Text} from 'react-native';
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@nextui-org/react";
-import styled from 'styled-components';
 
-
-const StyledDiv = styled.div`
-  background-color: lightblue;
-  color: darkblue;
-`;
 
 function MyModal() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
