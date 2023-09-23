@@ -2,6 +2,11 @@ import { navbar } from "@/types/navbar";
 
 export const navItems: navbar[] = [
     {
+        title: "home",
+        type: "button",
+        href: "/home"
+    },                                                                                                                                                  
+    {
         title: "program",
         type: "dropdown",
         options: [
@@ -15,7 +20,7 @@ export const navItems: navbar[] = [
             }
         ]
     },
-    {
+    { 
         title: "courses",
         type: "dropdown",
         options: [
