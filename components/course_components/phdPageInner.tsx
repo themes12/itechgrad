@@ -18,7 +18,7 @@ function MyModal() {
   const size = '4xl'
   return (
     <>
-      <a color="gray" onClick={onOpen}>courses descript</a>
+      <a color="gray" onClick={onOpen}>courses description</a>
       <Modal size={size} isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false}>
         <ModalContent>
           {(onClose) => (
