@@ -163,7 +163,7 @@ const page = (props: Props) => {
             </div>
           </div>
           <div id="image" className="my-11 mr-auto ml-2 xxxs:hidden xxs:hidden sm:hidden md:flex">
-            <img className=" object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-72 lg:h-72  xl:h-96" src="_DSC4369.jpg" alt="" />
+            <img className=" object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-60 lg:h-72  xl:h-96" src="_DSC4369.jpg" alt="" />
           </div>
         </div>
 
@@ -239,7 +239,7 @@ const page = (props: Props) => {
             <img className=" object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-72 lg:h-72  xl:h-96" src="/_DSC2867.jpg" alt="" />
           </div>
           <div id="image" className="my-11 ml-auto mr-10 xxxs:hidden xxs:hidden sm:hidden md:flex">
-            <img className=" object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-72 lg:h-72  xl:h-96" src="/_DSC2867.jpg" alt="" />
+            <img className=" object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-60 lg:h-72  xl:h-96" src="/_DSC2867.jpg" alt="" />
           </div>
           <div className=" font-semibold text-[#E7F6FD] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto ">
             Bioinformatics
