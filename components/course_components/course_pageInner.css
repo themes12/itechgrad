@@ -1,0 +1,30 @@
+.table_name {
+    color: #17455d;
+    font-size: 16px;
+    text-align: top;
+    width: 40%;
+    font-style: normal;
+    font-weight: 600;
+    line-height: '20px /* 125% */'; 
+}
+
+.table_data {
+    color: #000000;
+    font-size: 15px;
+    text-align: 'top';
+    width: 60%;
+    font-weight: 400;
+    font-style: normal;
+    line-height: '20px /* 133.333% */'; 
+}
+
+.bottom-line {
+    border-bottom: solid;
+}
+
+.course_id{
+    border-bottom: 0.05px solid rgb(224, 224, 224); 
+}
+
+
+
