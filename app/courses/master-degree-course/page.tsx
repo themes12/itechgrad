@@ -1,6 +1,7 @@
 "use client";
 import { Table_courses } from '@/components/course_components/table_course';
 import React from 'react'
+import Courses_navbar from '@/components/course_components/courses_navbar';
 
 type Props = {};
 
@@ -22,6 +23,7 @@ const page = (props: Props) => {
              shadow-small rounded-large transition-transform-background motion-reduce:transition-none border-none bg-white w-full 
              lg:w-auto p-2">
               <div className="flex-grow overflow-y-auto">
+              <Courses_navbar/>
               <div className="p-8">
                 <Table_courses/>
               </div>
