@@ -1,7 +1,6 @@
 import "@/components/course_components/table_courses.css";
 import React from "react";
-import { dataItems } from "@/utils/data-course";
-import PhdPageInner from '@/components/course_components/phdPageInner';
+import {MyModal} from '@/components/course_components/phdPageInner';
 import {
     Pagination,
     Button
@@ -48,7 +47,7 @@ export const Table_courses = () => {
             <span className="english-course-name">Data Structure and Programming Languages</span>{" "} <br />
             <span className="thai-course-name">โครงสร้างข้อมูลและภาษาโปรแกรม</span>
             </span>
-            <span className="table-cell-3"><PhdPageInner/></span>
+            <span className="table-cell-3"><MyModal/></span>
         </span>
         {" "} 
         <br />
