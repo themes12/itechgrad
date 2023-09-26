@@ -59,7 +59,9 @@ export const Table_courses = () => {
           <span className="english-course-name">Data Structure and Programming Languages</span>{" "} <br />
           <span className="thai-course-name">โครงสร้างข้อมูลและภาษาโปรแกรม</span>
         </span>
-        <span className="table-cell-3"><MyModal /></span>
+        <span className="table-cell-3">
+            <MyModal/>
+        </span>
       </div>
         {" "} 
         <br />
