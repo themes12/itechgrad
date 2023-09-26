@@ -5,3 +5,6 @@
     font-weight: 400;
     line-height: 40px; 
 }
+.bottom_course:hover {
+    background-color: rgb(0, 0, 0);
+  }

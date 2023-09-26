@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic';
 import { Providers } from '@/app/providers';
 import Footer from '@/components/footer';
 import Courses_navbar from '@/components/course_components/courses_navbar';
-import Test from '@/components/course_components/test';
 import { Table_courses } from '@/components/course_components/table_course';
 
 type Props = {}
@@ -29,7 +28,7 @@ const page = (props: Props) => {
          shadow-small rounded-large transition-transform-background motion-reduce:transition-none border-none bg-white w-full 
          lg:w-auto p-2">
           <div className="flex-grow overflow-y-auto">
-            <div>
+            <div >
           <Courses_navbar/>
             </div>
           <div className="p-8">

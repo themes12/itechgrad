@@ -10,7 +10,7 @@ import {
     Button,
     useDisclosure,
   } from "@nextui-org/react";
-//import "@/components/course_components/course_navbar.css";
+import "@/components/course_components/course_navbar.css";
 
 function course_navbar() {
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
@@ -26,7 +26,7 @@ function course_navbar() {
           <Input
             placeholder="Search..."
             
-            width="400px"// Adjust the width as needed
+            width="200px"// Adjust the width as needed
           />
         </div>
       </NavbarContent>

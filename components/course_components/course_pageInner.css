@@ -1,19 +1,22 @@
 .table_name {
     color: #17455d;
     font-size: 16px;
-    text-align: top;
+    vertical-align: text-top;
     width: 40%;
     font-style: normal;
     font-weight: 600;
     line-height: '20px /* 125% */'; 
 }
-
+.modal_body{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
 .table_data {
     color: #000000;
     font-size: 15px;
-    text-align: 'top';
     width: 60%;
     font-weight: 400;
+    vertical-align: text-top;
     font-style: normal;
     line-height: '20px /* 133.333% */'; 
 }
