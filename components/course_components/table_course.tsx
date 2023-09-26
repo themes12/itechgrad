@@ -32,23 +32,35 @@ export const Table_courses = () => {
     // }, [page, dataItems]);
   return (
     <div>
+        <div className="table-container">
         <table>
         <thead>
-            <tr className="table-header">
-            <th className="table-header1 lg:pl-[90px] md:pl-[45px]">Course code</th>
+          <tr className="table-header">
+            <th className="table-header1">
+                <div className="lg:ml-20">
+                Course code
+                </div>
+            </th>
             <th className="table-header2">Course name</th>
             <th className="table-header3"></th>
-            </tr>
+          </tr>
         </thead>
-        </table>
-        <span className="table-row">
-            <span className="table-cell-1">204700</span>
-            <span className="table-cell-2">
-            <span className="english-course-name">Data Structure and Programming Languages</span>{" "} <br />
-            <span className="thai-course-name">โครงสร้างข้อมูลและภาษาโปรแกรม</span>
+      </table>
+
+      <div className="table-row">
+        <div className="grid grid-cols-6">
+          <div className="lg:col-start-3 col-end-4 sm:col-start-2 col-end-3">
+            <span className="table-cell-1">
+              <p className="font-table-cell-1">204700</p>
             </span>
-            <span className="table-cell-3"><MyModal/></span>
+          </div>
+        </div>
+        <span className="table-cell-2">
+          <span className="english-course-name">Data Structure and Programming Languages</span>{" "} <br />
+          <span className="thai-course-name">โครงสร้างข้อมูลและภาษาโปรแกรม</span>
         </span>
+        <span className="table-cell-3"><MyModal /></span>
+      </div>
         {" "} 
         <br />
        {/* {items.map((item, index) => (
@@ -110,6 +122,7 @@ export const Table_courses = () => {
                 </div>
                 </div>
             )} */}
+            </div>
     </div>
   );
 };
