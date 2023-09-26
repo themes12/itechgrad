@@ -1,0 +1,27 @@
+/* Define the custom button class */
+.custom-button {
+    background-color: #a2c7ec;
+    width: 980px;
+    height: 60px;
+    color: rgb(28, 14, 14);
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px; /* Add rounded corners if desired */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    cursor: pointer;
+    /* Add more styles as needed */
+  }
+  
+  .custom-button:hover {
+    background-color: #a8d0f3; 
+  }
+  
+  /* Define styles for the button when clicked */
+  .custom-button:active {
+    transform: translateY(2px); /* Add a slight click effect */
+    /* Add more styles for active state if desired */
+  }
+  
+  .text-left {
+    text-align: left;
+  }
