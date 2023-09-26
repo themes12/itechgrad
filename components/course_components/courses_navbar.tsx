@@ -1,37 +1,33 @@
-
-import React from 'react';
-import { Navbar, NavbarBrand, NavbarContent, Input } from '@nextui-org/react';
-import {
-    Modal,
-    ModalContent,
-    ModalHeader,
-    ModalBody,
-    ModalFooter,
-    Button,
-    useDisclosure,
-  } from "@nextui-org/react";
+import React, { useState } from 'react';
+import { Button, Input } from '@nextui-org/react';
 import "@/components/course_components/course_navbar.css";
 
-function course_navbar() {
-    const {isOpen, onOpen, onOpenChange} = useDisclosure();
-  return (
-    <Navbar isBordered>
-      <NavbarContent>
-        <NavbarBrand>
-          <Button className="bottom_course"  variant="light">Recent courses 1/2023</Button>
-          <Button className="bottom_course" variant="light">All courses</Button>
-        </NavbarBrand>
+function CourseNavbar() {
+  const [isActiveRecent, setIsActiveRecent] = useState(false);
+  const [isActiveAll, setIsActiveAll] = useState(false);
 
-        <div className="flex items-center">
-          <Input
-            placeholder="Search..."
-            
-            width="200px"// Adjust the width as needed
-          />
-        </div>
-      </NavbarContent>
-    </Navbar>
+  const handleButtonClickRecent = () => {
+    setIsActiveRecent(!isActiveRecent);
+    setIsActiveAll(false); // Ensure the other button is not active
+  };
+
+  const handleButtonClickAll = () => {
+    setIsActiveAll(!isActiveAll);
+    setIsActiveRecent(false); // Ensure the other button is not active
+  };
+
+  return (
+    <div className="navbar_course">
+      <Button className={`buttom_course_recent ${isActiveRecent ? 'active' : ''}`}variant="light"radius="sm" onClick={handleButtonClickRecent}> Recent courses 1/2023</Button>
+      <Button className={`buttom_course_all ${isActiveAll ? 'active' : ''}`} variant="light" radius="sm" onClick={handleButtonClickAll} > All courses</Button>
+      <Input
+        className="search-input"
+        placeholder="Search..."
+        width="200px"
+      />
+    </div>
   );
 }
 
-export default course_navbar;
+export default CourseNavbar;
+

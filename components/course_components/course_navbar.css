@@ -1,10 +1,43 @@
-.bottom_course {
+.buttom_course_recent {
     color: #000;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 40px; 
+    border: 2px;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
 }
-.bottom_course:hover {
-    background-color: rgb(0, 0, 0);
+.buttom_course_all {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    border: 2px;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.buttom_course_recent.active,
+.buttom_course_all.active {
+    background-color: #E4E4E4; 
+    color: rgb(0, 0, 0); 
+}
+
+.buttom{
+    vertical-align: middle;
+    text-align: justify;
+
+}
+.navbar_course {
+    height : 75px;
+    padding-left: 32px;
+    display: flex;
+    vertical-align: middle;
+    align-items: center; 
+  }
+  
+  .search-input {
+ 
+    margin-left: 10px; 
+    width: 200px;
   }
