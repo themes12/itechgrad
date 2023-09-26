@@ -24,14 +24,14 @@ export const MyModal = () => {
           {(onClose) => (
             <>
             <div className="pt-20">   
-              <ModalBody>
+              <ModalBody className="modal_body">
                
               <Table hideHeader removeWrapper aria-label="Example collection table">
                 <TableHeader>
                   <TableColumn>NAME</TableColumn>
                   <TableColumn>DATA</TableColumn>
                 </TableHeader>
-                  <TableBody>
+                  <TableBody className="Table-body">
                 
                         <TableRow key="1 " className="course_id" >
                           <TableCell  className="table_name">รหัสกระบวนการวิชา</TableCell>
@@ -48,7 +48,7 @@ export const MyModal = () => {
                         <TableCell  className="table_data">โครงสร้างข้อมูลและภาษาโปรแกรม</TableCell>
                       </TableRow>
                       <TableRow key="4">
-                        <TableCell  className="table_name" text-align="top">คำอธิบายลักษณะกระบวนวิชา</TableCell>
+                        <TableCell  className="table_name" >คำอธิบายลักษณะกระบวนวิชา</TableCell>
                         <TableCell  className="table_data">Abstract data types, linear data structure, non-linear data structure, 
                                   searching and sorting techniques, programming language paradigms.
                         </TableCell>

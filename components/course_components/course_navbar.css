@@ -1,7 +1,59 @@
-.bottom_course {
+.buttom_course_recent {
     color: #000;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 40px; 
+    border: 2px;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
 }
+.buttom_course_all {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    border: 2px;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.buttom_course_recent.active,
+.buttom_course_all.active {
+    background-color: #E4E4E4; 
+    color: rgb(0, 0, 0); 
+}
+
+.buttom{
+    vertical-align: middle;
+    text-align: justify;
+
+}
+.navbar_course {
+    height : 75px;
+    padding-left: 32px;
+    display: flex;
+    align-items: center; 
+  }
+  
+  .search-input {
+    margin-left: 10px; 
+    margin-right: 30px; 
+    width: 355px;
+    float: right;
+}
+
+
+.Button_announ:hover {
+    background-color: rgb(0, 0, 0);
+    color: #FFF;
+  }
+
+.border_line {
+    border-bottom: 0.05px  solid rgb(191, 191, 191); 
+    margin-left: 32px;
+    margin-right: 32px;
+}
+.search_bar{
+    margin-left: auto; 
+  }
+
