@@ -7,6 +7,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import SectionText from "@/components/sectionText";
 import AnnouncementCard from "@/components/announcementCard";
 import Carousal from "@/components/carousal";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
     const posts = [
@@ -131,15 +132,17 @@ export default function Home() {
             image_url: "2788476b-972d-4e83-b3cc-cf1fb62df678",
         },
     ];
+    const t = useTranslations("Index");
+
     return (
         <main className="space-y-8">
             <Section className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
                 <div className="space-y-4">
                     <h2 className="font-bold text-4xl xxs:text-5xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl text-[#002F43]">
-                        Master and Ph.D Program in
+                        {t("header1")}
                     </h2>
                     <h2 className="font-extrabold text-5xl xxs:text-6xl xs:text-6xl sm:text-7xl md:text-6xl lg:text-7xl xl:text-8xl text-[#FFB724]">
-                        Computer Science CMU
+                        {t("header2")}
                     </h2>
                 </div>
                 <div className="flex flex-col md:flex-row mt-8 lg:mt-16 justify-evenly lg:mx-20 gap-x-10 gap-y-2">

@@ -22,12 +22,14 @@ import { useRouter } from "next/navigation";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { navItems } from "@/utils/navbar";
+import { useLocale } from "next-intl";
 
 type Props = {};
 
 const NavbarHeader = (props: Props) => {
     const router = useRouter();
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+    const locale = useLocale();
 
     return (
         <>
@@ -73,12 +75,16 @@ const NavbarHeader = (props: Props) => {
                             endContent:
                                 "mr-0.5 text-xs font-semibold text-[#BCBCBC]",
                         }}
+                        isSelected={locale === "th"}
                         thumbIcon={({ isSelected, className }) =>
                             isSelected ? (
                                 <span className="text-[#4E5BA6]">TH</span>
                             ) : (
                                 <span className="text-[#E8A721]">EN</span>
                             )
+                        }
+                        onValueChange={(value) =>
+                            router.replace(`${value ? "th" : "en"}`)
                         }
                         size="lg"
                         color="default"

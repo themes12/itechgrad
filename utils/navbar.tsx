@@ -4,58 +4,58 @@ export const navItems: navbar[] = [
     {
         title: "home",
         type: "button",
-        href: "/home"
-    },                                                                                                                                                  
+        href: "/",
+    },
     {
         title: "program",
         type: "dropdown",
         options: [
             {
                 title: "mater's degree",
-                href: "/program/master-degree"
+                href: "/program/master-degree",
             },
             {
                 title: "PHD",
-                href: "/program/phd"
-            }
-        ]
+                href: "/program/phd",
+            },
+        ],
     },
-    { 
+    {
         title: "courses",
         type: "dropdown",
         options: [
             {
                 title: "กระบวนวิชา ป.โท",
-                href: "/courses/master-degree-course"
+                href: "/courses/master-degree-course",
             },
             {
                 title: "กระบวนวิชา ป.เอก",
-                href: "/courses/phd-course"
-            }
-        ]
+                href: "/courses/phd-course",
+            },
+        ],
     },
     {
         title: "research",
         type: "button",
-        href: "/research"
+        href: "/research",
     },
     {
         title: "announcement",
         type: "dropdown",
         options: [
             {
-               title: "announcement",
-               href: "/announcement" 
+                title: "announcement",
+                href: "/announcement",
             },
             {
                 title: "congratulations",
-                href: "/congratulations" 
+                href: "/congratulations",
             },
             {
                 title: "news",
-                href: "/news" 
+                href: "/news",
             },
-        ]
+        ],
     },
     {
         title: "staff",
@@ -63,13 +63,13 @@ export const navItems: navbar[] = [
         options: [
             {
                 title: "academic staff",
-                href: "/staff/academic"
+                href: "/staff/academic",
             },
             {
                 title: "supporting staff",
-                href: "/staff/supporting-staff"
-            }
-        ]
+                href: "/staff/supporting-staff",
+            },
+        ],
     },
     {
         title: "about",
@@ -77,16 +77,16 @@ export const navItems: navbar[] = [
         options: [
             {
                 title: "history",
-                href: "/about/history"
+                href: "/about/history",
             },
             {
                 title: "vision",
-                href: "/about/vision"
+                href: "/about/vision",
             },
             {
                 title: "head of department",
-                href: "/about/head-of-department"
+                href: "/about/head-of-department",
             },
-        ]
+        ],
     },
-]
+];
