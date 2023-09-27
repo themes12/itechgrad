@@ -28,8 +28,10 @@ type Props = {};
 
 const NavbarHeader = (props: Props) => {
     const router = useRouter();
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const locale = useLocale();
+
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+    const [localeSwitch, setLocaleSwitch] = useState(locale === "th");
 
     return (
         <>
@@ -75,7 +77,7 @@ const NavbarHeader = (props: Props) => {
                             endContent:
                                 "mr-0.5 text-xs font-semibold text-[#BCBCBC]",
                         }}
-                        isSelected={locale === "th"}
+                        isSelected={localeSwitch}
                         thumbIcon={({ isSelected, className }) =>
                             isSelected ? (
                                 <span className="text-[#4E5BA6]">TH</span>
@@ -83,8 +85,10 @@ const NavbarHeader = (props: Props) => {
                                 <span className="text-[#E8A721]">EN</span>
                             )
                         }
-                        onValueChange={(value) =>
+                        onValueChange={(value) => {
+                            setLocaleSwitch((prev) => !prev)
                             router.replace(`${value ? "th" : "en"}`)
+                        }
                         }
                         size="lg"
                         color="default"

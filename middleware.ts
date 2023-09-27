@@ -3,7 +3,7 @@ import createIntlMiddleware from "next-intl/middleware";
 import { NextRequest } from "next/server";
 
 const locales = ["en", "th"];
-const publicPages = ["/", "/login"];
+const publicPages = ["/", "/login", "/announcement", "/courses/master-degree-course", "/courses/phd-course"];
 
 const intlMiddleware = createIntlMiddleware({
     locales,
