@@ -118,7 +118,7 @@ const page = (props: Props) => {
             <div className=" font-semibold text-[#E7F6FD] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto ">
               Health informatics
               <p className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-light  mt-3 ">
-                Analysis of biomedical data(patients' records, images)
+                Analysis of biomedical data(patients&apos; records, images)
               </p>
               <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3">
                 Reseacher

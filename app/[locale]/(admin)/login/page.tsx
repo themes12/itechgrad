@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 
 type Props = {};
 
-const Admin = (props: Props) => {
+const Login = (props: Props) => {
     const router = useRouter();
     const {
         control,
@@ -30,7 +30,7 @@ const Admin = (props: Props) => {
                 redirect: false,
             });
             router.replace("/admin");
-        } catch (e) {}
+        } catch (e) { }
     };
 
     return (
@@ -88,4 +88,4 @@ const Admin = (props: Props) => {
     );
 };
 
-export default Admin;
+export default Login;
