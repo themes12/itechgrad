@@ -16,7 +16,7 @@ function program_navbar() {
   return (
     <Navbar isBordered>
       <NavbarContent>
-        <NavbarBrand className="flex justify-start"> {/* Use "flex justify-start" to align buttons to the left */}
+        <NavbarBrand className="flex justify-start pt-6"> {/* Use "flex justify-start" to align buttons to the left */}
           <Button className="bottom_program text-[18px] font-sans" variant="solid">Master's Degree Program 2566</Button>
           <Button className="bottom_program text-[18px] font-sans" variant="light">Master's Degree Program 2561</Button>
         </NavbarBrand>

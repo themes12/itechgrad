@@ -19,9 +19,9 @@ function ProgramButton() {
     <div>
       <h2 className="text-[36px] pb-12 font-bold px-12 pt-10">Master's Degree Program 2566</h2>
       <div className="mb-4 w-full flex flex-col items-center">
-      <Button className="flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-a8d0f3 active:translate-y-2" style={{ width: '90%' }}>
+      <Button className="flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 hover:text-blue-600" style={{ width: '90%' }}>
         <div className="flex-grow">
-          <p className="text-left text-[18px] font-bold px-5 text-blue-950">
+          <p className="text-left text-[18px] font-bold px-5 text-blue-950 hover:text-blue-600">
             Type 1 (Plan A Type A1)
           </p>
         </div>
@@ -31,9 +31,9 @@ function ProgramButton() {
       </Button>
       </div>&nbsp;
       <div className="mb-4 w-full flex flex-col items-center">
-      <Button className="flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-a8d0f3 active:translate-y-2" style={{ width: '90%' }}>
+      <Button className="flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 hover:text-blue-600" style={{ width: '90%' }}>
         <div className="flex-grow">
-          <p className="text-left text-[18px] font-bold px-5 text-blue-950">
+          <p className="text-left text-[18px] font-bold px-5 text-blue-950 hover:text-blue-600">
             Type 2 (Plan A Type A2)
           </p>
         </div>
@@ -43,9 +43,9 @@ function ProgramButton() {
       </Button>
       </div>&nbsp;
       <div className="mb-4 w-full flex flex-col items-center">
-      <Button className="flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-a8d0f3 active:translate-y-2" style={{ width: '90%' }}>
+      <Button className="flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 hover:text-blue-600" style={{ width: '90%' }}>
         <div className="flex-grow">
-          <p className="text-left text-[18px] font-bold px-5 text-blue-950">
+          <p className="text-left text-[18px] font-bold px-5 text-blue-950 hover:text-blue-600">
             Type 3 (Plan B)
           </p>
         </div>
