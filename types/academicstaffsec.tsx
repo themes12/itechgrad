@@ -1,4 +1,5 @@
 export type acaStaff = {
+    type: "acdemicStaff"|"supportStaff";
     nameThai: string;
     rank: string;
     nameEng: string;

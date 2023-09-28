@@ -6,19 +6,6 @@ import {CardStaff} from '@/components/card_staff/cardstaff';
 type Props = {}
 
 const page = (props: Props) => {
-  /*const posts = [
-    {
-        id: 1,
-        title: "",
-        body: "",
-        image_url: "",
-    },
-    {
-        id: 2,
-        title: "",
-        body: "",
-        image_url: "",
-    }];*/
   return (
 
     <div>
@@ -29,10 +16,9 @@ const page = (props: Props) => {
       </Section>
       <Section>
 
-        <header className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
-          <div className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
-            <h1 className="text-[64px] font-bold ">Academic Staff</h1>
-
+        <header className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-8 lg:px-8 ">
+          <div className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-8 lg:px-8">
+            <h1 className="text-2xl xxs:text-5xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[64px] font-bold md:px-0 lg:px-24 xl:px-40">Academic&nbsp;Staff</h1>
           </div>
         </header>
       </Section>
@@ -51,6 +37,12 @@ const page = (props: Props) => {
         </header>
       </Section>
       <Section>
+        <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9">
+          <div className="mb-24 relative mt-8">
+            <CardStaff></CardStaff>
+          </div>
+        </div>
+
         <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9">
           <div className="mb-24 relative mt-8">
             <CardStaff></CardStaff>
