@@ -32,21 +32,23 @@ export const Announcement_card = () => {
     };
 
     const buttonStyles = {
-        height: '40px',
-        fontSize: '15px',
+        height: '2.5rem', 
+        fontSize: '1rem', 
         fontWeight: 400,
-        marginRight: '10px',
-        marginBottom: '10px',
-        border: '1px solid #797979',
-        alignItems: 'left',
-        transition: 'background-color 1.0s ease' // Comma added here
+        marginRight: '0.625rem', 
+        marginBottom: '0.625rem', 
+        border: '0.0625rem solid #797979', 
+        alignItems: 'left', 
+        transition: 'background-color 1.0s ease'
     };
+    
     
 
     const hoveredtext = {
         textDecoration: "underline",
-        textDecorationThickness: "2px"
+        textDecorationThickness: "0.125rem"
     };
+    
 
     // const [page, setPage] = React.useState(1);
     // const rowsPerPage = 6;
@@ -72,15 +74,15 @@ export const Announcement_card = () => {
 
   return (
     <div>
-            <div className="navbar" style={{ marginBottom: '50px' }}>
+            <div className="navbar" style={{ marginBottom: '3.125rem' }}>
                 <div
-                    style={{
-                        width: '100%',
-                        height: '1px',
-                        backgroundColor: '#ccc',
-                        margin: '50px 0',
-                        display: 'block',
-                    }}
+                style={{
+                    width: '100%', 
+                    height: '0.0625rem',
+                    backgroundColor: '#ccc',
+                    margin: '3.125rem 0', 
+                    display: 'block',
+                }}
                     />
                 <div className="md:ml-auto md:mr-auto flex flex-wrap items-center">
                     <div className="items-right w-[365px] py-1 px-3 lg:ml-auto mb-5 md:items-left lg:order-2">
@@ -101,7 +103,7 @@ export const Announcement_card = () => {
             </div>
         
         <div className="card">
-            <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 justify-center mb-20">
+            <div className="grid md:grid-cols-12 gap-6 md:gap-4 justify-center mb-20">
                 {/* Grid 1 (empty) */}
                 <div className="col-span-1"></div>
 
@@ -167,7 +169,7 @@ export const Announcement_card = () => {
             </div> 
 
 
-            <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 justify-center mb-20">
+            <div className="grid md:grid-cols-12 gap-6 md:gap-4 justify-center mb-20">
                 {/* Grid 1 (empty) */}
                 <div className="col-span-1"></div>
 
