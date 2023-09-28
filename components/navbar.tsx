@@ -18,8 +18,12 @@ import {
     Listbox,
     ListboxItem,
 } from "@nextui-org/react";
-import { useRouter, usePathname } from 'next-intl/client';
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { useRouter, usePathname } from "next-intl/client";
+import {
+    ChevronDownIcon,
+    Bars3Icon,
+    XMarkIcon,
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { navItems } from "@/utils/navbar";
 import { useLocale } from "next-intl";
@@ -87,10 +91,11 @@ const NavbarHeader = (props: Props) => {
                             )
                         }
                         onValueChange={(value) => {
-                            setLocaleSwitch((prev) => !prev)
-                            router.replace(pathname, { locale: value ? "th" : "en" });
-                        }
-                        }
+                            setLocaleSwitch((prev) => !prev);
+                            router.replace(pathname, {
+                                locale: value ? "th" : "en",
+                            });
+                        }}
                         size="lg"
                         color="default"
                         startContent={<span>EN</span>}
@@ -116,7 +121,14 @@ const NavbarHeader = (props: Props) => {
                                                 className="p-1"
                                                 key={value.title}
                                                 onPress={() =>
-                                                    router.push(value.href ?? "#", { locale: localeSwitch ? "th" : "en" })
+                                                    router.push(
+                                                        value.href ?? "#",
+                                                        {
+                                                            locale: localeSwitch
+                                                                ? "th"
+                                                                : "en",
+                                                        }
+                                                    )
                                                 }
                                             >
                                                 {value.title}
@@ -162,10 +174,11 @@ const NavbarHeader = (props: Props) => {
                             )
                         }
                         onValueChange={(value) => {
-                            setLocaleSwitch((prev) => !prev)
-                            router.push(pathname, { locale: value ? "th" : "en" });
-                        }
-                        }
+                            setLocaleSwitch((prev) => !prev);
+                            router.push(pathname, {
+                                locale: value ? "th" : "en",
+                            });
+                        }}
                         size="lg"
                         color="default"
                         startContent={<span>EN</span>}
@@ -212,7 +225,14 @@ const NavbarHeader = (props: Props) => {
                                                 key={value.title}
                                                 aria-label={value.title}
                                                 onPress={() =>
-                                                    router.replace(value.href ?? "#", { locale: localeSwitch ? "th" : "en" })
+                                                    router.replace(
+                                                        value.href ?? "#",
+                                                        {
+                                                            locale: localeSwitch
+                                                                ? "th"
+                                                                : "en",
+                                                        }
+                                                    )
                                                 }
                                             >
                                                 {value.title}
