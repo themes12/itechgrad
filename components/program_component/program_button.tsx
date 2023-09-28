@@ -18,7 +18,7 @@ function ProgramButton() {
     return (
         <div>
             <h2 className="text-[36px] pb-12 font-bold px-12 pt-10">
-                Master's Degree Program 2566
+                Master&apos;s Degree Program 2566
             </h2>
             <div className="w-full flex flex-col items-center mt-2.5">
                 <Button className="custom-button" style={{ width: "90%" }}>

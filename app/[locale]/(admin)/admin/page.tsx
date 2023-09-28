@@ -2,7 +2,7 @@
 import { signOut, useSession } from "next-auth/react";
 type Props = {};
 
-const admin = (props: Props) => {
+const Admin = (props: Props) => {
     const { data: session } = useSession();
     console.log(session?.user);
 
@@ -24,4 +24,4 @@ const admin = (props: Props) => {
     );
 };
 
-export default admin;
+export default Admin;
