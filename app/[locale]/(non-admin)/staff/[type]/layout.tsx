@@ -1,5 +1,5 @@
-// import "app/courses/background-courses.css";
 import React from "react";
+
 type Props = {};
 
 const layout = ({ children }: { children: React.ReactNode }) => {

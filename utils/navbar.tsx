@@ -26,11 +26,11 @@ export const navItems: navbar[] = [
         options: [
             {
                 title: "กระบวนวิชา ป.โท",
-                href: "/courses/master-degree-course",
+                href: "/courses/master-degree",
             },
             {
                 title: "กระบวนวิชา ป.เอก",
-                href: "/courses/phd-course",
+                href: "/courses/phd",
             },
         ],
     },
@@ -67,7 +67,7 @@ export const navItems: navbar[] = [
             },
             {
                 title: "supporting staff",
-                href: "/staff/supporting-staff",
+                href: "/staff/support",
             },
         ],
     },

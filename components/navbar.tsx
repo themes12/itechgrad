@@ -18,7 +18,7 @@ import {
     Listbox,
     ListboxItem,
 } from "@nextui-org/react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from 'next-intl/client';
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { navItems } from "@/utils/navbar";
@@ -29,6 +29,7 @@ type Props = {};
 const NavbarHeader = (props: Props) => {
     const router = useRouter();
     const locale = useLocale();
+    const pathname = usePathname();
 
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const [localeSwitch, setLocaleSwitch] = useState(locale === "th");
@@ -52,7 +53,7 @@ const NavbarHeader = (props: Props) => {
                     />
                     <NavbarBrand className="justify-center">
                         <Image
-                            className="hidden xxxs:block xxxs:w-16 xxxs:h-16"
+                            className="hidden xxxs:block xxxs:w-12 xxxs:h-12"
                             src="/logo.svg"
                             alt="Logo CSCMU"
                             width="80"
@@ -87,7 +88,7 @@ const NavbarHeader = (props: Props) => {
                         }
                         onValueChange={(value) => {
                             setLocaleSwitch((prev) => !prev)
-                            router.replace(`${value ? "th" : "en"}`)
+                            router.replace(pathname, { locale: value ? "th" : "en" });
                         }
                         }
                         size="lg"
@@ -115,9 +116,7 @@ const NavbarHeader = (props: Props) => {
                                                 className="p-1"
                                                 key={value.title}
                                                 onPress={() =>
-                                                    router.push(
-                                                        value.href ?? "#"
-                                                    )
+                                                    router.push(value.href ?? "#", { locale: localeSwitch ? "th" : "en" })
                                                 }
                                             >
                                                 {value.title}
@@ -154,12 +153,18 @@ const NavbarHeader = (props: Props) => {
                             endContent:
                                 "mr-0.5 text-xs font-semibold text-[#BCBCBC]",
                         }}
+                        isSelected={localeSwitch}
                         thumbIcon={({ isSelected, className }) =>
                             isSelected ? (
                                 <span className="text-[#4E5BA6]">TH</span>
                             ) : (
                                 <span className="text-[#E8A721]">EN</span>
                             )
+                        }
+                        onValueChange={(value) => {
+                            setLocaleSwitch((prev) => !prev)
+                            router.push(pathname, { locale: value ? "th" : "en" });
+                        }
                         }
                         size="lg"
                         color="default"
@@ -207,9 +212,7 @@ const NavbarHeader = (props: Props) => {
                                                 key={value.title}
                                                 aria-label={value.title}
                                                 onPress={() =>
-                                                    router.push(
-                                                        value.href ?? "#"
-                                                    )
+                                                    router.replace(value.href ?? "#", { locale: localeSwitch ? "th" : "en" })
                                                 }
                                             >
                                                 {value.title}

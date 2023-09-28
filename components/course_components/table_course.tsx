@@ -1,71 +1,71 @@
 import "@/components/course_components/table_courses.css";
 import React from "react";
-import {MyModal} from '@/components/course_components/phdPageInner';
+import { MyModal } from '@/components/course_components/phdPageInner';
 import {
-    Pagination,
-    Button
-  } from "@nextui-org/react";
-  
+  Pagination,
+  Button
+} from "@nextui-org/react";
+import { Course } from "@/types/course";
 
 
-export const Table_courses = () => {
-    // const [page, setPage] = React.useState(1);
-    // const rowsPerPage = 6;
+export const Table_courses = ({ courses }: { courses: Course[] }) => {
+  // const [page, setPage] = React.useState(1);
+  // const rowsPerPage = 6;
 
-    // const pages = Math.ceil(dataItems.length / rowsPerPage);
-    // const onNextPage = React.useCallback(() => {
-    //     if (page < pages) {
-    //     setPage(page + 1);
-    //     }
-    // }, [page, pages]);
+  // const pages = Math.ceil(dataItems.length / rowsPerPage);
+  // const onNextPage = React.useCallback(() => {
+  //     if (page < pages) {
+  //     setPage(page + 1);
+  //     }
+  // }, [page, pages]);
 
-    // const onPreviousPage = React.useCallback(() => {
-    //     if (page > 1) {
-    //     setPage(page - 1);
-    //     }
-    // }, [page]);
+  // const onPreviousPage = React.useCallback(() => {
+  //     if (page > 1) {
+  //     setPage(page - 1);
+  //     }
+  // }, [page]);
 
-    // const items = React.useMemo(() => {
-    //     const start = (page - 1) * rowsPerPage;
-    //     const end = start + rowsPerPage;
-    //     return dataItems.slice(start, end);
-    // }, [page, dataItems]);
+  // const items = React.useMemo(() => {
+  //     const start = (page - 1) * rowsPerPage;
+  //     const end = start + rowsPerPage;
+  //     return dataItems.slice(start, end);
+  // }, [page, dataItems]);
   return (
     <div>
-        <div className="table-container">
+      <div className="table-container">
         <table>
-        <thead>
-          <tr className="table-header">
-            <th className="table-header1">
+          <thead>
+            <tr className="table-header">
+              <th className="table-header1">
                 <div className="lg:ml-20">
-                Course code
+                  Course code
                 </div>
-            </th>
-            <th className="table-header2">Course name</th>
-            <th className="table-header3"></th>
-          </tr>
-        </thead>
-      </table>
+              </th>
+              <th className="table-header2">Course name</th>
+              <th className="table-header3"></th>
+            </tr>
+          </thead>
+        </table>
 
-      <div className="table-row">
-        <div className="grid grid-cols-6">
-          <div className="lg:col-start-3 col-end-4 sm:col-start-2 col-end-3">
-            <span className="table-cell-1">
-              <p className="font-table-cell-1">204700</p>
+        {
+          courses.map((course) => <div key={course._id} className="table-row">
+            <div className="grid grid-cols-6">
+              <div className="lg:col-start-3 col-end-4 sm:col-start-2 col-end-3">
+                <span className="bg-[#005870] rounded-lg px-3 py-2 font-medium text-base text-white">{course._id}</span>
+              </div>
+            </div>
+            <span className="table-cell-2">
+              <span className="english-course-name">{course.name_en}</span>{" "} <br />
+              <span className="thai-course-name">{course.name_th}</span>
             </span>
-          </div>
-        </div>
-        <span className="table-cell-2">
-          <span className="english-course-name">Data Structure and Programming Languages</span>{" "} <br />
-          <span className="thai-course-name">โครงสร้างข้อมูลและภาษาโปรแกรม</span>
-        </span>
-        <span className="table-cell-3">
-            <MyModal/>
-        </span>
-      </div>
-        {" "} 
+            <span className="table-cell-3">
+              <MyModal course={course} />
+            </span>
+          </div>)
+        }
+        {" "}
         <br />
-       {/* {items.map((item, index) => (
+        {/* {items.map((item, index) => (
         <span className="table-row" key={index}>
             <span className="table-cell-1">{item.Course_code}</span>
             <span className="table-cell-2">
@@ -124,7 +124,7 @@ export const Table_courses = () => {
                 </div>
                 </div>
             )} */}
-            </div>
+      </div>
     </div>
   );
 };
