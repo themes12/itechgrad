@@ -3,12 +3,8 @@ import createIntlMiddleware from "next-intl/middleware";
 import { NextRequest } from "next/server";
 
 const locales = ["en", "th"];
-<<<<<<< Updated upstream
-const publicPages = ["/", "/login", "/announcement", "/courses/master-degree-course", "/courses/phd-course"];
-=======
 // const publicPages = ["/", "/login", "/announcement", "/courses"];
-const protectedPages = ["/admin"]
->>>>>>> Stashed changes
+const protectedPages = ["/admin"];
 
 const intlMiddleware = createIntlMiddleware({
     locales,
@@ -33,15 +29,15 @@ const authMiddleware = withAuth(
 );
 
 export default function middleware(req: NextRequest) {
-  const pathname = req.nextUrl.pathname;
+    const pathname = req.nextUrl.pathname;
 
-  if (protectedPages.some(route => pathname.startsWith(route))) {
-    // Apply authentication middleware to protected routes
-    return (authMiddleware as any)(req);
-  } else {
-    // For public routes or any other routes, apply intlMiddleware
-    return intlMiddleware(req);
-  }
+    if (protectedPages.some((route) => pathname.startsWith(route))) {
+        // Apply authentication middleware to protected routes
+        return (authMiddleware as any)(req);
+    } else {
+        // For public routes or any other routes, apply intlMiddleware
+        return intlMiddleware(req);
+    }
 }
 
 // export default function middleware(req: NextRequest) {
