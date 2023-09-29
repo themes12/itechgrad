@@ -12,26 +12,20 @@ import {
 // import {Mail} from './Mail';
 // import {Phone} from './Phone';
 
-
 //import { acaStaff } from "@/types/academicstaffsec";
 //export const CardStaff = ({ nameThai, rank, nameEng, Tel, email, ResearchInterests, href, image}:acaStaff) =>
-type Props = {type: "acdemicStaff"|"supportStaff"}
+type Props = { type: "acdemicStaff" | "supportStaff" };
 
-export const CardStaff = ({type}: Props) =>
-    {
-        return <div>
-        <div className="relative container mx-auto py-8 px-8">
-            <div className="relative flex flex-row xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row md:pl-10 lg:pl-20 xl:pl-40 ">
-
+export const CardStaff = ({ type }: Props) => {
+    return (
+        <div>
+            <div className="relative container mx-auto py-8 px-8">
+                <div className="relative flex flex-row xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row md:pl-10 lg:pl-20 xl:pl-40 ">
                     <Image
-                      alt="MouckUp"
+                        alt="MouckUp"
                         className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]"
-                        src="https://drive.google.com/uc?export=view&id=11Q-WPNcCA_TcfZTCVsDBbDsfs7zzCcpq" 
-                        
-                        />
-               
-
-                
+                        src="https://drive.google.com/uc?export=view&id=11Q-WPNcCA_TcfZTCVsDBbDsfs7zzCcpq"
+                    />
 
                     <div className="relative col-span-7 px-20">
                         <div className="flex flex-col gap-5">
@@ -123,6 +117,5 @@ export const CardStaff = ({type}: Props) =>
                 </div>
             </div>
         </div>
-    
-                                };
-   
+    );
+};
