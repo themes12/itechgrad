@@ -8,7 +8,7 @@ const Detail = (props: Props) => {
     return (
     <div className="flex flex-col gap-6 bg-[#FFF]">
         <div className="flex flex-col gap-6 bg-[#FFF] lg:px-10 md:px-8 px-4">
-            <div className="flex flex-wrap justify-end gap-8 items-center py-4">
+            <div className="flex flex-wrap justify-end gap-8 items-center py-6">
                 <div>
                 Quickly monetize synergistic portals via efficient e-commerce. 
                 Phosfluorescently reinvent frictionless intellectual capital vis-a-vis 
