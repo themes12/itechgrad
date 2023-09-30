@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@nextui-org/react": "^2.1.13",
+    "@reactuses/core": "^4.0.8",
     "@splinetool/react-spline": "^2.2.6",
     "@types/datatables.net": "^1.10.25",
     "@types/jquery": "^3.5.20",
@@ -35,8 +36,10 @@
     "next-intl": "^2.20.2",
     "next-themes": "^0.2.1",
     "postcss": "^8.4.29",
+    "primereact": "^10.0.2",
     "react": "18.2.0",
     "react-apexcharts": "^1.4.0",
+    "react-date-picker": "^10.5.1",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.46.2",
     "react-icons": "^4.11.0",
