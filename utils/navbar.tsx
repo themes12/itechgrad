@@ -41,21 +41,8 @@ export const navItems: navbar[] = [
     },
     {
         title: "announcement",
-        type: "dropdown",
-        options: [
-            {
-                title: "announcement",
-                href: "/announcement",
-            },
-            {
-                title: "congratulations",
-                href: "/congratulations",
-            },
-            {
-                title: "news",
-                href: "/news",
-            },
-        ],
+        type: "button",
+        href: "/announcement",
     },
     {
         title: "staff",
