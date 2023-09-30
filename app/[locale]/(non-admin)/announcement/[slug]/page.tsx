@@ -4,6 +4,7 @@ import BackButton from '@/components/announcement_component/back_button';
 import AnnounceHeadline from '@/components/announcement_component/announce_headline';
 import ImgHeadline from '@/components/announcement_component/img_headline';
 import Detail from '@/components/announcement_component/detail';
+import ImgTemplate from '@/components/announcement_component/img_template';
 import {
   Divider
 } from "@nextui-org/react";
@@ -41,6 +42,11 @@ const page = ({ params }: { params: { slug: string } }) => {
         <div className='bg-[#FFF]'>
           <div className="py-3 md:py-4 lg:py-3 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-8 lg:px-8">
               <Detail/>
+          </div>
+        </div>
+        <div className='bg-[#FFF]'>
+          <div className="py-3 md:py-4 lg:py-3 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-8 lg:px-8">
+              <ImgTemplate/>
           </div>
         </div>
       </div>
