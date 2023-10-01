@@ -14,8 +14,8 @@ export interface Course {
     lab: number,
     independent_study: number,
   },
-  prerequisite: Array<string | Array<string>> | Array<null>,
-  description_en: String,
-  description_th: String,
+  prerequisite: Array<string | Array<string>>,
+  description_en: string,
+  description_th: string,
   is_show?: Boolean,
 }

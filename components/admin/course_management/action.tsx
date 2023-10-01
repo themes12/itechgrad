@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import { Toast } from "primereact/toast";
 import axios from "axios";
 import { useRouter } from "next-intl/client";
+import Link from 'next-intl/link';
 
 type Props = {}
 
@@ -69,8 +70,8 @@ const Action = (rowData: Course) => {
             <Toast ref={toast} />
             <Toast ref={toastConfirm} position="top-right" />
             <div className="space-x-2">
-                <Button color="default">
-                    ดู
+                <Button color="warning" as={Link} href={`/admin/master-degree/course-management/${rowData._id}/edit`}>
+                    แก้ไข
                 </Button>
                 <Button color="danger" onClick={confirm}>
                     ลบ
