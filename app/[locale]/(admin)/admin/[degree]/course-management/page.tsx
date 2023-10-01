@@ -1,15 +1,12 @@
 import Section from "@/components/section";
-// import { useSession } from "next-auth/react";
 import { Column } from "primereact/column";
 import { DataTable } from "primereact/datatable";
 import axios from "axios";
-import degreeJson from "@/utils/degree.json";
 import { Course, Degree } from "@/types/course";
 import HeaderEditor from "@/components/admin/course_management/header";
 import TableCheckbox from "@/components/admin/course_management/table_checkbox";
 import Action from "@/components/admin/course_management/action";
 import { AcademicSetting } from "@/types/setting";
-import { Button } from "@nextui-org/react";
 
 type Props = {};
 
@@ -27,8 +24,6 @@ const CourseManagement = async ({ params }: { params: { degree: string } }) => {
             `${process.env.NEXT_PUBLIC_API_URL}/setting/academic-year`
         )
     ).data.academic_year
-    console.log(setting)
-    // console.log(session?.user);
 
     return (
         <Section className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl mx-auto px-9 lg:px-9">

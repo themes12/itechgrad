@@ -148,7 +148,7 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row mt-8 lg:mt-16 justify-evenly lg:mx-20 gap-x-10 gap-y-2">
                     <div className="w-full lg:w-5/12">
                         <h5 className="font-normal text-[#515151] text-[11px] md:text-[14px] lg:text-[18px]">
-                            Department of Computer Science <br /> 
+                            Department of Computer Science <br />
                             Faculty of Science, Chiang Mai University
                         </h5>
                         <Button
@@ -161,13 +161,14 @@ export default function Home() {
                         </Button>
                     </div>
                     <div className="w-full lg:w-7/12 h-96 rounded-xl aspect-square	">
-                        <Spline scene="https://prod.spline.design/FPmjVxMXmGo3Jvvo/scene.splinecode" />
+                        {/* <Spline scene="https://prod.spline.design/FPmjVxMXmGo3Jvvo/scene.splinecode" /> */}
+                        <Spline scene="https://prod.spline.design/NyiP7j2kw5Y1VgZn/scene.splinecode" />
                     </div>
                 </div>
             </Section>
             <Section className="bg-gradient-to-r from-[#d1e0d8]/70 to-[#76b9cd]/70 py-12">
                 <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9">
-                    <SectionText name="Announcement"/>
+                    <SectionText name="Announcement" />
                     <div className="mt-8">
                         <Carousal>
                             {posts.map((item, index) => (
