@@ -137,27 +137,27 @@ export default function Home() {
     return (
         <main className="space-y-8">
             <Section className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
-                <div className="space-y-4">
-                    <h2 className="font-bold text-4xl xxs:text-5xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl text-[#002F43]">
+                <div className="space-y-4 mt-6 md:mt-10 lg:mt-16">
+                    <h2 className="font-bold text-xl md:text-5xl lg:text-[74px] xl:text-[74px] text-[#262626] text-center">
                         {t("header1")}
                     </h2>
-                    <h2 className="font-extrabold text-5xl xxs:text-6xl xs:text-6xl sm:text-7xl md:text-6xl lg:text-7xl xl:text-8xl text-[#FFB724]">
+                    <h2 className="font-bold text-2xl md:text-6xl lg:text-[92px] xl:text-[92px] text-[#5EAAF0] text-center">
                         {t("header2")}
                     </h2>
                 </div>
                 <div className="flex flex-col md:flex-row mt-8 lg:mt-16 justify-evenly lg:mx-20 gap-x-10 gap-y-2">
                     <div className="w-full lg:w-5/12">
-                        <h5 className="font-normal text-[#515151] text-lg">
-                            Department of Computer Science <br /> Faculty of
-                            Science, Chiang Mai University
+                        <h5 className="font-normal text-[#515151] text-[11px] md:text-[14px] lg:text-[18px]">
+                            Department of Computer Science <br /> 
+                            Faculty of Science, Chiang Mai University
                         </h5>
                         <Button
-                            className="my-2 lg:mt-10 px-7 text-xl font-medium text-white bg-[#262626] hover:bg-[#515151]"
-                            radius="md"
+                            className="transition ease-in-out delay-150 hover:-translate-y-1 duration-300 
+                            my-2 lg:mt-10 px-7 text-xl font-regular text-white bg-[#5EAAF0] hover:bg-[#3E99ED] rounded-3xl"
                             size="lg"
                             endContent={<ArrowRightIcon className="h-5 w-5" />}
                         >
-                            View program
+                            about program
                         </Button>
                     </div>
                     <div className="w-full lg:w-7/12 h-96 rounded-xl aspect-square	">
@@ -165,9 +165,9 @@ export default function Home() {
                     </div>
                 </div>
             </Section>
-            <Section className="bg-gradient-to-r from-[#d1e0d8] to-[#76b9cd] py-12">
+            <Section className="bg-gradient-to-r from-[#d1e0d8]/70 to-[#76b9cd]/70 py-12">
                 <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9">
-                    <SectionText name="Announcement" />
+                    <SectionText name="Announcement"/>
                     <div className="mt-8">
                         <Carousal>
                             {posts.map((item, index) => (

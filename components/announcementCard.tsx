@@ -17,7 +17,7 @@ const AnnouncementCard = ({ title, body, href, image }: CardProps) => {
     return (
         <Card
             isBlurred
-            className="border-none bg-background/60 dark:bg-default-100/50 w-auto h-1/4 p-2"
+            className="border-none bg-background dark:bg-default-100/50 w-auto h-1/4 p-2"
             shadow="sm"
         >
             <CardBody>
@@ -33,16 +33,16 @@ const AnnouncementCard = ({ title, body, href, image }: CardProps) => {
                     <div className="flex flex-col col-span-6">
                         <div className="flex justify-between items-start">
                             <div className="flex flex-col gap-0">
-                                <h6 className="uppercase font-semibold text-transparent text-base bg-clip-text bg-gradient-to-r from-[#FF4545] to-[#E0772A]">
+                                <h6 className="uppercase font-semibold text-transparent text-base bg-clip-text bg-[#0E80E9]">
                                     Announment
                                 </h6>
-                                <h3 className="font-bold text-2xl xs:text-5xl line-clamp-3">
+                                <h3 className="font-bold text-2xl xs:text-5xl line-clamp-3 text-[#262626]">
                                     {title}
                                 </h3>
-                                <p className="text-[#1A202E] text-base line-clamp-5 mt-5">
+                                <p className="text-[#515151] text-base line-clamp-5 mt-5">
                                     {body}
                                 </p>
-                                <p className="text-[#97989F] text-sm mt-5">
+                                <p className="text-[#6E6E6E] text-sm mt-5">
                                     15/09/2566
                                 </p>
                             </div>
