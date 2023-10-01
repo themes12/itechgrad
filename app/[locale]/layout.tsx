@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 
 const inter = Noto_Sans_Thai({ subsets: ["thai"] });
+// const inter = Kanit({ subsets: ["thai"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
 export function generateStaticParams() {
     return [{ locale: "en" }, { locale: "th" }];

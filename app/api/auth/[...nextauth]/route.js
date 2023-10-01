@@ -8,16 +8,25 @@ const handler = NextAuth({
   providers: [
     CredentialsProvider({
       name: "credentials",
-      credentials: {},
+      credentials: {
+        username: {
+          label: "Username",
+          type: "text",
+          placeholder: "Enter your username.",
+        },
+        password: {
+          label: "Password",
+          type: "password",
+          placeholder: "Enter your password.",
+        },
+      },
 
       async authorize(credentials) {
         const { username, password } = credentials;
-        console.log(username, password);
 
         try {
           await connectMongoDB();
           const user = await User.findOne({ username: username });
-          console.log(user);
           if (!user) {
             return null;
           }
@@ -39,9 +48,6 @@ const handler = NextAuth({
     strategy: "jwt",
   },
   secret: process.env.NEXTAUTH_SECRET,
-  pages: {
-    signIn: "/login",
-  },
 });
 
 export { handler as GET, handler as POST };
