@@ -1,24 +1,50 @@
 "use client";
-import React, { useState } from "react";
+import { useRef, useState } from "react";
 import { Button, Select, SelectItem } from "@nextui-org/react";
 import { Calendar } from "primereact/calendar";
 import { AcademicSetting } from "@/types/setting";
 import { PlusIcon } from "@heroicons/react/24/outline";
 import Link from 'next-intl/link';
+import axios from "axios";
+import { Toast } from "primereact/toast";
+import { useUpdateEffect } from "@reactuses/core";
 
 const DateEditor = ({ semester, year }: AcademicSetting) => {
+    const toast = useRef<Toast>(null);
     const [date, setDate] = useState<null | Date>(new Date(year));
     const [selectedSemester, setSelectedSemester] = useState(
         new Set([String(semester)])
     );
 
-    const handleSelectionChange = (e) => {
+    const handleSelectionChange = (e: React.ChangeEventHandler<HTMLSelectElement>) => {
         setSelectedSemester(new Set([e.target.value]));
     };
+
+    const handleChangeSetting = async () => {
+        const semester = Array.from(selectedSemester).join('');
+        try {
+            await axios.post(
+                `${process.env.NEXT_PUBLIC_API_URL}/setting/acdemic-year`,
+                {
+                    year: date,
+                    semester: semester
+                }
+            )
+            toast.current?.show({ severity: 'success', summary: 'อัพเดทข้อมูลแล้ว', life: 3000 })
+        } catch (error) {
+            toast.current?.show({ severity: 'error', summary: 'อัพเดทข้อมูลไม่สำเร็จ', life: 3000 })
+        }
+    }
+
+    useUpdateEffect(() => {
+        handleChangeSetting()
+        console.log("changed")
+    }, [date, selectedSemester])
 
     return (
         <>
             <div className="flex flex-row w-full gap-3">
+                <Toast ref={toast} />
                 <Select
                     labelPlacement="outside"
                     label="ภาคการศึกษา"

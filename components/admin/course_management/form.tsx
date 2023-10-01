@@ -60,7 +60,6 @@ const Form = ({ course, params }: Props) => {
                         `${process.env.NEXT_PUBLIC_API_URL}/course/${degree}/${course_id}`,
                         data
                     )
-                    console.log(res.data)
                     toast.current?.show({ severity: 'success', summary: 'เพิ่มข้อมูลรายวิชาสำเร็จ', life: 3000 })
                 } catch (error) {
                     toast.current?.show({ severity: 'error', summary: 'เพิ่มข้อมูลรายวิชาไม่สำเร็จ', life: 3000 })
@@ -71,7 +70,6 @@ const Form = ({ course, params }: Props) => {
                         `${process.env.NEXT_PUBLIC_API_URL}/course/${degree}`,
                         data
                     )
-                    console.log(res.data)
                     formik.resetForm();
                     toast.current?.show({ severity: 'success', summary: 'เพิ่มข้อมูลรายวิชาสำเร็จ', life: 3000 })
                 } catch (error) {
