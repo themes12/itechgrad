@@ -158,7 +158,7 @@ const page = (props: Props) => {
                     >
                         <img
                             className=" object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-72 lg:h-72  xl:h-96"
-                            src="_DSC4369.jpg"
+                            src="/_DSC4369.jpg"
                             alt=""
                         />
                     </div>
@@ -194,7 +194,7 @@ const page = (props: Props) => {
                     >
                         <img
                             className=" object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-60 lg:h-72  xl:h-96"
-                            src="_DSC4369.jpg"
+                            src="/_DSC4369.jpg"
                             alt=""
                         />
                     </div>

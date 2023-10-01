@@ -59,21 +59,9 @@ export const navItems: navbar[] = [
         ],
     },
     {
-        title: "about",
-        type: "dropdown",
-        options: [
-            {
-                title: "history",
-                href: "/about/history",
-            },
-            {
-                title: "vision",
-                href: "/about/vision",
-            },
-            {
-                title: "head of department",
-                href: "/about/head-of-department",
-            },
-        ],
+        title: "about us",
+        type: "button",
+        href: "/about"
+
     },
 ];
