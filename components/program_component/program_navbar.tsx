@@ -2,11 +2,6 @@
 import React from 'react';
 import { Navbar, NavbarBrand, NavbarContent, Input } from '@nextui-org/react';
 import {
-    Modal,
-    ModalContent,
-    ModalHeader,
-    ModalBody,
-    ModalFooter,
     Button,
     useDisclosure,
   } from "@nextui-org/react";
@@ -16,9 +11,9 @@ function program_navbar() {
   return (
     <Navbar isBordered>
       <NavbarContent>
-        <NavbarBrand className="flex justify-start pt-6"> {/* Use "flex justify-start" to align buttons to the left */}
-          <Button className="bottom_program text-[18px] font-sans" variant="solid">Master's Degree Program 2566</Button>
-          <Button className="bottom_program text-[18px] font-sans" variant="light">Master's Degree Program 2561</Button>
+        <NavbarBrand className="flex justify-start pt-6">
+          <Button className="bottom_program text-base font-medium rounded-md" variant="light">Master's Degree Program 2566</Button>
+          <Button className="bottom_program text-base font-medium rounded-md" variant="light">Master's Degree Program 2561</Button>
         </NavbarBrand>
       </NavbarContent>
     </Navbar>

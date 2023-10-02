@@ -1,27 +1,36 @@
 "use client";
-import React from "react";
-import { Navbar, NavbarBrand, NavbarContent, Input } from "@nextui-org/react";
-import "@/components/program_component/program_button_style.css";
+import React, { useState } from "react";
 import {
-    Modal,
-    ModalContent,
-    ModalHeader,
-    ModalBody,
-    ModalFooter,
     Button,
-    useDisclosure,
 } from "@nextui-org/react";
 
 function ProgramButton() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure(); 
+  const [hoveredButton , setHoveredBox] = useState<number | null>(null);
+
+  const handleMouseEnter = (boxNumber: number) => {
+      setHoveredBox(boxNumber);
+  };
+
+  const handleMouseLeave = () => {
+      setHoveredBox(null);
+  };
+  const isButtonHovered = (boxNumber: number) => {
+    return hoveredButton === boxNumber;
+};
+
 
   return (
     <div>
       <h2 className="text-[36px] pb-12 font-bold px-12 pt-10">Master's Degree Program 2566</h2>
       <div className="mb-4 w-full flex flex-col items-center">
-      <Button className="flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 hover:text-blue-600" style={{ width: '90%' }}>
+      <Button 
+        className={`flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 ${isButtonHovered(1) ? 'text-white' : 'text-blue-950'}`}
+        style={{ width: '90%' }}
+        onMouseEnter={() => handleMouseEnter(1)}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="flex-grow">
-          <p className="text-left text-[18px] font-bold px-5 text-blue-950 hover:text-blue-600">
+          <p className={`text-left text-[18px] font-bold px-5 ${isButtonHovered(1) ? 'text-white' : 'text-blue-950'}`}>
             Type 1 (Plan A Type A1)
           </p>
         </div>
@@ -31,9 +40,14 @@ function ProgramButton() {
       </Button>
       </div>&nbsp;
       <div className="mb-4 w-full flex flex-col items-center">
-      <Button className="flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 hover:text-blue-600" style={{ width: '90%' }}>
+      <Button 
+        className={`flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 ${isButtonHovered(2) ? 'text-white' : 'text-blue-950'}`}
+        style={{ width: '90%' }}
+        onMouseEnter={() => handleMouseEnter(2)}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="flex-grow">
-          <p className="text-left text-[18px] font-bold px-5 text-blue-950 hover:text-blue-600">
+          <p className={`text-left text-[18px] font-bold px-5 ${isButtonHovered(2) ? 'text-white' : 'text-blue-950'}`}>
             Type 2 (Plan A Type A2)
           </p>
         </div>
@@ -43,9 +57,14 @@ function ProgramButton() {
       </Button>
       </div>&nbsp;
       <div className="mb-4 w-full flex flex-col items-center">
-      <Button className="flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 hover:text-blue-600" style={{ width: '90%' }}>
+      <Button 
+        className={`flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 ${isButtonHovered(3) ? 'text-white' : 'text-blue-950'}`}
+        style={{ width: '90%' }}
+        onMouseEnter={() => handleMouseEnter(3)}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="flex-grow">
-          <p className="text-left text-[18px] font-bold px-5 text-blue-950 hover:text-blue-600">
+          <p className={`text-left text-[18px] font-bold px-5 ${isButtonHovered(3) ? 'text-white' : 'text-blue-950'}`}>
             Type 3 (Plan B)
           </p>
         </div>
