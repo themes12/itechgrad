@@ -21,7 +21,7 @@ export const MyModal = ({ course }: { course: Course }) => {
   const size = '4xl'
   return (
     <>
-      <a className="bg-[#005870] rounded-lg px-3 py-2 font-medium text-base text-white" onClick={onOpen}>ดูรายละเอียด</a>
+      <a className="px-3 py-2 font-normal text-base text-gray" onClick={onOpen}>รายละเอียด</a>
       <Modal size={size} isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false}>
         <ModalContent>
           {(onClose) => (

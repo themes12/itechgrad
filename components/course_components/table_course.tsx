@@ -33,6 +33,7 @@ export const Table_courses = ({ courses }: { courses: Course[] }) => {
   return (
     <div>
       <div className="table-container">
+        <div className="inline-flex bg-[#3E99ED] text-xl font-normal pt-2 pb-2 py-10 px-20 mb-5 text-[#FFF] rounded-full">Recent course 2/2023</div>
         <table>
           <thead>
             <tr className="table-header">
@@ -51,7 +52,7 @@ export const Table_courses = ({ courses }: { courses: Course[] }) => {
           courses.map((course) => <div key={course._id} className="table-row">
             <div className="grid grid-cols-6">
               <div className="lg:col-start-3 col-end-4 sm:col-start-2 col-end-3">
-                <span className="bg-[#005870] rounded-lg px-3 py-2 font-medium text-base text-white">{course._id}</span>
+                <span className="bg-[#262626] rounded-full px-3 py-2 font-medium text-base text-white">{course._id}</span>
               </div>
             </div>
             <span className="table-cell-2">

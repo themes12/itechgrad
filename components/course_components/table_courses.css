@@ -3,7 +3,7 @@
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
-  background: var(--foundation-dark-blue-dark-blue-100, #B3D5F4);
+  background: var(--foundation-dark-blue-dark-blue-100, #DAF0FC);
 }
 
 .table-header1{
