@@ -1,5 +1,5 @@
-export type AcademicSetting = {
-  _id: string,
-  semester: number,
-  year: Date,
+export type SettingCourse = {
+    _id: "academic-year",
+    semester: number,
+    year: Date
 }

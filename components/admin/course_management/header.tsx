@@ -2,14 +2,14 @@
 import { useRef, useState } from "react";
 import { Button, Select, SelectItem } from "@nextui-org/react";
 import { Calendar } from "primereact/calendar";
-import { AcademicSetting } from "@/types/setting";
+import { SettingCourse } from "@/types/setting";
 import { PlusIcon } from "@heroicons/react/24/outline";
 import Link from 'next-intl/link';
 import axios from "axios";
 import { Toast } from "primereact/toast";
 import { useUpdateEffect } from "@reactuses/core";
 
-const DateEditor = ({ semester, year }: AcademicSetting) => {
+const DateEditor = ({ semester, year }: SettingCourse) => {
     const toast = useRef<Toast>(null);
     const [date, setDate] = useState<null | Date>(new Date(year));
     const [selectedSemester, setSelectedSemester] = useState(

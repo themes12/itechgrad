@@ -13,7 +13,7 @@ const Courses = async ({ params }: Props) => {
     const degreeText = degreeJson[degree as keyof Degree];
     const courses = (
         await axios.get<{ courses: Course[] }>(
-            `${process.env.NEXT_PUBLIC_API_URL}/courses/${degree}`
+            `${process.env.NEXT_PUBLIC_API_URL}/courses/${degree}/all`
         )
     ).data.courses;
 

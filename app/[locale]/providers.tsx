@@ -18,6 +18,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
               'hover:bg-default-200' //Hover
             )
           }
+        },
+      },
+      tabmenu: {
+        menu: {
+          className: classNames('flex m-0 p-0 list-none flex-nowrap', 'bg-white', 'outline-none no-underline text-base list-none')
         }
       }
     },

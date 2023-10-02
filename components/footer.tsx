@@ -5,7 +5,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
     return (
-        <footer className="bg-[#262626] text-[#E9E9E9] mt-8">
+        <footer className="bg-[#262626] text-[#E9E9E9]">
             <div className="divide-solid divide-y-2 divide-[#BCBCBC] px-12 pt-10">
                 <div className="pb-10 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-4 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto">
                     <h5 className="font-semibold text-2xl">
@@ -17,7 +17,7 @@ const Footer = (props: Props) => {
                         </h6>
                         <p>ภาควิชาวิทยาการคอมพิวเตอร์คณะวิทยาศาสตร์</p>
                         <p>
-                            มหาวิทยาลัยเชียงใหม่239 ถ.ห้วยแก้ว ต.สุเทพ 
+                            มหาวิทยาลัยเชียงใหม่239 ถ.ห้วยแก้ว ต.สุเทพ
                             อ.เมือง จ.เชียงใหม่ 50200
                         </p>
                     </div>

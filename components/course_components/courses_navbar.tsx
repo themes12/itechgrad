@@ -2,27 +2,25 @@
 import React, { useState } from 'react';
 import { Button, Input } from '@nextui-org/react';
 import "@/components/course_components/course_navbar.css";
+import { SettingCourse } from '@/types/setting';
+import { useLocale } from 'next-intl';
+import { TabMenu } from 'primereact/tabmenu';
+import Link from 'next-intl/link';
 
-function CourseNavbar() {
-  const [isActiveRecent, setIsActiveRecent] = useState(false);
-  const [isActiveAll, setIsActiveAll] = useState(false);
+function CourseNavbar({ setting }: { setting: SettingCourse }) {
+  const locale = useLocale()
 
-  const handleButtonClickRecent = () => {
-    setIsActiveRecent(!isActiveRecent);
-    setIsActiveAll(false); // Ensure the other button is not active
-  };
-
-  const handleButtonClickAll = () => {
-    setIsActiveAll(!isActiveAll);
-    setIsActiveRecent(false); // Ensure the other button is not active
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
+  const items = [
+    { label: `Recent courses ${setting.semester}/${locale === "th" ? new Date(setting.year).getFullYear() + 543 : new Date(setting.year).getFullYear()}`, template: (options: any) => <Button as={Link} href="/courses/master-degree" variant="light" radius="sm" className="text-base font-medium" onClick={(e) => setActiveIndex(0)}>{options.label}</Button> },
+    { label: 'All courses', template: (options: any) => <Button as={Link} href="/courses/master-degree/all" variant="light" radius="sm" className="text-base font-medium" onClick={(e) => setActiveIndex(1)}>{options?.label}</Button> },
+  ];
 
   return (
     <>
       <div>
         <div className="navbar_course">
-          <Button className={`buttom_course_recent ${isActiveRecent ? 'active' : ''}`} variant="light" radius="sm" onClick={handleButtonClickRecent}> Recent courses 1/2023</Button>
-          <Button className={`buttom_course_all ${isActiveAll ? 'active' : ''}`} variant="light" radius="sm" onClick={handleButtonClickAll}> All courses</Button>
+          <TabMenu model={items} activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)} />
           <div className="search_bar">
             <Input
               className="search-input"
