@@ -72,8 +72,8 @@ export default function Home() {
                     </div>
                     <div className="w-full lg:w-7/12 h-96 rounded-xl aspect-square">
                         <iframe
+                            className="border-none"
                             src="https://my.spline.design/untitled-61e15f9284714cf931f280e292ae5589/"
-                            frameborder="0"
                             width="100%"
                             height="100%"
                         ></iframe>
