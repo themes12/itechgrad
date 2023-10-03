@@ -30,20 +30,9 @@ export const CardStaff = ({
             <div className="relative container mx-auto py-8 px-8">
                 <div className="relative flex flex-row xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row md:pl-10 lg:pl-20 xl:pl-40 ">
                     {type === "academic" ? (
-                        staff.picture.includes("data:image") ? (
-                            <img src={staff.picture} alt="" />
-                        ) : (
-                            <ImageNext
-                                alt={`picture of ${staff.picture}`}
-                                className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                src={`https://cs-33ck.vercel.app/personal/lecturers${staff.picture}`}
-                            />
-                        )
+                        <img src={staff.picture} className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]" alt={`picture of ${staff.picture}`} />
                     ) : staff.picture.includes("data:image") ? (
-                        <img src={staff.picture} alt="" />
+                        <img src={staff.picture} className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]" alt={`picture of ${staff.picture}`} />
                     ) : (
                         <ImageNext
                             alt={`picture of ${staff.picture}`}
