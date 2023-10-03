@@ -33,67 +33,67 @@ const Research = (props: Props) => {
             <section>
                 <div className="relative flex overflow-x-hidden md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-screen-2xl mx-auto shadow-[0px_4px_30px_0px_rgba(0,87.97,111.95,0.1)] border-1 border-white rounded-lg -mb-9 xl:-mb-10 z-10 ">
                     <div className="flex flex-row justify-center font-medium text-l xxs:text-l xs:text-l sm:text-l md:text-xl lg:text-xl xl:text-xl text-[#000000] bg-white animate-marquee whitespace-nowrap ">
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Blockchain
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Medical informatics
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Health informatics
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Next generation computer network
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Augmented / Virtual reality
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Bioinformatics
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Computational Astronomy
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Machine learning
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Computer Vision
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Human Computer Interaction
                         </span>
                     </div>
 
                     <div className="flex flex-row absolute justify-center font-medium text-l xxs:text-l xs:text-l sm:text-l md:text-l lg:text-l xl:text-xl text-[#000000] -ml-1 bg-white animate-marquee2 whitespace-nowrap ">
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Blockchain
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Medical informatics
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Health informatics
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Next generation computer network
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Augmented / Virtual reality
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Bioinformatics
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Computational Astronomy
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Machine learning
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Computer Vision
                         </span>
-                        <span className="text-[#5EAAF0] mx-8 my-8">
+                        <span className="text-[#262626] mx-8 my-8">
                             Human Computer Interaction
                         </span>
                     </div>
