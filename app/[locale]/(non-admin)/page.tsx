@@ -51,7 +51,7 @@ export default function Home() {
                     <h2 className="font-bold text-xl md:text-5xl lg:text-[74px] xl:text-[74px] text-[#262626] text-center">
                         {t("header1")}
                     </h2>
-                    <h2 className="font-bold text-2xl md:text-6xl lg:text-[92px] xl:text-[92px] text-[#5EAAF0] text-center">
+                    <h2 className="font-bold text-2xl md:text-6xl lg:text-[92px] xl:text-[92px] text-[#FFC550] text-center">
                         {t("header2")}
                     </h2>
                 </div>
@@ -63,7 +63,7 @@ export default function Home() {
                         </h5>
                         <Button
                             className="transition ease-in-out delay-150 hover:-translate-y-1 duration-300 
-                            my-2 lg:mt-10 px-7 text-xl font-regular text-white bg-[#5EAAF0] hover:bg-[#3E99ED] rounded-3xl"
+                            my-2 lg:mt-10 px-7 text-xl font-regular text-white bg-[#515151] hover:bg-[#262626] rounded-3xl"
                             size="lg"
                             endContent={<ArrowRightIcon className="h-5 w-5" />}
                         >

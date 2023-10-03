@@ -5,7 +5,7 @@ type Props = {};
 const page = (props: Props) => {
     return (
         <>
-            <section className=" relative  xl:pt-4 mb-20 md:pt-8 lg:pt-10 md:pb-8 lg:pb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9 flex xxxs:flex-col lg:flex-row ">
+            <section className=" relative lg:my-10 my-6 xl:pt-4 mb-20 md:pt-8 lg:pt-10 md:pb-8 lg:pb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9 flex xxxs:flex-col lg:flex-row ">
                 <div className="z-0 xxxs:block lg:hidden mt-4 mb-4 md:ml-8 md:mr-8">
                     <img
                         className="mx-auto object-fill rounded-md "
@@ -14,7 +14,7 @@ const page = (props: Props) => {
                     />
                 </div>
 
-                <div className="bg-white z-10 xxxs:mt-4 lg:mt-0 xl:mt-48 lg:mr-[2rem] xl:mr-[12.7rem] xl:pt-2">
+                <div className="rounded-md bg-white z-10 xxxs:mt-4 lg:mt-0 xl:mt-48 lg:mr-[2rem] xl:mr-[12.7rem] xl:pt-2">
                     <h2 className="flex justify-start font-bold text-[1.9rem] xxs:text-[1.9rem] xs:text-[2rem] sm:text-[2rem] md:text-[2rem] lg:text-[2rem] xl:text-[2rem] text-[#0E80E9] md:ml-8 ">
                         Master&apos;s degree program
                     </h2>
@@ -74,7 +74,7 @@ const page = (props: Props) => {
                     />
                 </div>
 
-                <div className="bg-white z-10 xxxs:mt-2 lg:mt-0 xl:mt-[17.5rem] lg:-ml-[10rem] xl:-ml-[5.6rem] xl:pt-6">
+                <div className="rounded-md bg-white z-10 xxxs:mt-2 lg:mt-0 xl:mt-[17.5rem] lg:-ml-[10rem] xl:-ml-[5.6rem] xl:pt-6">
                     <h2 className="flex justify-start font-bold text-[2rem] xxs:text-[2rem] xs:text-[2rem] sm:text-[2rem] md:text-[2rem] lg:text-[2rem] xl:text-[2rem] text-[#0E80E9] md:ml-8 ">
                         PhD&apos;s degree program
                     </h2>
