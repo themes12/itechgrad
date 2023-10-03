@@ -11,7 +11,7 @@ driver.get("http://localhost:3000")
 #------Page Research------
 button_researh = driver.find_element(By.XPATH, '/html/body/div/div/div/nav[2]/header/ul/li[4]/a/button')
 button_researh.click()
-#time.sleep(2)
+time.sleep(2)
 #================================================================================================
 #------Locate Page Research------
 try:

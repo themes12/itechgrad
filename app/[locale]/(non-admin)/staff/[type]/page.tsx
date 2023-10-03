@@ -9,8 +9,9 @@ import {
     StaffPageProps,
     StaffTypes,
 } from "@/types/staff";
+import { useTranslations } from "next-intl";
 
-const page = async ({ params }: { params: StaffPageProps }) => {
+const Page = async ({ params }: { params: StaffPageProps }) => {
     const { type } = params;
     const staffType = staffJson[type as keyof StaffTypes];
     const staffTypeAPI = type === "academic" ? "lecturers" : "staffs";
@@ -69,4 +70,4 @@ const page = async ({ params }: { params: StaffPageProps }) => {
     );
 };
 
-export default page;
+export default Page;

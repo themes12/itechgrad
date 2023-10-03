@@ -6,8 +6,9 @@ import {
     NavbarContent,
     NavbarItem,
     Button,
+    Link
 } from "@nextui-org/react";
-import { Link, usePathname } from "@/navigation";
+import { usePathname } from "@/navigation";
 
 type Props = { degree: string };
 
@@ -27,20 +28,14 @@ function AdminNavbar({ degree }: Props) {
                 <NavbarItem
                     isActive={checkIsActive(pathname, "course-management")}
                 >
-                    <Link href={{
-                        pathname: "/admin/[degree]/course-management",
-                        params: { degree: degree }
-                    }}>
+                    <Link href={`/admin/${degree}/course-management`}>
                         จัดการ Course
                     </Link>
                 </NavbarItem>
                 <NavbarItem
                     isActive={checkIsActive(pathname, "program-management")}
                 >
-                    <Link href={{
-                        pathname: "/admin/[degree]/program-management",
-                        params: { degree: degree }
-                    }}>
+                    <Link href={`/admin/${degree}/program-management`}>
                         จัดการแผนการเรียน
                     </Link>
                 </NavbarItem>

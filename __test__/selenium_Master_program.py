@@ -13,6 +13,7 @@ button_program = driver.find_element(By.XPATH, '/html/body/div/div/div/nav[2]/he
 button_program.click()
 button_master = driver.find_element(By.XPATH, '/html/body/div[2]/div/div[1]/ul/li[1]')
 button_master.click()
+time.sleep(2)
 #================================================================================================
 #------Locate Page Programe Master's Degree------
 try:

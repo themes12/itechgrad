@@ -44,7 +44,7 @@ export const CardStaff = ({
                             />
                         )
                     ) : staff.picture.includes("data:image") ? (
-                        <img src={staff.picture} alt="" />
+                        <img src={staff.picture} className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]" alt={`picture of ${staff.picture}`} />
                     ) : (
                         <ImageNext
                             alt={`picture of ${staff.picture}`}

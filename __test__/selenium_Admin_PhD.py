@@ -54,7 +54,7 @@ except:
 try:
     button_PhD = driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div[2]/a')
     button_PhD.click()
-    #time.sleep(3)
+    #time.sleep(4)
     url_PhD = driver.current_url
     #assert url_PhD == "http://localhost:3000/admin/phd/course-management"
     print("Success choose PhD & locate course-management")
@@ -64,11 +64,11 @@ except:
 #-----------------------------add course PhD nomal-------------------------------------
 #================================================================================================    
 try:
-    time.sleep(3)
+    time.sleep(4)
     button_PhD_add = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div/div/div/section/div[1]/a')))
     driver.execute_script("arguments[0].scrollIntoView();", button_PhD_add)
     button_PhD_add.click()
-    time.sleep(3)
+    time.sleep(4)
     input_PhD = driver.find_elements(By.CSS_SELECTOR, "input")
     input_data = ["204999", "TEST COURSE NORMAL", "ทดสอบ", "3", "1", "1", "1"]
 
@@ -98,23 +98,23 @@ try:
     
     button_PhD_add_course = driver.find_element(By.XPATH, '/html/body/div/div/div/div/section/div/form/div[5]/button')
     button_PhD_add_course.click()
-
+    time.sleep(4)
     button_back_to_PhD = driver.find_element(By.XPATH, '/html/body/div/div/div/nav/header/ul[1]/li[1]/a')
     button_back_to_PhD.click()
-
-    button_check_display = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[1]/label')
-    time.sleep(3)
+    time.sleep(4)
+    button_check_display = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[3]/td[1]/label')))
+    driver.execute_script("arguments[0].scrollIntoView();", button_check_display)
     button_check_display.click() 
 
     driver.get("http://localhost:3000/courses/phd") #############
 
-    time.sleep(3)
-    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[6]/div/div/span') 
+    time.sleep(4)
+    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[4]/div/div/span') 
 
      
     assert test_on_course.text == "204999"
     print("Success add course PhD nomal")
-    driver.get("http://localhost:3000/admin/master-degree/course-management")
+    driver.get("http://localhost:3000/en/admin/phd/course-management")
 except:
     assert False,"Failure to add course PhD nomal" 
 #================================================================================================================================
@@ -124,7 +124,7 @@ try:
     button_PhD_add = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div/div/div/section/div[1]/a')))
     driver.execute_script("arguments[0].scrollIntoView();", button_PhD_add)
     button_PhD_add.click()
-    time.sleep(3)
+    time.sleep(4)
     input_PhD = driver.find_elements(By.CSS_SELECTOR, "input")
     input_data = ["204998", "TEST COURSE PREREQ ONE", "ทดสอบ PREREQ ONE", "3", "1", "1", "1"]
 
@@ -175,18 +175,20 @@ try:
     button_PhD_add_course.click()
 
     button_back_to_PhD_ = driver.find_element(By.XPATH, '/html/body/div/div/div/nav/header/ul[1]/li[1]/a')
+    time.sleep(4)
     button_back_to_PhD_.click()
-    time.sleep(3)
-    button_check_display = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[6]/td[1]/label')
+    time.sleep(4)
+    button_check_display = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[4]/td[1]/label')))
+    driver.execute_script("arguments[0].scrollIntoView();", button_check_display)
     button_check_display.click() 
     
-    driver.get("http://localhost:3000/courses/PhD-degree")
+    driver.get("http://localhost:3000/en/courses/phd")
 
-    time.sleep(3)
-    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[7]/div/div/span') 
+    time.sleep(4)
+    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[5]/div/div/span') 
     assert test_on_course.text == "204998"
     print("Success add course PhD prereq one")
-    driver.get("http://localhost:3000/admin/PhD-degree/course-management")
+    driver.get("http://localhost:3000/en/admin/phd/course-management")
 except:
     assert False,"Failure to add course PhD prereq one"  
 
@@ -194,10 +196,10 @@ except:
 #-------------------------------------check Edit and Delete---------------------------------------
 #=================================================================================================
 try:    
-    time.sleep(3)
-    button_edit = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[4]/div[3]/a')
+    time.sleep(4)
+    button_edit = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[3]/td[4]/div[3]/a')
     button_edit.click()
-    time.sleep(3)
+    time.sleep(4)
     input_PhD = driver.find_elements(By.CSS_SELECTOR, "input")
     input_data = ["", "TEST COURSE NORMAL change", "ทดสอบ change", "5", "3", "3", "3","TESTtttttttttttttttttttttttttt", "ทดสอบบบบบบบบบบบบบบบบบบบบบ"]
 
@@ -216,28 +218,28 @@ try:
 
     
 
-    time.sleep(3)
+
     button_PhD_add_course = driver.find_element(By.XPATH, '/html/body/div/div/div/div/section/div/form/div[5]/button')
     button_PhD_add_course.click()
-
+    time.sleep(4)
     button_back_to_PhD_ = driver.find_element(By.XPATH, '/html/body/div/div/div/nav/header/ul[1]/li[1]/a')
     button_back_to_PhD_.click()
 
     
-    driver.get("http://localhost:3000/courses/master-degree")
+    driver.get("http://localhost:3000/en/courses/phd")
 
-    time.sleep(3)
-    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[6]/span[1]/span[1]') 
+    time.sleep(4)
+    test_on_course = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,'/html/body/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[4]/span[1]/span[1]'))) 
 
      
     assert test_on_course.text == "TEST COURSE NORMALTEST COURSE NORMAL change"
-    driver.get("http://localhost:3000/admin/master-degree/course-management") 
-    time.sleep(3)
-    delete_button = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[4]/div[3]/button').click()
-    confirmButtonDelete = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[4]/div[2]/div/div/div/div[1]/div/div[2]/button[1]').click()
-    time.sleep(3)
-    delete_button1 = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[4]/div[3]/button').click()
-    confirmButtonDelete = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[4]/div[2]/div/div/div/div[1]/div/div[2]/button[1]').click()
+    driver.get("http://localhost:3000/en/admin/phd/course-management") 
+    time.sleep(4)
+    delete_button = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[3]/td[4]/div[3]/button').click()
+    confirmButtonDelete = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[3]/td[4]/div[2]/div/div/div/div[1]/div/div[2]/button[1]').click()
+    time.sleep(4)
+    delete_button1 = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[3]/td[4]/div[3]/button').click()
+    confirmButtonDelete = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[3]/td[4]/div[2]/div/div/div/div[1]/div/div[2]/button[1]').click()
  
     print("Success to Edit and Delete")
     
@@ -247,6 +249,6 @@ except:
 
 
 #end the code with
-time.sleep(3)
+time.sleep(4)
 print(datetime.now())
 driver.quit()
