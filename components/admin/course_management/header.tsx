@@ -9,11 +9,17 @@ import axios from "axios";
 import { Toast } from "primereact/toast";
 import { useUpdateEffect } from "@reactuses/core";
 
-const DateEditor = ({ semester, year }: SettingCourse) => {
+const DateEditor = ({
+    setting,
+    degree,
+}: {
+    setting: SettingCourse;
+    degree: string;
+}) => {
     const toast = useRef<Toast>(null);
-    const [date, setDate] = useState<null | Date>(new Date(year));
+    const [date, setDate] = useState<null | Date>(new Date(setting.year));
     const [selectedSemester, setSelectedSemester] = useState(
-        new Set([String(semester)])
+        new Set([String(setting.semester)])
     );
 
     const handleSelectionChange = (value: string) => {
@@ -82,7 +88,7 @@ const DateEditor = ({ semester, year }: SettingCourse) => {
             </div>
             <Button
                 as={Link}
-                href="/admin/master-degree/course-management/create"
+                href={`/admin/${degree}/course-management/create`}
                 color="success"
                 startContent={<PlusIcon className="h-6 w-6" />}
             >

@@ -5,7 +5,9 @@ import { Providers } from "./providers";
 import AuthProvider from "./AuthProvider";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
+import { getRequestConfig } from "next-intl/server";
 
+const locales = ["en", "th"];
 const inter = Noto_Sans_Thai({ subsets: ["thai"] });
 // const inter = Kanit({ subsets: ["thai"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
@@ -31,6 +33,9 @@ export default async function RootLayout({
     } catch (error) {
         notFound();
     }
+
+    const isValidLocale = locales.some((cur) => cur === locale);
+    if (!isValidLocale) notFound();
 
     return (
         <html lang={locale}>
