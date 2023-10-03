@@ -14,7 +14,7 @@ const page = ({ params }: Props) => {
     return (
         <div>
             <section className="bg-whaite py-12 pt-0 relative">
-                <section className="bg-gradient-to-r from-[#d1e0d8] to-[#76b9cd] py-12 max-w-screen-2xl max-h-300px  relative">
+                <section className="bg-gradient-to-r from-[#d1e0d8] to-[#76b9cd] py-12 max-w-full max-h-300px  relative">
                     <header className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9 relative">
                         <h1 className="text-[64px] font-bold">
                             {degreeText} Program

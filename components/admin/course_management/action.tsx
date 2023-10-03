@@ -5,11 +5,13 @@ import { useRef, useState } from "react";
 import { Toast } from "primereact/toast";
 import axios from "axios";
 import { Link, useRouter } from "@/navigation";
+import { useParams } from "next/navigation";
 
 type Props = {}
 
 const Action = (rowData: Course) => {
     const router = useRouter()
+    const { degree } = useParams()
     const toastConfirm = useRef<Toast>(null);
     const toast = useRef<Toast>(null);
 
@@ -69,7 +71,7 @@ const Action = (rowData: Course) => {
             <Toast ref={toast} />
             <Toast ref={toastConfirm} position="top-right" />
             <div className="space-x-2">
-                <Button color="warning" as={Link} href={`/admin/master-degree/course-management/${rowData._id}/edit`}>
+                <Button color="warning" as={Link} href={`/admin/${degree}/course-management/${rowData._id}/edit`}>
                     แก้ไข
                 </Button>
                 <Button color="danger" onClick={confirm}>

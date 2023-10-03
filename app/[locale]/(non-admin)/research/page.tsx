@@ -11,9 +11,9 @@ const Research = (props: Props) => {
             <section className="pt-4 mb-8 md:pt-8 lg:pt-10 md:pb-8 lg:pb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
                 <div className="space-y-4">
                     <h2 className="flex justify-start font-bold text-2xl xxs:text-5xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[64px] text-[#0E80E9] mx-8 mt-8">
-                        {t("header")}
+                        {t("header")}&nbsp;
                         <span className="flex text-[#262626] ">
-                            at&nbsp;the
+                        at&nbsp;the
                         </span>
                     </h2>
 
