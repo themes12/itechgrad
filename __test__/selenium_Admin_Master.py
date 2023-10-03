@@ -54,7 +54,7 @@ except:
 try:
     button_master = driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div[1]/a')
     button_master.click()
-    #time.sleep(3)
+    #time.sleep(4)
     url_master = driver.current_url
     #assert url_master == "http://localhost:3000/admin/master-degree/course-management"
     print("Success choose master dregree & locate course-management")
@@ -64,11 +64,11 @@ except:
 #-----------------------------add course master degree nomal-------------------------------------
 #================================================================================================    
 try:
-    time.sleep(3)
+    time.sleep(4)
     button_master_add = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div/div/div/section/div[1]/a')))
     driver.execute_script("arguments[0].scrollIntoView();", button_master_add)
     button_master_add.click()
-    time.sleep(3)
+    time.sleep(4)
     input_master = driver.find_elements(By.CSS_SELECTOR, "input")
     input_data = ["204999", "TEST COURSE NORMAL", "ทดสอบ", "3", "1", "1", "1"]
 
@@ -98,19 +98,19 @@ try:
     
     button_master_add_course = driver.find_element(By.XPATH, '/html/body/div/div/div/div/section/div/form/div[5]/button')
     button_master_add_course.click()
-    time.sleep(3)
+    time.sleep(4)
     button_back_to_master_degree = driver.find_element(By.XPATH, '/html/body/div/div/div/nav/header/ul[1]/li[1]/a')
     button_back_to_master_degree.click()
 
-    time.sleep(3)
+    time.sleep(4)
     button_check_display = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[1]/label')))
     driver.execute_script("arguments[0].scrollIntoView();", button_check_display)
     button_check_display.click() 
 
     driver.get("http://localhost:3000/courses/master-degree")
 
-    time.sleep(3)
-    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[6]/div/div/span') 
+    time.sleep(4)
+    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[6]/div/div/span') 
 
      
     assert test_on_course.text == "204999"
@@ -125,7 +125,7 @@ try:
     button_master_add = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div/div/div/section/div[1]/a')))
     driver.execute_script("arguments[0].scrollIntoView();", button_master_add)
     button_master_add.click()
-    time.sleep(3)
+    time.sleep(4)
     input_master = driver.find_elements(By.CSS_SELECTOR, "input")
     input_data = ["204998", "TEST COURSE PREREQ ONE", "ทดสอบ PREREQ ONE", "3", "1", "1", "1"]
 
@@ -174,11 +174,11 @@ try:
 
     button_master_add_course = driver.find_element(By.XPATH, '/html/body/div/div/div/div/section/div/form/div[5]/button')
     button_master_add_course.click()
-    time.sleep(3)
+    time.sleep(4)
     button_back_to_master_degree = driver.find_element(By.XPATH, '/html/body/div/div/div/nav/header/ul[1]/li[1]/a')
     button_back_to_master_degree.click()
 
-    time.sleep(3)
+    time.sleep(4)
     button_check_display = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[6]/td[1]/label')))
     driver.execute_script("arguments[0].scrollIntoView();", button_check_display)
     button_check_display.click() 
@@ -186,8 +186,8 @@ try:
     
     driver.get("http://localhost:3000/courses/master-degree")
 
-    time.sleep(3)
-    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[7]/div/div/span') 
+    time.sleep(4)
+    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[7]/div/div/span') 
     assert test_on_course.text == "204998"
     print("Success add course master degree prereq one")
     driver.get("http://localhost:3000/admin/master-degree/course-management")
@@ -198,10 +198,10 @@ except:
 #-------------------------------------check Edit and Delete---------------------------------------
 #=================================================================================================
 try:    
-    time.sleep(3)
+    time.sleep(4)
     button_edit = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[4]/div[3]/a')
     button_edit.click()
-    time.sleep(3)
+    time.sleep(4)
     input_master = driver.find_elements(By.CSS_SELECTOR, "input")
     input_data = ["", "TEST COURSE NORMAL change", "ทดสอบ change", "5", "3", "3", "3","TESTtttttttttttttttttttttttttt", "ทดสอบบบบบบบบบบบบบบบบบบบบบ"]
 
@@ -223,23 +223,23 @@ try:
 
     button_master_add_course = driver.find_element(By.XPATH, '/html/body/div/div/div/div/section/div/form/div[5]/button')
     button_master_add_course.click()
-    time.sleep(3)
+    time.sleep(4)
     button_back_to_master_degree = driver.find_element(By.XPATH, '/html/body/div/div/div/nav/header/ul[1]/li[1]/a')
     button_back_to_master_degree.click()
 
     
     driver.get("http://localhost:3000/courses/master-degree")
 
-    time.sleep(3)
-    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[6]/span[1]/span[1]') 
+    time.sleep(4)
+    test_on_course = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/header/div/div/div/div[2]/div/div/div[6]/span[1]/span[1]') 
 
      
     assert test_on_course.text == "TEST COURSE NORMALTEST COURSE NORMAL change"
     driver.get("http://localhost:3000/admin/master-degree/course-management") 
-    time.sleep(3)
+    time.sleep(4)
     delete_button = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[4]/div[3]/button').click()
     confirmButtonDelete = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[4]/div[2]/div/div/div/div[1]/div/div[2]/button[1]').click()
-    time.sleep(3)
+    time.sleep(4)
     delete_button1 = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[4]/div[3]/button').click()
     confirmButtonDelete = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[4]/div[2]/div/div/div/div[1]/div/div[2]/button[1]').click()
  
@@ -262,6 +262,6 @@ except:
     assert False,"Failure to choose Phd" '''
 
 #end the code with
-time.sleep(3)
+time.sleep(4)
 print(datetime.now())
 driver.quit()
