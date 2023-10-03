@@ -4,12 +4,13 @@ import {
     Card,
     CardHeader,
     CardBody,
-    Image,
     Chip,
     Button,
+    Image,
 } from "@nextui-org/react";
 import { AcademicStaff, CardStaffProps, SupportStaff } from "@/types/staff";
 import Link from "next/link";
+import ImageNext from "next/image";
 
 export const CardStaff = ({
     type,
@@ -20,19 +21,39 @@ export const CardStaff = ({
 }) => {
     let researchInterestArray: Array<string> = [];
     if (type === "academic") {
-        researchInterestArray = (staff as AcademicStaff).research_interest
-            .split(",")
-            .map((value) => value.trim());
+        researchInterestArray = (
+            staff as AcademicStaff
+        ).research_interest.split(",");
     }
     return (
         <div>
             <div className="relative container mx-auto py-8 px-8">
                 <div className="relative flex flex-row xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row md:pl-10 lg:pl-20 xl:pl-40 ">
-                    <Image
-                        alt="MouckUp"
-                        className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]"
-                        src={`https://cs-33ck.vercel.app/${staff.picture}`}
-                    />
+                    {type === "academic" ? (
+                        staff.picture.includes("data:image") ? (
+                            <img src={staff.picture} alt="" />
+                        ) : (
+                            <ImageNext
+                                alt={`picture of ${staff.picture}`}
+                                className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                src={`https://cs-33ck.vercel.app/personal/lecturers${staff.picture}`}
+                            />
+                        )
+                    ) : staff.picture.includes("data:image") ? (
+                        <img src={staff.picture} alt="" />
+                    ) : (
+                        <ImageNext
+                            alt={`picture of ${staff.picture}`}
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]"
+                            src={`https://cs-33ck.vercel.app/personal/staff${staff.picture}`}
+                        />
+                    )}
 
                     <div className="relative col-span-7 px-20">
                         <div className="flex flex-col gap-5">
@@ -64,7 +85,7 @@ export const CardStaff = ({
                                                 color="primary"
                                                 className="text-black text-[14px] gap-8 bg-[#E7F6FD] "
                                             >
-                                                {value}
+                                                {value.trim()}
                                             </Chip>
                                         ) : (
                                             <></>
