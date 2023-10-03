@@ -98,12 +98,13 @@ try:
     
     button_master_add_course = driver.find_element(By.XPATH, '/html/body/div/div/div/div/section/div/form/div[5]/button')
     button_master_add_course.click()
-
+    time.sleep(3)
     button_back_to_master_degree = driver.find_element(By.XPATH, '/html/body/div/div/div/nav/header/ul[1]/li[1]/a')
     button_back_to_master_degree.click()
 
-    button_check_display = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[1]/label')
     time.sleep(3)
+    button_check_display = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[5]/td[1]/label')))
+    driver.execute_script("arguments[0].scrollIntoView();", button_check_display)
     button_check_display.click() 
 
     driver.get("http://localhost:3000/courses/master-degree")
@@ -173,12 +174,15 @@ try:
 
     button_master_add_course = driver.find_element(By.XPATH, '/html/body/div/div/div/div/section/div/form/div[5]/button')
     button_master_add_course.click()
-
+    time.sleep(3)
     button_back_to_master_degree = driver.find_element(By.XPATH, '/html/body/div/div/div/nav/header/ul[1]/li[1]/a')
     button_back_to_master_degree.click()
+
     time.sleep(3)
-    button_check_display = driver.find_element(By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[6]/td[1]/label')
+    button_check_display = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,'/html/body/div/div/div/div/section/div[2]/div/div[1]/table/tbody/tr[6]/td[1]/label')))
+    driver.execute_script("arguments[0].scrollIntoView();", button_check_display)
     button_check_display.click() 
+
     
     driver.get("http://localhost:3000/courses/master-degree")
 
@@ -216,10 +220,10 @@ try:
 
     
 
-    time.sleep(3)
+
     button_master_add_course = driver.find_element(By.XPATH, '/html/body/div/div/div/div/section/div/form/div[5]/button')
     button_master_add_course.click()
-
+    time.sleep(3)
     button_back_to_master_degree = driver.find_element(By.XPATH, '/html/body/div/div/div/nav/header/ul[1]/li[1]/a')
     button_back_to_master_degree.click()
 
