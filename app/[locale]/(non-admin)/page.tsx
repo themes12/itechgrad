@@ -70,8 +70,14 @@ export default function Home() {
                             about program
                         </Button>
                     </div>
-                    <div className="w-full lg:w-7/12 h-96 rounded-xl aspect-square	">
-                        <Spline scene="https://prod.spline.design/FPmjVxMXmGo3Jvvo/scene.splinecode" />
+                    <div className="w-full lg:w-7/12 h-96 rounded-xl aspect-square">
+                        <iframe
+                            src="https://my.spline.design/untitled-61e15f9284714cf931f280e292ae5589/"
+                            frameborder="0"
+                            width="100%"
+                            height="100%"
+                        ></iframe>
+                        {/* <Spline scene="https://prod.spline.design/FPmjVxMXmGo3Jvvo/scene.splinecode" /> */}
                         {/* <iframe src='https://my.spline.design/gitnesssplinetest-322630af95c0e73de65e07f3d7169434/' frameborder='0' width='100%' height='100%'></iframe> */}
                     </div>
                 </div>
