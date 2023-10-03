@@ -2,7 +2,7 @@ import Section from "@/components/section";
 import { Column } from "primereact/column";
 import { DataTable } from "primereact/datatable";
 import axios from "axios";
-import { Course, Degree } from "@/types/course";
+import { Course } from "@/types/course";
 import HeaderEditor from "@/components/admin/course_management/header";
 import TableCheckbox from "@/components/admin/course_management/table_checkbox";
 import Action from "@/components/admin/course_management/action";

@@ -1,9 +1,6 @@
 "use client";
-import React from "react";
-// import "datatables.net-dt/css/jquery.dataTables.css";
-// import ReactDataTables from "@/components/ReactDataTables";
 import { Button } from "@nextui-org/react";
-import Link from "next-intl/link";
+import { Link } from "@/navigation";
 
 type Props = {};
 

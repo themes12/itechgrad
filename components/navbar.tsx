@@ -13,12 +13,10 @@ import {
     NavbarMenuToggle,
     NavbarMenu,
     NavbarMenuItem,
-    Link,
     Switch,
     Listbox,
     ListboxItem,
 } from "@nextui-org/react";
-import { useRouter, usePathname } from "next-intl/client";
 import {
     ChevronDownIcon,
     Bars3Icon,
@@ -27,6 +25,8 @@ import {
 import Image from "next/image";
 import { navItems } from "@/utils/navbar";
 import { useLocale } from "next-intl";
+import { usePathname, useRouter, Link } from "@/navigation";
+import { useParams } from 'next/navigation';
 
 type Props = {};
 
@@ -34,6 +34,9 @@ const NavbarHeader = (props: Props) => {
     const router = useRouter();
     const locale = useLocale();
     const pathname = usePathname();
+    const params = useParams();
+
+    console.log(pathname)
 
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const [localeSwitch, setLocaleSwitch] = useState(locale === "th");
@@ -92,9 +95,7 @@ const NavbarHeader = (props: Props) => {
                         }
                         onValueChange={(value) => {
                             setLocaleSwitch((prev) => !prev);
-                            router.replace(pathname, {
-                                locale: value ? "th" : "en",
-                            });
+                            router.replace({ pathname, params }, { locale: value ? "th" : "en" });
                         }}
                         size="lg"
                         color="default"
@@ -120,16 +121,21 @@ const NavbarHeader = (props: Props) => {
                                             <ListboxItem
                                                 className="p-1"
                                                 key={value.title}
-                                                onPress={() =>
-                                                    router.push(
-                                                        value.href ?? "#",
-                                                        {
-                                                            locale: localeSwitch
-                                                                ? "th"
-                                                                : "en",
-                                                        }
-                                                    )
-                                                }
+                                                as={Link}
+                                                href={value.href ?? "#"}
+                                                locale={localeSwitch
+                                                    ? "th"
+                                                    : "en"}
+                                            // onPress={() =>
+                                            //     router.push(
+                                            //         value.href ?? "#",
+                                            //         {
+                                            //             locale: localeSwitch
+                                            //                 ? "th"
+                                            //                 : "en",
+                                            //         }
+                                            //     )
+                                            // }
                                             >
                                                 {value.title}
                                             </ListboxItem>
@@ -175,9 +181,7 @@ const NavbarHeader = (props: Props) => {
                         }
                         onValueChange={(value) => {
                             setLocaleSwitch((prev) => !prev);
-                            router.push(pathname, {
-                                locale: value ? "th" : "en",
-                            });
+                            router.replace({ pathname, params }, { locale: value ? "th" : "en", });
                         }}
                         size="lg"
                         color="default"
@@ -224,16 +228,21 @@ const NavbarHeader = (props: Props) => {
                                                 className="capitalize"
                                                 key={value.title}
                                                 aria-label={value.title}
-                                                onPress={() =>
-                                                    router.replace(
-                                                        value.href ?? "#",
-                                                        {
-                                                            locale: localeSwitch
-                                                                ? "th"
-                                                                : "en",
-                                                        }
-                                                    )
-                                                }
+                                                as={Link}
+                                                href={value.href ?? "#"}
+                                                locale={localeSwitch
+                                                    ? "th"
+                                                    : "en"}
+                                            // onPress={() =>
+                                            //     router.replace(
+                                            //         value.href ?? "#",
+                                            //         {
+                                            //             locale: localeSwitch
+                                            //                 ? "th"
+                                            //                 : "en",
+                                            //         }
+                                            //     )
+                                            // }
                                             >
                                                 {value.title}
                                             </DropdownItem>

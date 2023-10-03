@@ -4,8 +4,7 @@ import { Button } from "@nextui-org/react";
 import { useRef, useState } from "react";
 import { Toast } from "primereact/toast";
 import axios from "axios";
-import { useRouter } from "next-intl/client";
-import Link from 'next-intl/link';
+import { Link, useRouter } from "@/navigation";
 
 type Props = {}
 

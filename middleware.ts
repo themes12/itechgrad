@@ -1,13 +1,14 @@
 import { withAuth } from "next-auth/middleware";
 import createIntlMiddleware from "next-intl/middleware";
 import { NextRequest } from "next/server";
+import {locales, pathnames} from './navigation';
 
-const locales = ["en", "th"];
 const protectedPages = ["/th/admin", "/en/admin", "/admin"];
 
 const intlMiddleware = createIntlMiddleware({
   locales,
   defaultLocale: "en",
+  pathnames
 });
 
 const authMiddleware = withAuth(

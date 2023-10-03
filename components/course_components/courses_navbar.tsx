@@ -5,15 +5,17 @@ import "@/components/course_components/course_navbar.css";
 import { SettingCourse } from '@/types/setting';
 import { useLocale } from 'next-intl';
 import { TabMenu } from 'primereact/tabmenu';
-import Link from 'next-intl/link';
+import { Link } from '@/navigation';
+import { useParams } from 'next/navigation';
 
 function CourseNavbar({ setting }: { setting: SettingCourse }) {
   const locale = useLocale()
+  const { degree } = useParams()
 
   const [activeIndex, setActiveIndex] = useState(0);
   const items = [
-    { label: `Recent courses ${setting.semester}/${locale === "th" ? new Date(setting.year).getFullYear() + 543 : new Date(setting.year).getFullYear()}`, template: (options: any) => <Button as={Link} href="/courses/master-degree" variant="light" radius="sm" className="text-base font-medium" onClick={(e) => setActiveIndex(0)}>{options.label}</Button> },
-    { label: 'All courses', template: (options: any) => <Button as={Link} href="/courses/master-degree/all" variant="light" radius="sm" className="text-base font-medium" onClick={(e) => setActiveIndex(1)}>{options?.label}</Button> },
+    { label: `Recent courses ${setting.semester}/${locale === "th" ? new Date(setting.year).getFullYear() + 543 : new Date(setting.year).getFullYear()}`, template: (options: any) => <Button as={Link} href={`/courses/${degree}`} variant="light" radius="sm" className="text-base font-medium" onClick={(e) => setActiveIndex(0)}>{options.label}</Button> },
+    { label: 'All courses', template: (options: any) => <Button as={Link} href={`/courses/${degree}/all`} variant="light" radius="sm" className="text-base font-medium" onClick={(e) => setActiveIndex(1)}>{options?.label}</Button> },
   ];
 
   return (

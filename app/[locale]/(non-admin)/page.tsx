@@ -7,7 +7,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import SectionText from "@/components/sectionText";
 import AnnouncementCard from "@/components/announcementCard";
 import Carousal from "@/components/carousal";
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
     const posts = [

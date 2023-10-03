@@ -3,7 +3,6 @@ import Courses_navbar from "@/components/course_components/courses_navbar";
 import axios from "axios";
 import degreeJson from "@/utils/degree.json";
 import { Course, Degree } from "@/types/course";
-import { useState } from "react";
 import { SettingCourse } from "@/types/setting"
 
 type Props = { params: { degree: string } };

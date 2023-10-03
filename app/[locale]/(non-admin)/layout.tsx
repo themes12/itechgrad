@@ -1,19 +1,25 @@
+import pick from 'lodash/pick';
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import React from "react";
-import { NextIntlClientProvider } from "next-intl";
-import { useLocale } from "next-intl";
+import { useLocale, NextIntlClientProvider, useMessages } from "next-intl";
 
 type Props = {};
 
-const layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
+    const messages = useMessages();
+    const locale = useLocale();
     return (
-        <div>
+        <NextIntlClientProvider locale={locale}
+            messages={
+                // Only provide the minimum of messages
+                pick(messages, 'Index')
+            }>
             <Navbar />
             <div>{children}</div>
             <Footer />
-        </div>
+        </NextIntlClientProvider>
     );
 };
 
-export default layout;
+export default Layout;

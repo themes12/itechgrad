@@ -5,10 +5,9 @@ import {
     NavbarBrand,
     NavbarContent,
     NavbarItem,
-    Link,
     Button,
 } from "@nextui-org/react";
-import { usePathname } from "next-intl/client";
+import { Link, usePathname } from "@/navigation";
 
 type Props = { degree: string };
 

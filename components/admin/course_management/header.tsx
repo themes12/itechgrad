@@ -4,10 +4,10 @@ import { Button, Select, SelectItem } from "@nextui-org/react";
 import { Calendar } from "primereact/calendar";
 import { SettingCourse } from "@/types/setting";
 import { PlusIcon } from "@heroicons/react/24/outline";
-import Link from "next-intl/link";
 import axios from "axios";
 import { Toast } from "primereact/toast";
 import { useUpdateEffect } from "@reactuses/core";
+import { Link } from "@/navigation";
 
 const DateEditor = ({
     setting,
