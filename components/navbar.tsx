@@ -13,6 +13,7 @@ import {
     NavbarMenuToggle,
     NavbarMenu,
     NavbarMenuItem,
+    Link,
     Switch,
     Listbox,
     ListboxItem,
@@ -25,7 +26,7 @@ import {
 import Image from "next/image";
 import { navItems } from "@/utils/navbar";
 import { useLocale } from "next-intl";
-import { usePathname, useRouter, Link } from "@/navigation";
+import { usePathname, useRouter } from "@/navigation";
 import { useParams } from 'next/navigation';
 
 type Props = {};
@@ -95,7 +96,7 @@ const NavbarHeader = (props: Props) => {
                         }
                         onValueChange={(value) => {
                             setLocaleSwitch((prev) => !prev);
-                            router.replace({ pathname, params }, { locale: value ? "th" : "en" });
+                            router.replace({ pathname, ...params }, { locale: value ? "th" : "en" });
                         }}
                         size="lg"
                         color="default"
@@ -121,21 +122,16 @@ const NavbarHeader = (props: Props) => {
                                             <ListboxItem
                                                 className="p-1"
                                                 key={value.title}
-                                                as={Link}
-                                                href={value.href ?? "#"}
-                                                locale={localeSwitch
-                                                    ? "th"
-                                                    : "en"}
-                                            // onPress={() =>
-                                            //     router.push(
-                                            //         value.href ?? "#",
-                                            //         {
-                                            //             locale: localeSwitch
-                                            //                 ? "th"
-                                            //                 : "en",
-                                            //         }
-                                            //     )
-                                            // }
+                                                onPress={() =>
+                                                    router.push(
+                                                        value.href ?? "#",
+                                                        {
+                                                            locale: localeSwitch
+                                                                ? "th"
+                                                                : "en",
+                                                        }
+                                                    )
+                                                }
                                             >
                                                 {value.title}
                                             </ListboxItem>
@@ -181,7 +177,7 @@ const NavbarHeader = (props: Props) => {
                         }
                         onValueChange={(value) => {
                             setLocaleSwitch((prev) => !prev);
-                            router.replace({ pathname, params }, { locale: value ? "th" : "en", });
+                            router.replace({ pathname, ...params }, { locale: value ? "th" : "en" });
                         }}
                         size="lg"
                         color="default"
@@ -228,21 +224,16 @@ const NavbarHeader = (props: Props) => {
                                                 className="capitalize"
                                                 key={value.title}
                                                 aria-label={value.title}
-                                                as={Link}
-                                                href={value.href ?? "#"}
-                                                locale={localeSwitch
-                                                    ? "th"
-                                                    : "en"}
-                                            // onPress={() =>
-                                            //     router.replace(
-                                            //         value.href ?? "#",
-                                            //         {
-                                            //             locale: localeSwitch
-                                            //                 ? "th"
-                                            //                 : "en",
-                                            //         }
-                                            //     )
-                                            // }
+                                                onPress={() =>
+                                                    router.replace(
+                                                        value.href ?? "#",
+                                                        {
+                                                            locale: localeSwitch
+                                                                ? "th"
+                                                                : "en",
+                                                        }
+                                                    )
+                                                }
                                             >
                                                 {value.title}
                                             </DropdownItem>

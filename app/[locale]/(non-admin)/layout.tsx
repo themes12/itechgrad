@@ -1,8 +1,7 @@
-import pick from 'lodash/pick';
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import React from "react";
-import { useLocale, NextIntlClientProvider, useMessages } from "next-intl";
+import { useLocale, NextIntlClientProvider, useMessages, } from "next-intl";
 
 type Props = {};
 
@@ -12,8 +11,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <NextIntlClientProvider locale={locale}
             messages={
-                // Only provide the minimum of messages
-                pick(messages, 'Index')
+                messages
             }>
             <Navbar />
             <div>{children}</div>

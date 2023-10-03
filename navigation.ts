@@ -20,7 +20,7 @@ export const pathnames = {
   '/courses/[degree]/all': '/courses/[degree]/all',
   '/program/[degree]': '/program/[degree]',
   '/research': '/research',
-  '/staff/[type]': '/research/[type]',
+  '/staff/[type]': '/staff/[type]',
 
   '/admin': '/admin',
   '/admin/[degree]': '/admin/[degree]',
@@ -30,4 +30,7 @@ export const pathnames = {
 } satisfies Pathnames<typeof locales>;
  
 export const {Link, redirect, usePathname, useRouter, getPathname} =
-  createLocalizedPathnamesNavigation({locales, pathnames});
+  createLocalizedPathnamesNavigation({
+    locales,
+    pathnames: pathnames as typeof pathnames & Record<string & {}, string>
+  });

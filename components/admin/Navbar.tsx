@@ -27,14 +27,20 @@ function AdminNavbar({ degree }: Props) {
                 <NavbarItem
                     isActive={checkIsActive(pathname, "course-management")}
                 >
-                    <Link href={`/admin/${degree}/course-management`}>
+                    <Link href={{
+                        pathname: "/admin/[degree]/course-management",
+                        params: { degree: degree }
+                    }}>
                         จัดการ Course
                     </Link>
                 </NavbarItem>
                 <NavbarItem
                     isActive={checkIsActive(pathname, "program-management")}
                 >
-                    <Link href={`/admin/${degree}/program-management`}>
+                    <Link href={{
+                        pathname: "/admin/[degree]/program-management",
+                        params: { degree: degree }
+                    }}>
                         จัดการแผนการเรียน
                     </Link>
                 </NavbarItem>

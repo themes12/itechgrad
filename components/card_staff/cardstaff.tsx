@@ -68,7 +68,7 @@ export const CardStaff = ({
                                 </h6>
                             </div>
                             <div>
-                                {staff.position.map((value, index) => {
+                                {staff.position && staff.position.map((value, index) => {
                                     return (
                                         <p key={index} className="text-[18px]">
                                             {value}
@@ -100,7 +100,7 @@ export const CardStaff = ({
                                     <div>
                                         <Image alt="Phone" src="/Phone.svg" />
                                     </div>
-                                    {staff.tel.map((value, index) => (
+                                    {staff.tel && staff.tel.map((value, index) => (
                                         <div key={index}>{value}</div>
                                     ))}
                                 </div>
@@ -108,7 +108,7 @@ export const CardStaff = ({
                                     <div>
                                         <Image alt="Mail" src="/Mail.svg" />
                                     </div>
-                                    {staff.email.map((value, index) => (
+                                    {staff.email && staff.email.map((value, index) => (
                                         <div key={index}>{value}</div>
                                     ))}
                                 </div>
