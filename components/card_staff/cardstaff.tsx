@@ -29,16 +29,17 @@ export const CardStaff = ({
         <div>
             <div className="relative container mx-auto py-8 px-8">
                 <div className="relative flex flex-row xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row md:pl-10 lg:pl-20 xl:pl-40 ">
+                    <div className="">
                     {type === "academic" ? (
                         staff.picture.includes("data:image") ? (
                             <img src={staff.picture} alt="" />
                         ) : (
                             <ImageNext
                                 alt={`picture of ${staff.picture}`}
-                                className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]"
+                                className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360]"
                                 width={0}
                                 height={0}
-                                sizes="100vw"
+                                // sizes="100vw"
                                 src={`https://cs-33ck.vercel.app/personal/lecturers${staff.picture}`}
                             />
                         )
@@ -49,11 +50,12 @@ export const CardStaff = ({
                             alt={`picture of ${staff.picture}`}
                             width={0}
                             height={0}
-                            sizes="100vw"
-                            className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]"
+                            // sizes="100vw"
+                            className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360]"
                             src={`https://cs-33ck.vercel.app/personal/staff${staff.picture}`}
                         />
                     )}
+                    </div>
 
                     <div className="relative col-span-7 px-20">
                         <div className="flex flex-col gap-5">
@@ -83,7 +85,7 @@ export const CardStaff = ({
                                             <Chip
                                                 key={index}
                                                 color="primary"
-                                                className="text-black text-[14px] gap-8 bg-[#E7F6FD] "
+                                                className="text-[#0E80E9] text-[14px] gap-8 bg-[#E7F6FD] "
                                             >
                                                 {value.trim()}
                                             </Chip>
@@ -120,8 +122,10 @@ export const CardStaff = ({
                                         href={
                                             (staff as AcademicStaff)
                                                 .personal_web
+                                                
                                         }
-                                        className="bg-[#054563] text-white text-[15px]"
+                                        target= {"_blank"}
+                                        className="bg-[#0E80E9] text-white text-[15px]"
                                         radius="full"
                                         endContent={
                                             <svg

@@ -89,7 +89,7 @@ const NavbarHeader = (props: Props) => {
                         isSelected={localeSwitch}
                         thumbIcon={({ isSelected, className }) =>
                             isSelected ? (
-                                <span className="text-[#4E5BA6]">TH</span>
+                                <span className="text-[#E8A721]">TH</span>
                             ) : (
                                 <span className="text-[#E8A721]">EN</span>
                             )
@@ -170,7 +170,7 @@ const NavbarHeader = (props: Props) => {
                         isSelected={localeSwitch}
                         thumbIcon={({ isSelected, className }) =>
                             isSelected ? (
-                                <span className="text-[#4E5BA6]">TH</span>
+                                <span className="text-[#E8A721]">TH</span>
                             ) : (
                                 <span className="text-[#E8A721]">EN</span>
                             )

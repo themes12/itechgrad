@@ -36,14 +36,14 @@ const page = async ({ params }: { params: StaffPageProps }) => {
             <Section>
                 <header className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
                     <div className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
-                        <h1 className="text-[64px] font-bold ">{staffType}</h1>
+                        <h1 className="text-[48px] font-bold ">{staffType}</h1>
                     </div>
                 </header>
             </Section>
             <Section>
                 <header className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9 relative">
-                    <div className=" relative  items-center">
-                        <div className="w-full p-[1px] bg-gray-300 my-12" />
+                    <div className="relative items-center">
+                        <div className="w-full p-[0.5px] bg-gray-300 my-4" />
                     </div>
                 </header>
             </Section>
