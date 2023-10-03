@@ -4,7 +4,7 @@ import { Button, Select, SelectItem } from "@nextui-org/react";
 import { Calendar } from "primereact/calendar";
 import { SettingCourse } from "@/types/setting";
 import { PlusIcon } from "@heroicons/react/24/outline";
-import Link from 'next-intl/link';
+import Link from "next-intl/link";
 import axios from "axios";
 import { Toast } from "primereact/toast";
 import { useUpdateEffect } from "@reactuses/core";
@@ -16,30 +16,38 @@ const DateEditor = ({ semester, year }: SettingCourse) => {
         new Set([String(semester)])
     );
 
-    const handleSelectionChange = (e: React.ChangeEventHandler<HTMLSelectElement>) => {
-        setSelectedSemester(new Set([e.target.value]));
+    const handleSelectionChange = (value: string) => {
+        setSelectedSemester(new Set([value]));
     };
 
     const handleChangeSetting = async () => {
-        const semester = Array.from(selectedSemester).join('');
+        const semester = Array.from(selectedSemester).join("");
         try {
             await axios.post(
                 `${process.env.NEXT_PUBLIC_API_URL}/setting/acdemic-year`,
                 {
                     year: date,
-                    semester: semester
+                    semester: semester,
                 }
-            )
-            toast.current?.show({ severity: 'success', summary: 'อัพเดทข้อมูลแล้ว', life: 3000 })
+            );
+            toast.current?.show({
+                severity: "success",
+                summary: "อัพเดทข้อมูลแล้ว",
+                life: 3000,
+            });
         } catch (error) {
-            toast.current?.show({ severity: 'error', summary: 'อัพเดทข้อมูลไม่สำเร็จ', life: 3000 })
+            toast.current?.show({
+                severity: "error",
+                summary: "อัพเดทข้อมูลไม่สำเร็จ",
+                life: 3000,
+            });
         }
-    }
+    };
 
     useUpdateEffect(() => {
-        handleChangeSetting()
-        console.log("changed")
-    }, [date, selectedSemester])
+        handleChangeSetting();
+        console.log("changed");
+    }, [date, selectedSemester]);
 
     return (
         <>
@@ -52,7 +60,7 @@ const DateEditor = ({ semester, year }: SettingCourse) => {
                     className="max-w-xs"
                     selectedKeys={selectedSemester}
                     selectionMode="single"
-                    onChange={handleSelectionChange}
+                    onChange={(e) => handleSelectionChange(e.target.value)}
                 >
                     <SelectItem key="1" value="1">
                         ภาคการศึกษาที่ 1
@@ -72,7 +80,12 @@ const DateEditor = ({ semester, year }: SettingCourse) => {
                     />
                 </div>
             </div>
-            <Button as={Link} href="/admin/master-degree/course-management/create" color="success" startContent={<PlusIcon className="h-6 w-6" />}>
+            <Button
+                as={Link}
+                href="/admin/master-degree/course-management/create"
+                color="success"
+                startContent={<PlusIcon className="h-6 w-6" />}
+            >
                 เพิ่มรายวิชา
             </Button>
         </>
