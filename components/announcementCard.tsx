@@ -21,7 +21,7 @@ const AnnouncementCard = ({ title, body, href, image }: CardProps) => {
             shadow="sm"
         >
             <CardBody>
-                <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 justify-center items-center">
+                <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 justify-center items-center space-x-6">
                     <div className="relative col-span-6">
                         <Image
                             alt=""
@@ -30,7 +30,7 @@ const AnnouncementCard = ({ title, body, href, image }: CardProps) => {
                         />
                     </div>
 
-                    <div className="flex flex-col col-span-6">
+                    <div className="flex flex-col col-span-6 m">
                         <div className="flex justify-between items-start">
                             <div className="flex flex-col gap-0">
                                 <h6 className="uppercase font-semibold text-transparent text-base bg-clip-text bg-[#0E80E9]">

@@ -36,7 +36,8 @@ const Carousal = ({ children }: { children: React.ReactNode[] }) => {
             <Button
                 // ref={navigationPrevRef}
                 onClick={() => swiperRef.current?.slidePrev()}
-                className="bg-[#6E6E6E] z-10 absolute inset-y-[155px] -left-6 rounded-full min-w-unit-12 h-unit-12 px-unit-0"
+                className="transition ease-in-out delay-150 hover:-translate-x-1 duration-300 
+                bg-[#262626] z-10 absolute inset-y-[155px] -left-6 rounded-full min-w-unit-12 h-unit-12 px-unit-0"
                 startContent={
                     <ChevronLeftIcon className="w-7 h-7 text-white" />
                 }
@@ -44,7 +45,8 @@ const Carousal = ({ children }: { children: React.ReactNode[] }) => {
             <Button
                 // ref={navigationNextRef}
                 onClick={() => swiperRef.current?.slideNext()}
-                className="bg-[#6E6E6E] z-10 absolute inset-y-[155px] -right-6 rounded-full min-w-unit-12 h-unit-12 px-unit-0"
+                className="transition ease-in-out delay-150 hover:translate-x-1 duration-300 
+                bg-[#262626] z-10 absolute inset-y-[155px] -right-6 rounded-full min-w-unit-12 h-unit-12 px-unit-0"
                 startContent={
                     <ChevronRightIcon className="w-7 h-7 text-white" />
                 }
