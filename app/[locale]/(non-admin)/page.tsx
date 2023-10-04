@@ -45,7 +45,7 @@ export default function Home() {
     const t = useTranslations("Index");
 
     return (
-        <main className="space-y-16 lg:space-y-24">
+        <main className="space-y-16">
             <Section className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
                 <div className="space-y-4 mt-6 md:mt-10 lg:mt-16">
                     <h2 className="font-bold text-xl md:text-5xl lg:text-[74px] xl:text-[74px] text-[#262626] text-center">
