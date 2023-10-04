@@ -33,12 +33,12 @@ export const Table_courses = ({ courses }: { courses: Course[] }) => {
   return (
     <div>
       <div className="table-container">
-        <div className="inline-flex bg-[#3E99ED] text-xl font-normal pt-2 pb-2 py-10 px-20 mb-5 text-[#FFF] rounded-full">Recent course 2/2023</div>
+        <div className="inline-flex bg-[#3E99ED] lg:text-xl md:text-base sm:text-base xs:text-sm xxs:text-sm xxxs:text-xs font-normal pt-1.5 pb-1.5 px-20 mb-5 text-[#FFF] rounded-full">Recent course 2/2023</div>
         <table>
           <thead>
             <tr className="table-header">
               <th className="table-header1">
-                <div className="lg:ml-20">
+                <div className="lg:ml-20 md:px-10">
                   Course code
                 </div>
               </th>
@@ -51,17 +51,18 @@ export const Table_courses = ({ courses }: { courses: Course[] }) => {
         {
           courses.map((course) => <div key={course._id} className="table-row">
             <div className="grid grid-cols-6">
-              <div className="lg:col-start-3 col-end-4 sm:col-start-2 col-end-3">
-                <span className="bg-[#262626] rounded-full px-3 py-2 font-medium text-base text-white">{course._id}</span>
+              <div className="lg:col-start-3 lg:col-end-4  md:col-start-3 md:col-end-4  sm:col-start-2 sm:col-end-3 xs:col-start-2 xs:col-end-3 xxs:col-start-2 xxs:col-end-3">
+                <span className="bg-[#262626] rounded-full px-3 py-2 font-medium lg:text-base md:text-base sm:text-base xs:text-sm text-white xxs:text-xs xxxs:text-xs">{course._id}</span>
               </div>
             </div>
+            
             <span className="table-cell-2">
               <span className="english-course-name">{course.name_en}</span>{" "} <br />
               <span className="thai-course-name">{course.name_th}</span>
             </span>
-            <span className="table-cell-3">
-              <MyModal course={course} />
-            </span>
+              <span className="table-cell-3">
+                <MyModal course={course} />
+              </span>
           </div>)
         }
         {" "}

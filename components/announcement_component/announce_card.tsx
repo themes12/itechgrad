@@ -105,7 +105,7 @@ export const Announcement_card = () => {
             </div>
         
         <div className="card">
-            <div className="grid md:grid-cols-12 gap-6 md:gap-4 justify-center mb-20">
+            <div className="grid md:grid-cols-12 gap-6 md:gap-4 justify-center mb-20 animate-slideB">
                 {/* Grid 1 (empty) */}
                 <div className="col-span-1"></div>
 
@@ -171,7 +171,7 @@ export const Announcement_card = () => {
             </div> 
 
 
-            <div className="grid md:grid-cols-12 gap-6 md:gap-4 justify-center mb-20">
+            <div className="grid md:grid-cols-12 gap-6 md:gap-4 justify-center mb-20 animate-slideB">
                 {/* Grid 1 (empty) */}
                 <div className="col-span-1"></div>
 

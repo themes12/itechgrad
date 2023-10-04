@@ -21,19 +21,28 @@ function CourseNavbar({ setting }: { setting: SettingCourse }) {
   return (
     <>
       <div>
-        <div className="navbar_course">
-          <TabMenu model={items} activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)} />
-          <div className="search_bar">
-            <Input
-              className="search-input"
-              placeholder="Search..."
-              width="200px" />
+        <div className="navbar_course flex flex-col md:flex-row">
+          <div className="lg:w-1/2">
+            {/* TabMenu */}
+            <TabMenu model={items} activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)} />
           </div>
-        </div><div className='border_line'></div>
+          <div className="lg:w-1/2">
+            {/* Search Input */}
+            <div className="search_bar">
+              <Input
+                className="search-input"
+                placeholder="Search..."
+                width="200px"
+              />
+            </div>
+          </div>
+        </div>
+        <div className='border_line'></div>
         <div className=''>
 
         </div>
       </div>
+
     </>
   );
 }

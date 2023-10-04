@@ -2,64 +2,64 @@ import { navbar } from "@/types/navbar";
 
 export const navItems: navbar[] = [
     {
-        title: "home",
+        title: "หน้าหลัก",
         type: "button",
         href: "/",
     },
     {
-        title: "program",
+        title: "หลักสูตร",
         type: "dropdown",
         options: [
             {
-                title: "mater's degree",
+                title: "หลักสูตรปริญญาโท",
                 href: "/program/master-degree",
             },
             {
-                title: "PHD",
+                title: "หลักสูตรปริญญาเอก",
                 href: "/program/phd",
             },
         ],
     },
     {
-        title: "courses",
+        title: "กระบวนวิชา",
         type: "dropdown",
         options: [
             {
-                title: "Master's degree Courses",
+                title: "กระบวนวิชาปริญญาโท",
                 href: "/courses/master-degree",
             },
             {
-                title: "PhD's Courses",
+                title: "กระบวนวิชาปริญญาเอก",
                 href: "/courses/phd",
             },
         ],
     },
     {
-        title: "research",
+        title: "งานวิจัย",
         type: "button",
         href: "/research",
     },
     {
-        title: "announcement",
+        title: "ประชาสัมพันธ์",
         type: "button",
         href: "/announcement",
     },
     {
-        title: "staff",
+        title: "บุคลากร",
         type: "dropdown",
         options: [
             {
-                title: "academic staff",
+                title: "อาจารย์",
                 href: "/staff/academic",
             },
             {
-                title: "supporting staff",
+                title: "เจ้าหน้าที่",
                 href: "/staff/support",
             },
         ],
     },
     {
-        title: "about us",
+        title: "เกี่ยวกับเรา",
         type: "button",
         href: "/about"
 

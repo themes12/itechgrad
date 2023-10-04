@@ -142,3 +142,47 @@ color: #818a92;
 text-align: right;
 }
 
+@media (max-width: 576px) {
+  .table-header1{
+    font-size: small;
+  }
+  .table-header2{
+    font-size: small;
+  }
+  .english-course-name{
+    font-size: small;
+  }
+  .thai-course-name{
+    font-size: small;
+  }
+}
+
+@media (max-width: 448px) {
+  .table-header1{
+    font-size: small;
+  }
+  .table-header2{
+    font-size: small;
+  }
+  .english-course-name{
+    font-size: small;
+  }
+  .thai-course-name{
+    font-size: small;
+  }
+}
+
+@media (max-width: 320px) {
+  .table-header1{
+    font-size: xx-small;
+  }
+  .table-header2{
+    font-size: xx-small;
+  }
+  .english-course-name{
+    font-size: xx-small;
+  }
+  .thai-course-name{
+    font-size: xx-small;
+  }
+}
