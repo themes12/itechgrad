@@ -135,7 +135,8 @@ export const CardStaff = ({
                                                 
                                         }
                                         target= {"_blank"}
-                                        className="bg-[#0E80E9] text-white text-[15px]"
+                                        className="transition ease-in-out delay-150 hover:translate-x-1 duration-300
+                                        bg-[#0E80E9] text-white text-[15px]"
                                         radius="full"
                                         endContent={
                                             <ArrowRightIcon className="h-4 w-4 text-white" />

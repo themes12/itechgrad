@@ -29,7 +29,8 @@ const Page = (props: Props) => {
                         {t("body2")}&quot;
                     </p>
 
-                    <button className="flex cursor-pointer md:ml-8 mt-10 bg-[#0E80E9] text-white px-4 py-4 rounded-[2rem] font-normal text-sm items-center justify-between">
+                    <button className="transition ease-in-out delay-150 hover:translate-x-1 duration-300
+                    flex cursor-pointer md:ml-8 mt-10 bg-[#0E80E9] text-white px-4 py-4 rounded-[2rem] font-normal text-sm items-center justify-between">
                         <span>{t("button1")}&nbsp;&nbsp;</span>
                         <span><ArrowRightIcon className="h-4 w-4 text-white" /></span>
                     </button>
@@ -70,7 +71,8 @@ const Page = (props: Props) => {
                         &quot;{t("body3")}&quot;
                     </p>
 
-                    <button className="flex cursor-pointer md:ml-8 mt-10 bg-[#AFDEF9] text-[#0E80E9] px-4 py-4 rounded-[2rem] font-normal text-sm items-center justify-between">
+                    <button className="transition ease-in-out delay-150 hover:translate-x-1 duration-300
+                    flex cursor-pointer md:ml-8 mt-10 bg-[#AFDEF9] text-[#0E80E9] px-4 py-4 rounded-[2rem] font-normal text-sm items-center justify-between">
                         <span>{t("button2")}&nbsp;&nbsp;</span>
                         <span><ArrowRightIcon className="h-4 w-4 text-[#0E80E9]" /></span>
                     </button>
