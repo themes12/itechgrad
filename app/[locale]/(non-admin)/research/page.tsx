@@ -119,7 +119,7 @@ const Research = (props: Props) => {
                             alt=""
                         />
                     </div>
-                    <div className=" font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto">
+                    <div className=" font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl mx-auto xl:max-w-7xl 2xl:mr-auto 2xl:ml-20">
                         Medical informatics
                         <p className="xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-light mt-3">
                             Smart medical devices and AI-based medical support
@@ -164,7 +164,7 @@ const Research = (props: Props) => {
                             alt=""
                         />
                     </div>
-                    <div className=" font-semibold text-[#262626] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto">
+                    <div className=" font-semibold text-[#262626] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto 2xl:ml-auto 2xl:mr-28">
                         Next generation
                         <br />
                         <span>computer network</span>
@@ -223,7 +223,7 @@ const Research = (props: Props) => {
                             alt=""
                         />
                     </div>
-                    <div className=" font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto">
+                    <div className=" font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto 2xl:mr-auto 2xl:ml-20">
                         Computation Astronomy
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3 ">
@@ -262,7 +262,7 @@ const Research = (props: Props) => {
                             alt=""
                         />
                     </div>
-                    <div className=" font-semibold text-[#262626] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto">
+                    <div className=" font-semibold text-[#262626] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl mx-auto xl:max-w-7xl 2xl:ml-auto 2xl:mr-10">
                         Augmented / Virtual reality
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#E9E9E9] rounded-md py-1 px-3 ">
@@ -313,7 +313,7 @@ const Research = (props: Props) => {
                     </div>
                     <div
                         id="image"
-                        className="rounded my-11 ml-auto mr-10 xxxs:hidden xxs:hidden sm:hidden md:flex"
+                        className="rounded my-11 ml-auto mr-10 xxxs:hidden xxs:hidden sm:hidden md:flex "
                     >
                         <img
                             className="rounded object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-60 lg:h-72  xl:h-96"
@@ -321,7 +321,7 @@ const Research = (props: Props) => {
                             alt=""
                         />
                     </div>
-                    <div className=" font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto ">
+                    <div className=" font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto 2xl:mr-auto 2xl:ml-20">
                         Bioinformatics
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3 ">

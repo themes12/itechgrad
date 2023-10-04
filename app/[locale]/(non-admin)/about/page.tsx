@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 type Props = {};
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
     const t = useTranslations("Aboutus");
     return (
         <>
@@ -80,4 +80,4 @@ const page = (props: Props) => {
     );
 };
 
-export default page;
+export default Page;

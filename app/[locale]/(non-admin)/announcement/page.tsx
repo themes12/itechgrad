@@ -8,7 +8,7 @@ import { Navbar, NavbarBrand, NavbarContent, Input } from '@nextui-org/react';
 import { useTranslations } from "next-intl";
 type Props = {}
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   const buttonStyles = {
     height: '40px',
     fontSize: '15px',
@@ -36,4 +36,4 @@ const page = (props: Props) => {
   );
 }
 
-export default page
+export default Page
