@@ -58,8 +58,8 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row mt-8 lg:mt-16 justify-evenly lg:mx-20 gap-x-10 gap-y-2">
                     <div className="w-full lg:w-5/12">
                         <h5 className="font-normal text-[#515151] text-[11px] md:text-[14px] lg:text-[18px]">
-                            Department of Computer Science <br />
-                            Faculty of Science, Chiang Mai University
+                            {t("header3")} <br />
+                            {t("header4")}
                         </h5>
                         <Button
                             className="transition ease-in-out delay-150 hover:-translate-y-1 duration-300 
@@ -67,7 +67,7 @@ export default function Home() {
                             size="lg"
                             endContent={<ArrowRightIcon className="h-5 w-5" />}
                         >
-                            about program
+                            {t("button1")}
                         </Button>
                     </div>
                     <div className="w-full lg:w-7/12 h-96 rounded-xl aspect-square">
@@ -84,7 +84,7 @@ export default function Home() {
             </Section>
             <Section className="bg-gradient-to-r from-[#d1e0d8]/70 to-[#76b9cd]/70 py-12">
                 <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9">
-                    <SectionText name="Announcement" />
+                    <SectionText name={t("header5")} />
                     <div className="mt-8">
                         <Carousal>
                             {posts.map((item, index) => (
@@ -102,7 +102,7 @@ export default function Home() {
             </Section>
             <Section>
                 <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9">
-                    <SectionText name="Congratulations" />
+                    <SectionText name={t("header6")} />
                     <div className="mb-24 relative mt-8">
                         <Image
                             className="z-0 w-full h-full object-cover rounded-lg aspect-video"
@@ -134,22 +134,19 @@ export default function Home() {
                     <div className="bg-[#E8E8E8] shadow-lg w-full md:w-1/3 lg:w-1/4 px-8 md:pl-16 md:pr-10 space-y-6 py-8">
                         <div>
                             <h5 className="text-[#002F43] text-lg font-bold underline underline-offset-2">
-                                Address
+                                {t("footer1")}
                             </h5>
                             <p className="text-sm font-normal">
-                                Department of Computer Science Faculty of
-                                Science Chiang Mai University 239 Huay Kaew
-                                Road, Suthep Subdistrict, Mueang District,
-                                Chiang Mai Province 50200
+                                {t("footer2")}
                             </p>
                         </div>
                         <div className="space-y-4">
                             <h5 className="text-[#002F43] text-lg font-bold underline underline-offset-2">
-                                Contact us
+                                {t("footer3")}
                             </h5>
                             <div className="space-y-1">
                                 <p className="font-extrabold text-sm">
-                                    โทรศัพท์
+                                    {t("footer4")}
                                 </p>
                                 <p className="text-sm font-light">
                                     0-5394-3412-16
@@ -159,19 +156,19 @@ export default function Home() {
                                 </p>
                             </div>
                             <div className="space-y-1">
-                                <p className="font-extrabold text-sm">ธุรการ</p>
+                                <p className="font-extrabold text-sm">{t("footer5")}</p>
                                 <p className="text-sm font-light">
-                                    กด 0 หรือ 101
+                                    {t("footer6")}
                                 </p>
                             </div>
                             <div className="space-y-1">
                                 <p className="font-extrabold text-sm">
-                                    หลักสูตรปริญญาโท-เอก
+                                    {t("footer7")}
                                 </p>
-                                <p className="text-sm font-light">กด 105</p>
+                                <p className="text-sm font-light">{t("footer8")}</p>
                             </div>
                             <div className="space-y-1">
-                                <p className="font-extrabold text-sm">E-mail</p>
+                                <p className="font-extrabold text-sm">{t("footer9")}</p>
                                 <p className="text-sm font-light">
                                     compsci@cmu.ac.th
                                 </p>
@@ -179,7 +176,7 @@ export default function Home() {
                         </div>
                         <div>
                             <h5 className="text-[#002F43] text-lg font-bold underline underline-offset-2">
-                                Follow us
+                                {t("footer10")}
                             </h5>
                             <div className="flex gap-3">
                                 <button>
