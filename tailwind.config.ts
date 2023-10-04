@@ -47,6 +47,7 @@ const config: Config = {
                 slideL: "slideL 1s ease-in ",
                 slideR: "slideR 1s ease-in ",
                 slideB: "slideB 0.8s ease-in ",
+                fadeIn: "fadeIn 1s ease-in forwards ",
             },
             keyframes: {
                 marquee: {
@@ -68,6 +69,10 @@ const config: Config = {
                 slideB: {
                     "0%" : { opacity : "0%" ,transform : "translateY(10%) " },
                     "100%" : { opacity : "100%" ,transform: "translateY(0%) " },
+                },
+                fadeIn: {
+                    "0%" : { opacity : "0%" },
+                    "100%" : { opacity : "100%" },
                 },
             },
         },

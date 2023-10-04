@@ -48,22 +48,22 @@ export default function Home() {
         <main className="space-y-16">
             <Section className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
                 <div className="space-y-4 mt-6 md:mt-10 lg:mt-16">
-                    <h2 className="font-bold text-xl md:text-5xl lg:text-[74px] xl:text-[74px] text-[#262626] text-center">
+                    <h2 className="font-bold text-xl md:text-5xl lg:text-[74px] xl:text-[74px] text-[#262626] text-center animate-fadeIn">
                         {t("header1")}
                     </h2>
-                    <h2 className="font-bold text-2xl md:text-6xl lg:text-[92px] xl:text-[92px] text-[#FFC550] text-center">
+                    <h2 className="font-bold text-2xl md:text-6xl lg:text-[92px] xl:text-[92px] text-[#FFC550] text-center animate-fadeIn">
                         {t("header2")}
                     </h2>
                 </div>
                 <div className="flex flex-col md:flex-row mt-8 lg:mt-16 justify-evenly lg:mx-20 gap-x-10 gap-y-2">
                     <div className="w-full lg:w-5/12">
-                        <h5 className="font-normal text-[#515151] text-[11px] md:text-[14px] lg:text-[18px]">
+                        <h5 className="font-normal text-[#515151] text-[11px] md:text-[14px] lg:text-[18px] animate-fadeIn">
                             {t("header3")} <br />
                             {t("header4")}
                         </h5>
                         <Button
                             className="transition ease-in-out delay-150 hover:translate-x-1 duration-300 
-                            my-2 lg:mt-10 px-7 text-xl font-regular text-white bg-[#515151] hover:bg-[#262626] rounded-3xl"
+                            my-2 lg:mt-10 px-7 text-xl font-regular text-white bg-[#515151] hover:bg-[#262626] rounded-3xl animate-fadeIn"
                             size="lg"
                             endContent={<ArrowRightIcon className="h-5 w-5" />}
                         >
