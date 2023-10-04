@@ -4,7 +4,7 @@ import axios from "axios";
 import degreeJson from "@/utils/degree.json";
 import { Course, Degree } from "@/types/course";
 import { useState } from "react";
-import { SettingCourse } from "@/types/setting"
+import { SettingCourse } from "@/types/setting";
 
 type Props = { params: { degree: string } };
 
@@ -13,7 +13,7 @@ const Courses = async ({ params }: Props) => {
     const degreeText = degreeJson[degree as keyof Degree];
     const courses = (
         await axios.get<{ courses: Course[] }>(
-            `${process.env.NEXT_PUBLIC_API_URL}/courses/${degree}`
+            `${process.env.NEXT_PUBLIC_API_URL}/course/${degree}`
         )
     ).data.courses;
 

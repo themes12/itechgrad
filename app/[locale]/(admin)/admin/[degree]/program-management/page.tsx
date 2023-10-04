@@ -5,11 +5,16 @@ import axios from "axios";
 // import HeaderEditor from "@/components/admin/course_management/header";
 import { Program } from "@/types/program";
 import Action from "@/components/admin/program_management/action";
+import { Link } from "@/navigation";
 // import { SettingCourse } from "@/types/setting";
 
 type Props = {};
 
-const ProgramManagement = async ({ params }: { params: { degree: number } }) => {
+const ProgramManagement = async ({
+    params,
+}: {
+    params: { degree: number };
+}) => {
     const { degree } = params;
     // const { data: session } = useSession();
     const programs = (

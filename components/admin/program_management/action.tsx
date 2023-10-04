@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Course } from "@/types/course";
 import { Button } from "@nextui-org/react";
 import { useRef, useState } from "react";
@@ -7,11 +7,11 @@ import axios from "axios";
 import { Link, useRouter } from "@/navigation";
 import { useParams } from "next/navigation";
 
-type Props = {}
+type Props = {};
 
 const Action = (rowData: Course) => {
-    const router = useRouter()
-    const { degree } = useParams()
+    const router = useRouter();
+    const { degree } = useParams();
     const toastConfirm = useRef<Toast>(null);
     const toast = useRef<Toast>(null);
 
@@ -27,7 +27,7 @@ const Action = (rowData: Course) => {
                 life: 3000,
             });
         }
-    }
+    };
 
     const clear = async (submit: boolean) => {
         toastConfirm.current?.clear();
@@ -44,26 +44,35 @@ const Action = (rowData: Course) => {
             summary: `ลบข้อมูลรายวิชา ${rowData._id} สำเร็จ`,
             life: 3000,
         });
-    }
+    };
 
     const confirm = () => {
         toastConfirm.current?.show({
             severity: "warn",
             sticky: true,
-            className: 'border-none',
+            className: "border-none",
             content: (
                 <div className="flex w-full flex-column justify-center">
                     <div>
                         <div className="text-center">
-                            <div className="font-bold text-xl my-3">ลบข้อมูลวิชา {rowData._id}?</div>
+                            <div className="font-bold text-xl my-3">
+                                ลบข้อมูลวิชา {rowData._id}?
+                            </div>
                         </div>
                         <div className="flex gap-3">
-                            <Button color="danger" onClick={(e) => clear(true)}>ยืนยัน</Button>
-                            <Button color="default" onClick={(e) => clear(false)}>ยกเลิก</Button>
+                            <Button color="danger" onClick={(e) => clear(true)}>
+                                ยืนยัน
+                            </Button>
+                            <Button
+                                color="default"
+                                onClick={(e) => clear(false)}
+                            >
+                                ยกเลิก
+                            </Button>
                         </div>
                     </div>
                 </div>
-            )
+            ),
         });
     };
     return (
@@ -71,7 +80,18 @@ const Action = (rowData: Course) => {
             <Toast ref={toast} />
             <Toast ref={toastConfirm} position="top-right" />
             <div className="flex gap-2 justify-center items-center">
-                <Button color="warning" as={Link} href={`/admin/${degree}/program-management/${rowData._id}/edit`}>
+                <Button
+                    color="success"
+                    as={Link}
+                    href={`/admin/${degree}/program-management/${rowData._id}`}
+                >
+                    ดูข้อมูล
+                </Button>
+                <Button
+                    color="warning"
+                    as={Link}
+                    href={`/admin/${degree}/program-management/${rowData._id}/edit`}
+                >
                     แก้ไข
                 </Button>
                 <Button color="danger" onClick={confirm}>
@@ -79,8 +99,7 @@ const Action = (rowData: Course) => {
                 </Button>
             </div>
         </>
+    );
+};
 
-    )
-}
-
-export default Action
+export default Action;
