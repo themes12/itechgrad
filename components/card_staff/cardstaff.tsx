@@ -40,11 +40,11 @@ export const CardStaff = ({
                     <div className="absolute pt-4 xxxs:pl-8 md:pl-0">
                     {type === "academic" ? (
                         staff.picture.includes("data:image") ? (
-                            <img src={staff.picture} alt="" />
+                            <img src={staff.picture} alt="" className="rounded-lg " />
                         ) : (
                             <ImageNext
                                 alt={`picture of ${staff.picture}`}
-                                className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 "
+                                className="rounded-lg  object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6  w-auto  "
                                 width={0}
                                 height={0}
                                 // sizes="100vw"
@@ -52,14 +52,14 @@ export const CardStaff = ({
                             />
                         )
                     ) : staff.picture.includes("data:image") ? (
-                        <img src={staff.picture} className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 " alt={`picture of ${staff.picture}`} />
+                        <img src={staff.picture} className="rounded-lg " alt={`picture of ${staff.picture}`} />
                     ) : (
                         <ImageNext
                             alt={`picture of ${staff.picture}`}
                             width={0}
                             height={0}
                             // sizes="100vw"
-                            className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto "
+                            className="rounded-lg  object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto "
                             src={`https://cs-33ck.vercel.app/personal/staff${staff.picture}`}
                         />
                     )}
