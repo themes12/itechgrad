@@ -11,6 +11,7 @@ import {
 import { AcademicStaff, CardStaffProps, SupportStaff } from "@/types/staff";
 import Link from "next/link";
 import ImageNext from "next/image";
+import  ArrowRightIcon  from "@heroicons/react/24/outline/ArrowRightIcon";
 
 export const CardStaff = ({
     type,
@@ -137,20 +138,7 @@ export const CardStaff = ({
                                         className="bg-[#0E80E9] text-white text-[15px]"
                                         radius="full"
                                         endContent={
-                                            <svg
-                                                width={24}
-                                                height={24}
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="m2 12h20m-9-9 9 9-9 9"
-                                                    fill="none"
-                                                    stroke="#ffff"
-                                                    strokeWidth="2"
-                                                />
-                                            </svg>
+                                            <ArrowRightIcon className="h-4 w-4 text-white" />
                                         }
                                     >
                                         Personal Website
