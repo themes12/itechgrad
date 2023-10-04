@@ -45,7 +45,7 @@ export default function Home() {
     const t = useTranslations("Index");
 
     return (
-        <main className="space-y-8">
+        <main className="space-y-16 lg:space-y-24">
             <Section className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
                 <div className="space-y-4 mt-6 md:mt-10 lg:mt-16">
                     <h2 className="font-bold text-xl md:text-5xl lg:text-[74px] xl:text-[74px] text-[#262626] text-center">
@@ -82,8 +82,8 @@ export default function Home() {
                     </div>
                 </div>
             </Section>
-            <Section className="bg-gradient-to-r from-[#d1e0d8]/70 to-[#76b9cd]/70 py-12">
-                <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9">
+            <Section className="bg-gradient-to-r from-[#d1e0d8]/70 to-[#76b9cd]/70 py-20">
+                <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9 my-8">
                     <SectionText name={t("header5")} />
                     <div className="mt-8">
                         <Carousal>
@@ -101,28 +101,30 @@ export default function Home() {
                 </div>
             </Section>
             <Section>
-                <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9">
+                <div className="md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9 mb-44">
                     <SectionText name={t("header6")} />
                     <div className="mb-24 relative mt-8">
                         <Image
                             className="z-0 w-full h-full object-cover rounded-lg aspect-video"
-                            src="/congratulation.svg"
+                            src="/IMG_1712.jpg"
                             alt=""
                         />
-                        <div className="w-11/12 md:w-1/2 lg:w-2/5 p-3 sm:p-6 rounded-xl absolute left-0 right-0 -bottom-28 xxxs:-bottom-20 xxs:-bottom-12 xs:-bottom-16 sm:-bottom-16 md:-bottom-4 md:left-16 bg-white shadow-md">
-                            <h6 className="text-[#181A2A] text-base sm:text-lg md:text-2xl font-semibold">
-                                The Impact of Technology on the Workplace: How
-                                Technology is Changing
+                        <div className="w-11/12 md:w-5/6 lg:w-3/6 p-3 sm:p-6 rounded-xl absolute 
+                             lg:-bottom-38 xxxs:-bottom-20 xxs:-bottom-20 xs:-bottom-20 sm:-bottom-20 md:-bottom-28 left-4 md:left-14 bg-white shadow-md">
+                            <h6 className="text-[#262626]  text-[12px] md:text-2xl lg:text-2xl font-semibold">
+                            ขอแสดงความยินดีกับ บัณฑิต มหาบัณฑิต <br />
+                            ปรัชญาดุษฎีบัณฑิต ภาควิชาวิทยาการคอมพิวเตอร์ <br />
+                            ในพิธีพระราชทานปริญญาบัตร มช. ครั้งที่ 57 
                             </h6>
-                            <p className="text-[#97989F] text-xs md:text-sm font-sm mt-2">
-                                August 20, 2022
+                            <p className="text-[#0E80E9] text-[10px] lg:text-[14px] md:text-sm font-sm mt-2">
+                                January 24, 2023
                             </p>
                         </div>
                     </div>
                 </div>
             </Section>
             <Section>
-                <div className="flex flex-col md:flex-row justify-end space-y-5 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9 my-8">
+                <div className="flex flex-col md:flex-row justify-end space-y-5 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-9 my-36">
                     <div className="block w-full md:relative md:w-2/3 lg:w-3/4 h-96 my-auto">
                         <div className="block md:absolute -right-5 w-full h-full">
                             <iframe

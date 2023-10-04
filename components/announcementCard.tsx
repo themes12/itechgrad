@@ -33,7 +33,7 @@ const AnnouncementCard = ({ title, body, href, image }: CardProps) => {
                     <div className="flex flex-col col-span-6 m">
                         <div className="flex justify-between items-start">
                             <div className="flex flex-col gap-0">
-                                <h6 className="uppercase font-semibold text-transparent text-base bg-clip-text bg-[#0E80E9]">
+                                <h6 className="uppercase font-semibold text-transparent text-base bg-clip-text bg-[#0E80E9] my-1">
                                     Announment
                                 </h6>
                                 <h3 className="font-bold text-2xl xs:text-5xl line-clamp-3 text-[#262626]">
