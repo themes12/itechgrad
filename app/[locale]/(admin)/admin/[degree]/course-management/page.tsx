@@ -15,7 +15,7 @@ const CourseManagement = async ({ params }: { params: { degree: string } }) => {
     // const { data: session } = useSession();
     const courses = (
         await axios.get<{ courses: Course[] }>(
-            `${process.env.NEXT_PUBLIC_API_URL}/courses/${degree}/all`
+            `${process.env.NEXT_PUBLIC_API_URL}/course/${degree}/all`
         )
     ).data.courses;
 
