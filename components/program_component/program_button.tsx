@@ -18,13 +18,13 @@ function ProgramButton({ degree }: { degree: string }) {
 
     return (
         <div>
-            <h2 className="text-[36px] pb-12 font-bold px-12 pt-10">
+            <h2 className="text-[36px] pb-12 font-bold lg:px-12 pt-10 xxs:px-5">
                 {degree} Program 2566
             </h2>
             <div className="mb-4 w-full flex flex-col items-center">
                 <Button
-                    className={`flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 ${
-                        isButtonHovered(1) ? "text-white" : "text-blue-950"
+                    className={`flex justify-between items-center bg-[#E7F1FB] h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2
+                    ${isButtonHovered(1) ? "text-white" : "text-blue-950"
                     }`}
                     style={{ width: "90%" }}
                     onMouseEnter={() => handleMouseEnter(1)}
@@ -32,10 +32,8 @@ function ProgramButton({ degree }: { degree: string }) {
                 >
                     <div className="flex-grow">
                         <p
-                            className={`text-left text-[18px] font-bold px-5 ${
-                                isButtonHovered(1)
-                                    ? "text-white"
-                                    : "text-blue-950"
+                            className={`text-left font-bold lg:text-lg md:text-lg sm:text-lg xs:text-base xxs:text-sm xxs:px-1 xxxs:text-xs xxxs:px-0
+                            ${isButtonHovered(1)? "text-white": "text-blue-950"
                             }`}
                         >
                             Type 1 (Plan A Type A1)
@@ -47,7 +45,7 @@ function ProgramButton({ degree }: { degree: string }) {
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
                         stroke="currentColor"
-                        className="w-6 h-6"
+                        className="lg:w-6 xxs:w-5 xxxs:w-4 lg:h-6 xxs:h-5 xxxs:h-4"
                     >
                         <path
                             stroke-linecap="round"
@@ -60,8 +58,8 @@ function ProgramButton({ degree }: { degree: string }) {
             &nbsp;
             <div className="mb-4 w-full flex flex-col items-center">
                 <Button
-                    className={`flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 ${
-                        isButtonHovered(2) ? "text-white" : "text-blue-950"
+                    className={`flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 
+                    ${isButtonHovered(2) ? "text-white" : "text-blue-950"
                     }`}
                     style={{ width: "90%" }}
                     onMouseEnter={() => handleMouseEnter(2)}
@@ -69,10 +67,8 @@ function ProgramButton({ degree }: { degree: string }) {
                 >
                     <div className="flex-grow">
                         <p
-                            className={`text-left text-[18px] font-bold px-5 ${
-                                isButtonHovered(2)
-                                    ? "text-white"
-                                    : "text-blue-950"
+                            className={`text-left font-bold lg:text-lg md:text-lg sm:text-lg xs:text-base xxs:text-sm xxs:px-1 xxxs:text-xs xxxs:px-0
+                            ${isButtonHovered(2)? "text-white": "text-blue-950"
                             }`}
                         >
                             Type 2 (Plan A Type A2)
@@ -84,7 +80,7 @@ function ProgramButton({ degree }: { degree: string }) {
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
                         stroke="currentColor"
-                        className="w-6 h-6"
+                        className="lg:w-6 xxs:w-5 xxxs:w-4 lg:h-6 xxs:h-5 xxxs:h-4"
                     >
                         <path
                             stroke-linecap="round"
@@ -97,8 +93,8 @@ function ProgramButton({ degree }: { degree: string }) {
             &nbsp;
             <div className="mb-4 w-full flex flex-col items-center">
                 <Button
-                    className={`flex justify-between items-center bg-[#E7F1FB] w-80 h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 ${
-                        isButtonHovered(3) ? "text-white" : "text-blue-950"
+                    className={`flex justify-between items-center bg-[#E7F1FB] w-auto h-16 text-rgb-28-14-14 py-2 px-4 rounded-md shadow-md cursor-pointer hover:bg-[#262626] active:translate-y-2 
+                    ${isButtonHovered(3) ? "text-white" : "text-blue-950"
                     }`}
                     style={{ width: "90%" }}
                     onMouseEnter={() => handleMouseEnter(3)}
@@ -106,10 +102,8 @@ function ProgramButton({ degree }: { degree: string }) {
                 >
                     <div className="flex-grow">
                         <p
-                            className={`text-left text-[18px] font-bold px-5 ${
-                                isButtonHovered(3)
-                                    ? "text-white"
-                                    : "text-blue-950"
+                            className={`text-left font-bold lg:text-lg md:text-lg sm:text-lg xs:text-base xxs:text-sm xxs:px-1 xxxs:text-xs xxxs:px-0
+                            ${isButtonHovered(3)? "text-white": "text-blue-950"
                             }`}
                         >
                             Type 3 (Plan B)
@@ -121,7 +115,7 @@ function ProgramButton({ degree }: { degree: string }) {
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
                         stroke="currentColor"
-                        className="w-6 h-6"
+                        className="lg:w-6 xxs:w-5 xxxs:w-4 lg:h-6 xxs:h-5 xxxs:h-4"
                     >
                         <path
                             stroke-linecap="round"

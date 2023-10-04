@@ -1,4 +1,5 @@
 import React from "react";
+import  ArrowRightIcon  from "@heroicons/react/24/outline/ArrowRightIcon";
 
 type Props = {};
 
@@ -43,8 +44,8 @@ const page = (props: Props) => {
                     </p>
 
                     <button className="flex cursor-pointer md:ml-8 mt-10 bg-[#0E80E9] text-white px-4 py-4 rounded-[2rem] font-normal text-sm items-center justify-between">
-                        <span>view Master&apos;s program&nbsp;&nbsp;</span>
-                        <span>&#10132;</span>
+                        <span>Master&apos;s program&nbsp;&nbsp;</span>
+                        <span><ArrowRightIcon className="h-4 w-4 text-white" /></span>
                     </button>
                 </div>
 
@@ -94,8 +95,8 @@ const page = (props: Props) => {
                     </p>
 
                     <button className="flex cursor-pointer md:ml-8 mt-10 bg-[#AFDEF9] text-[#0E80E9] px-4 py-4 rounded-[2rem] font-normal text-sm items-center justify-between">
-                        <span>view PhD&apos;s program&nbsp;&nbsp;</span>
-                        <span>&#10132;</span>
+                        <span>PhD&apos;s program&nbsp;&nbsp;</span>
+                        <span><ArrowRightIcon className="h-4 w-4 text-[#0E80E9]" /></span>
                     </button>
                 </div>
             </section>
