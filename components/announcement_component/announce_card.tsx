@@ -7,6 +7,7 @@ import {
   } from "@nextui-org/react";
 
 import'@/components/course_components/course_navbar.css';
+import { useTranslations } from "next-intl";
 
 export const Announcement_card = () => {
     const [hoveredBox, setHoveredBox] = useState<number | null>(null);
@@ -71,7 +72,8 @@ export const Announcement_card = () => {
     //     const end = start + rowsPerPage;
     //     return dataItems.slice(start, end);
     // }, [page, dataItems]);
-
+    
+    const t = useTranslations("Annoucement");
   return (
     <div>
             <div className="navbar" style={{ marginBottom: '3.125rem' }}>
@@ -93,11 +95,11 @@ export const Announcement_card = () => {
                         />
                     </div>
                     <div className="lg:order-1">
-                        <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">All</Button>
-                        <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">Announcement</Button>
-                        <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">News</Button>
-                        <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">Congratulations</Button>
-                        <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">Events</Button>
+                        <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">{t("button1")}</Button>
+                        <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">{t("button2")}</Button>
+                        <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">{t("button3")}</Button>
+                        <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">{t("button4")}</Button>
+                        <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">{t("button5")}</Button>
                     </div>
                 </div>
             </div>

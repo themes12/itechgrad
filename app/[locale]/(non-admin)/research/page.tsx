@@ -11,22 +11,21 @@ const Research = (props: Props) => {
             <section className="pt-4 mb-8 md:pt-8 lg:pt-10 md:pb-8 lg:pb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">
                 <div className="space-y-4">
                     <h2 className="flex justify-start font-bold text-2xl xxs:text-5xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[64px] text-[#0E80E9] mx-8 mt-8">
-                        {t("header")}&nbsp;
+                        {t("header1")}&nbsp;
                         <span className="flex text-[#262626] ">
-                        at&nbsp;the
+                        {t("header2")}
                         </span>
                     </h2>
 
                     <h2 className="flex justify-start font-bold text-2xl xxs:text-5xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[64px]  text-[#262626] mx-8 mt-8">
-                        Computer Science CMU
+                        {t("header3")}
                     </h2>
                 </div>
 
                 <p className="flex justify-start font-normal text-md xxs:text-md xs:text-md sm:text-md md:text-xl lg:text-xl xl:text-xl text-[#515151] mx-8 mt-8">
-                    The esteemed faculty members of the department
+                    {t("header4")}
                     <br></br>
-                    have archieved remarkable research contribution a multitude
-                    of discipline.
+                    {t("header5")}
                 </p>
             </section>
 
@@ -127,7 +126,7 @@ const Research = (props: Props) => {
                             systems
                         </p>
                         <button className="xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3 ">
-                            Reseacher
+                            {t("header6")}
                         </button>
                         <br />
                         <button className="xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal transition-all ease-in-out hover:bg-[#FFFFFF] hover:text-[#262626] hover:px-3 rounded-md py-1 text-left">
@@ -142,7 +141,7 @@ const Research = (props: Props) => {
                                 records, images)
                             </p>
                             <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3">
-                                Reseacher
+                                {t("header6")}
                             </button>
                             <br />
                             <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal  transition-all ease-in-out hover:bg-[#FFFFFF] hover:text-[#262626] hover:px-3 rounded-md py-1 text-left ">
@@ -171,7 +170,7 @@ const Research = (props: Props) => {
                         <span>computer network</span>
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#E9E9E9] rounded-md py-1 px-3 ">
-                            Reseacher
+                            {t("header6")}
                         </button>
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal transition-all ease-in-out  hover:bg-[#262626] hover:text-[#FFFFFF] hover:px-3 rounded-md py-1 text-left">
@@ -182,7 +181,7 @@ const Research = (props: Props) => {
                             Blockchain
                             <br />
                             <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#E9E9E9] rounded-md py-1 px-3">
-                                Reseacher
+                                {t("header6")}
                             </button>
                             <br />
                             <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal  transition-all ease-in-out hover:bg-[#262626] hover:text-[#FFFFFF] hover:px-3 rounded-md py-1  text-left">
@@ -228,7 +227,7 @@ const Research = (props: Props) => {
                         Computation Astronomy
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3 ">
-                            Reseacher
+                            {t("header6")}
                         </button>
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal transition-all ease-in-out  hover:bg-[#FFFFFF] hover:text-[#262626] hover:px-3 rounded-md py-1 text-left ">
@@ -239,7 +238,7 @@ const Research = (props: Props) => {
                             Machine learning
                             <br />
                             <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3">
-                                Reseacher
+                                {t("header6")}
                             </button>
                             <br />
                             <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal transition-all ease-in-out hover:bg-[#FFFFFF] hover:text-[#262626] hover:px-3 rounded-md py-1 text-left">
@@ -267,7 +266,7 @@ const Research = (props: Props) => {
                         Augmented / Virtual reality
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#E9E9E9] rounded-md py-1 px-3 ">
-                            Reseacher
+                            {t("header6")}
                         </button>
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal transition-all ease-in-out  hover:bg-[#262626] hover:text-[#FFFFFF] hover:px-3 rounded-md py-1 text-left">
@@ -279,7 +278,7 @@ const Research = (props: Props) => {
                             Computer Vision
                             <br />
                             <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#E9E9E9] rounded-md py-1 px-3">
-                                Reseacher
+                                {t("header6")}
                             </button>
                             <br />
                             <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal  transition-all ease-in-out hover:bg-[#262626] hover:text-[#FFFFFF] hover:px-3 rounded-md py-1 text-left">
@@ -326,7 +325,7 @@ const Research = (props: Props) => {
                         Bioinformatics
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3 ">
-                            Reseacher
+                            {t("header6")}
                         </button>
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal transition-all ease-in-out  hover:bg-[#FFFFFF] hover:text-[#262626] hover:px-3 rounded-md py-1 text-left">
@@ -340,7 +339,7 @@ const Research = (props: Props) => {
                             Interaction
                             <br />
                             <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3">
-                                Reseacher
+                                {t("header6")}
                             </button>
                             <br />
                             <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal  transition-all ease-in-out hover:bg-[#FFFFFF] hover:text-[#262626] hover:px-3 rounded-md py-1 text-left">
