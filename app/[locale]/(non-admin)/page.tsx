@@ -77,7 +77,7 @@ export default function Home() {
                             width="100%"
                             height="100%"
                         ></iframe> */}
-                        <Spline scene="https://prod.spline.design/FPmjVxMXmGo3Jvvo/scene.splinecode" />
+                        <Spline scene="https://draft.spline.design/N11OSXHMoxq5flD6/scene.splinecode" />
                         {/* <iframe src='https://my.spline.design/gitnesssplinetest-322630af95c0e73de65e07f3d7169434/' frameborder='0' width='100%' height='100%'></iframe> */}
                     </div>
                 </div>
