@@ -21,7 +21,7 @@ export const MyModal = ({ course }: { course: Course }) => {
   const size = '4xl'
   return (
     <>
-      <a className="px-3 py-2 font-normal text-base text-gray" onClick={onOpen}>รายละเอียด</a>
+      <a className="px-3 py-2 font-normal text-gray lg:text-base md:text-base sm:text-base xs:text-sm xxs:text-xs xxxs:text-xs" onClick={onOpen}>รายละเอียด</a>
       <Modal size={size} isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false}>
         <ModalContent>
           {(onClose) => (
