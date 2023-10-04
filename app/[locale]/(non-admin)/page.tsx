@@ -131,7 +131,7 @@ export default function Home() {
                             ></iframe>
                         </div>
                     </div>
-                    <div className="bg-[#E8E8E8] rounded-md shadow-lg w-full md:w-2/3 lg:w-2/4 px-8 md:pl-16 md:pr-10 space-y-6 py-8">
+                    <div className="bg-[#F7FAFF] rounded-md shadow-lg w-full md:w-2/3 lg:w-2/4 px-8 md:pl-16 md:pr-10 space-y-6 py-8">
                         <div>
                             <h5 className="text-[#262626] text-lg font-bold underline underline-offset-2">
                                 {t("footer1")}
