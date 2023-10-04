@@ -18,7 +18,7 @@ const Action = (rowData: Course) => {
     const handleDelete = async () => {
         try {
             const response = await axios.delete(
-                `${process.env.NEXT_PUBLIC_API_URL}/course/${rowData._id}`
+                `${process.env.NEXT_PUBLIC_API_URL}/program/${rowData._id}`
             );
         } catch (error) {
             toast.current?.show({
@@ -41,7 +41,7 @@ const Action = (rowData: Course) => {
     const show = () => {
         toast.current?.show({
             severity: "success",
-            summary: `ลบข้อมูลรายวิชา ${rowData._id} สำเร็จ`,
+            summary: `ลบข้อมูล ${rowData.name_th} สำเร็จ`,
             life: 3000,
         });
     };
@@ -56,10 +56,10 @@ const Action = (rowData: Course) => {
                     <div>
                         <div className="text-center">
                             <div className="font-bold text-xl my-3">
-                                ลบข้อมูลวิชา {rowData._id}?
+                                ลบข้อมูล {rowData.name_th} ?
                             </div>
                         </div>
-                        <div className="flex gap-3">
+                        <div className="flex gap-3 justify-center items-center">
                             <Button color="danger" onClick={(e) => clear(true)}>
                                 ยืนยัน
                             </Button>

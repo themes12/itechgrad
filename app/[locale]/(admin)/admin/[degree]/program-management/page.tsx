@@ -22,12 +22,6 @@ const ProgramManagement = async ({
             `${process.env.NEXT_PUBLIC_API_URL}/program`
         )
     ).data.programs;
-
-    // const setting = (
-    //     await axios.get<{ academic_year: SettingCourse }>(
-    //         `${process.env.NEXT_PUBLIC_API_URL}/setting/academic-year`
-    //     )
-    // ).data.academic_year;
     return (
         <Section className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl mx-auto px-9 lg:px-9">
             {/* <div className="flex justify-between gap-3 items-end">
@@ -41,7 +35,7 @@ const ProgramManagement = async ({
                     rows={10}
                     rowsPerPageOptions={[5, 10, 25, 50]}
                 >
-                    <Column field="name_th" header="ชื่อวิชา"></Column>
+                    <Column field="name_th" header="หลักสูตร"></Column>
                     <Column body={Action}></Column>
                 </DataTable>
             </div>
