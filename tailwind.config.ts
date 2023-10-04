@@ -44,6 +44,9 @@ const config: Config = {
             animation: {
                 marquee: "marquee 50s linear infinite",
                 marquee2: "marquee2 50s linear infinite",
+                slideL: "slideL 1s ease-in ",
+                slideR: "slideR 1s ease-in ",
+                slideB: "slideB 0.8s ease-in ",
             },
             keyframes: {
                 marquee: {
@@ -53,6 +56,18 @@ const config: Config = {
                 marquee2: {
                     "0%": { transform: "translateX(100%)" },
                     "100%": { transform: "translateX(0%)" },
+                },
+                slideL: {
+                    "0%" : { opacity : "0%" ,transform : "translateX(-10%)" },
+                    "100%" : { opacity : "100%" ,transform: "translateX(0%) " },
+                },
+                slideR: {
+                    "0%" : { opacity : "0%" ,transform : "translateX(10%) " },
+                    "100%" : { opacity : "100%" ,transform: "translateX(0%) " },
+                },
+                slideB: {
+                    "0%" : { opacity : "0%" ,transform : "translateY(10%) " },
+                    "100%" : { opacity : "100%" ,transform: "translateY(0%) " },
                 },
             },
         },
