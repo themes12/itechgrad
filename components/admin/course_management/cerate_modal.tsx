@@ -123,7 +123,7 @@ const CreateModal = ({
                                         <div key={index}>
                                             <div className="inline-flex gap-2 mb-3">
                                                 <p className="text-lg font-semibold">
-                                                    เงื่อนไขกลุ่ม
+                                                    กลุ่มวิชาตัวเลือก
                                                 </p>
                                                 <Button
                                                     size="sm"
@@ -194,14 +194,14 @@ const CreateModal = ({
                                         handleAddPrerequisite("normal")
                                     }
                                 >
-                                    เพิ่มเงื่อนไขเดี่ยว
+                                    เพิ่มวิชา
                                 </Button>
                                 <Button
                                     onPress={() =>
                                         handleAddPrerequisite("group")
                                     }
                                 >
-                                    เพิ่มเงื่อนไขกลุ่ม
+                                    เพิ่มกลุ่มวิชาตัวเลือก
                                 </Button>
                             </ButtonGroup>
                         </ModalBody>
