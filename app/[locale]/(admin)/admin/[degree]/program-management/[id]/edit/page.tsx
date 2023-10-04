@@ -8,10 +8,10 @@ const EditCourse = async ({
 }: {
     params: { id: string; degree: string };
 }) => {
-    const { id } = params;
+    const { id, degree } = params;
     const program = (
         await axios.get<{ program: Program }>(
-            `${process.env.NEXT_PUBLIC_API_URL}/program/${id}`
+            `${process.env.NEXT_PUBLIC_API_URL}/program/${degree}/${id}`
         )
     ).data.program;
 

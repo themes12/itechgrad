@@ -11,14 +11,15 @@ type Props = {};
 
 const Action = (rowData: Course) => {
     const router = useRouter();
-    const { degree } = useParams();
+    const { degree, id } = useParams();
     const toastConfirm = useRef<Toast>(null);
     const toast = useRef<Toast>(null);
 
+    console.log(degree, id);
     const handleDelete = async () => {
         try {
             const response = await axios.delete(
-                `${process.env.NEXT_PUBLIC_API_URL}/plan/${rowData._id}`
+                `${process.env.NEXT_PUBLIC_API_URL}/plan/${degree}/${rowData._id}`
             );
         } catch (error) {
             toast.current?.show({
@@ -80,17 +81,17 @@ const Action = (rowData: Course) => {
             <Toast ref={toast} />
             <Toast ref={toastConfirm} position="top-right" />
             <div className="flex gap-2 justify-center items-center">
-                <Button
+                {/* <Button
                     color="success"
                     as={Link}
-                    href={`/admin/${degree}/program-management/${rowData._id}/plan`}
+                    href={`/admin/${degree}/program-management/${id}/plan/${rowData._id}`}
                 >
                     ดูข้อมูล
-                </Button>
+                </Button> */}
                 <Button
                     color="warning"
                     as={Link}
-                    href={`/admin/${degree}/program-management/${rowData._id}/edit`}
+                    href={`/admin/${degree}/program-management/${id}/plan/${rowData._id}/edit`}
                 >
                     แก้ไข
                 </Button>

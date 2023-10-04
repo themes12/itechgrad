@@ -22,8 +22,10 @@ const Form = ({ program, params }: Props) => {
     const toast = useRef<Toast>(null);
     const formik = useFormik<Program>({
         initialValues: {
+            degree: program?.degree,
             name_en: program?.name_en ?? "",
             name_th: program?.name_th ?? "",
+            type: program?.type,
         },
         validationSchema: Yup.object({
             name_en: Yup.string().required("Required"),
@@ -32,44 +34,42 @@ const Form = ({ program, params }: Props) => {
         onSubmit: async (values) => {
             const data = { ...values };
             if (program) {
-                console.log(`${process.env.NEXT_PUBLIC_API_URL}/program/${id}`);
-                // try {
-                //     const res = await axios.post(
-                //         `${process.env.NEXT_PUBLIC_API_URL}/program/${id}`,
-                //         data
-                //     );
-                //     toast.current?.show({
-                //         severity: "success",
-                //         summary: "เพิ่มข้อมูลรายวิชาสำเร็จ",
-                //         life: 3000,
-                //     });
-                // } catch (error) {
-                //     toast.current?.show({
-                //         severity: "error",
-                //         summary: "เพิ่มข้อมูลรายวิชาไม่สำเร็จ",
-                //         life: 3000,
-                //     });
-                // }
+                try {
+                    const res = await axios.post(
+                        `${process.env.NEXT_PUBLIC_API_URL}/program/${degree}/${id}`,
+                        data
+                    );
+                    toast.current?.show({
+                        severity: "success",
+                        summary: "แก้ไขข้อมูลหลักสูตรสำเร็จ",
+                        life: 3000,
+                    });
+                } catch (error) {
+                    toast.current?.show({
+                        severity: "error",
+                        summary: "แก้ไขข้อมูลหลักสูตรไม่สำเร็จ",
+                        life: 3000,
+                    });
+                }
             } else {
-                console.log(`${process.env.NEXT_PUBLIC_API_URL}/program/${id}`);
-                // try {
-                //     const res = await axios.put(
-                //         `${process.env.NEXT_PUBLIC_API_URL}/course/${degree}`,
-                //         data
-                //     );
-                //     formik.resetForm();
-                //     toast.current?.show({
-                //         severity: "success",
-                //         summary: "เพิ่มข้อมูลรายวิชาสำเร็จ",
-                //         life: 3000,
-                //     });
-                // } catch (error) {
-                //     toast.current?.show({
-                //         severity: "error",
-                //         summary: "เพิ่มข้อมูลรายวิชาไม่สำเร็จ",
-                //         life: 3000,
-                //     });
-                // }
+                try {
+                    const res = await axios.put(
+                        `${process.env.NEXT_PUBLIC_API_URL}/program/${degree}`,
+                        data
+                    );
+                    formik.resetForm();
+                    toast.current?.show({
+                        severity: "success",
+                        summary: "เพิ่มข้อมูลหลักสูตรสำเร็จ",
+                        life: 3000,
+                    });
+                } catch (error) {
+                    toast.current?.show({
+                        severity: "error",
+                        summary: "เพิ่มข้อมูลหลักสูตรไม่สำเร็จ",
+                        life: 3000,
+                    });
+                }
             }
         },
     });
@@ -93,7 +93,7 @@ const Form = ({ program, params }: Props) => {
                             isFormFieldInvalid("name_th") &&
                             formik.errors.name_th
                         }
-                        className="max-w-xs"
+                        className="max-w-full"
                         value={formik.values.name_th}
                         onChange={(e) => {
                             formik.setFieldValue("name_th", e.target.value);
@@ -109,7 +109,7 @@ const Form = ({ program, params }: Props) => {
                             isFormFieldInvalid("name_en") &&
                             formik.errors.name_en
                         }
-                        className="max-w-xs"
+                        className="max-w-full"
                         value={formik.values.name_en}
                         onChange={(e) => {
                             formik.setFieldValue("name_en", e.target.value);
@@ -117,7 +117,7 @@ const Form = ({ program, params }: Props) => {
                     />
                 </div>
             </div>
-            <div className="mt-5">
+            <div className="mt-5 flex justify-center">
                 <Button onPress={() => formik.submitForm()} color="success">
                     บันทึก
                 </Button>

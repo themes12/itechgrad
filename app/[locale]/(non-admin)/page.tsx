@@ -7,7 +7,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import SectionText from "@/components/sectionText";
 import AnnouncementCard from "@/components/announcementCard";
 import Carousal from "@/components/carousal";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function Home() {
     const posts = [
@@ -71,13 +71,21 @@ export default function Home() {
                         </Button>
                     </div>
                     <div className="w-full lg:w-7/12 h-96 rounded-xl aspect-square">
+                        <iframe
+                            src="https://my.spline.design/untitledcopy-b0520e6797aabf094a8a8f8c2b055eeb/"
+                            frameBorder="0"
+                            width="100%"
+                            height="100%"
+                        ></iframe>
+                        {/* <Spline scene="https://prod.spline.design/arhPmRi2xQ2PqhM1/scene.splinecode" /> */}
+                        {/* <Spline scene="https://prod.spline.design/FPmjVxMXmGo3Jvvo/scene.splinecode" /> */}
                         {/* <iframe
                             className="border-none"
                             src="https://my.spline.design/untitled-61e15f9284714cf931f280e292ae5589/"
                             width="100%"
                             height="100%"
                         ></iframe> */}
-                        <Spline scene="https://draft.spline.design/N11OSXHMoxq5flD6/scene.splinecode" />
+                        {/* <Spline scene="https://prod.spline.design/FPmjVxMXmGo3Jvvo/scene.splinecode" /> */}
                         {/* <iframe src='https://my.spline.design/gitnesssplinetest-322630af95c0e73de65e07f3d7169434/' frameborder='0' width='100%' height='100%'></iframe> */}
                     </div>
                 </div>
@@ -109,12 +117,15 @@ export default function Home() {
                             src="/IMG_1712.jpg"
                             alt=""
                         />
-                        <div className="w-11/12 md:w-5/6 lg:w-3/6 p-3 sm:p-6 rounded-xl absolute 
-                             lg:-bottom-38 xxxs:-bottom-20 xxs:-bottom-20 xs:-bottom-20 sm:-bottom-20 md:-bottom-28 left-4 md:left-14 bg-white shadow-md">
+                        <div
+                            className="w-11/12 md:w-5/6 lg:w-3/6 p-3 sm:p-6 rounded-xl absolute 
+                             lg:-bottom-38 xxxs:-bottom-20 xxs:-bottom-20 xs:-bottom-20 sm:-bottom-20 md:-bottom-28 left-4 md:left-14 bg-white shadow-md"
+                        >
                             <h6 className="text-[#262626]  text-[12px] md:text-2xl lg:text-2xl font-semibold">
-                            ขอแสดงความยินดีกับ บัณฑิต มหาบัณฑิต <br />
-                            ปรัชญาดุษฎีบัณฑิต ภาควิชาวิทยาการคอมพิวเตอร์ <br />
-                            ในพิธีพระราชทานปริญญาบัตร มช. ครั้งที่ 57 
+                                ขอแสดงความยินดีกับ บัณฑิต มหาบัณฑิต <br />
+                                ปรัชญาดุษฎีบัณฑิต ภาควิชาวิทยาการคอมพิวเตอร์{" "}
+                                <br />
+                                ในพิธีพระราชทานปริญญาบัตร มช. ครั้งที่ 57
                             </h6>
                             <p className="text-[#0E80E9] text-[10px] lg:text-[14px] md:text-sm font-sm mt-2">
                                 January 24, 2023
@@ -158,7 +169,9 @@ export default function Home() {
                                 </p>
                             </div>
                             <div className="space-y-1">
-                                <p className="font-extrabold text-sm">{t("footer5")}</p>
+                                <p className="font-extrabold text-sm">
+                                    {t("footer5")}
+                                </p>
                                 <p className="text-sm font-light">
                                     {t("footer6")}
                                 </p>
@@ -167,10 +180,14 @@ export default function Home() {
                                 <p className="font-extrabold text-sm">
                                     {t("footer7")}
                                 </p>
-                                <p className="text-sm font-light">{t("footer8")}</p>
+                                <p className="text-sm font-light">
+                                    {t("footer8")}
+                                </p>
                             </div>
                             <div className="space-y-1">
-                                <p className="font-extrabold text-sm">{t("footer9")}</p>
+                                <p className="font-extrabold text-sm">
+                                    {t("footer9")}
+                                </p>
                                 <p className="text-sm font-light">
                                     compsci@cmu.ac.th
                                 </p>

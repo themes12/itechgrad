@@ -61,13 +61,13 @@ const Form = ({ course, params }: Props) => {
                     );
                     toast.current?.show({
                         severity: "success",
-                        summary: "เพิ่มข้อมูลรายวิชาสำเร็จ",
+                        summary: "แก้ไขข้อมูลรายวิชาสำเร็จ",
                         life: 3000,
                     });
                 } catch (error) {
                     toast.current?.show({
                         severity: "error",
-                        summary: "เพิ่มข้อมูลรายวิชาไม่สำเร็จ",
+                        summary: "แก้ไขข้อมูลรายวิชาไม่สำเร็จ",
                         life: 3000,
                     });
                 }
@@ -78,6 +78,7 @@ const Form = ({ course, params }: Props) => {
                         data
                     );
                     formik.resetForm();
+                    setPrerequisite([]);
                     toast.current?.show({
                         severity: "success",
                         summary: "เพิ่มข้อมูลรายวิชาสำเร็จ",
@@ -232,8 +233,11 @@ const Form = ({ course, params }: Props) => {
             </div>
             <p className="text-lg font-semibold mt-5">เงื่อนไข</p>
             <p className="text-base font-base mt-5">
-                {formatArray(customSort(prerequisite))}
+                {formatArray(prerequisite)}
             </p>
+            {/* <p className="text-base font-base mt-5">
+                {formatArray(customSort(prerequisite))}
+            </p> */}
             <Button onPress={onOpen}>เพิ่มเงื่อนไข</Button>
             <CreateModal
                 isOpen={isOpen}
