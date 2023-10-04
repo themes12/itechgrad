@@ -16,7 +16,7 @@ type Props = {}
 
 const page = ({ params }: { params: { slug: string } }) => {
   return (
-    <div className='bg-[#FFF]'>
+    <div className='bg-[#FFF] mb-20'>
       <div className='bg-[#262626]'>
         <div className='bg-[#262626]'>
           <div className="py-3 md:py-4 lg:py-3 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-8 lg:px-8 ">
