@@ -2,22 +2,21 @@ import Section from "@/components/section";
 import { Column } from "primereact/column";
 import { DataTable } from "primereact/datatable";
 import axios from "axios";
-import { Course } from "@/types/course";
-import HeaderEditor from "@/components/admin/course_management/header";
-import TableCheckbox from "@/components/admin/course_management/table_checkbox";
-import Action from "@/components/admin/course_management/action";
-import { SettingCourse } from "@/types/setting";
+// import HeaderEditor from "@/components/admin/course_management/header";
+import { Program } from "@/types/program";
+import Action from "@/components/admin/program_management/action";
+// import { SettingCourse } from "@/types/setting";
 
 type Props = {};
 
 const ProgramManagement = async ({ params }: { params: { degree: number } }) => {
     const { degree } = params;
     // const { data: session } = useSession();
-    // const courses = (
-    //     await axios.get<{ courses: Course[] }>(
-    //         `${process.env.NEXT_PUBLIC_API_URL}/courses/${degree}/all`
-    //     )
-    // ).data.courses;
+    const programs = (
+        await axios.get<{ programs: Program[] }>(
+            `${process.env.NEXT_PUBLIC_API_URL}/program`
+        )
+    ).data.programs;
 
     // const setting = (
     //     await axios.get<{ academic_year: SettingCourse }>(
@@ -29,20 +28,18 @@ const ProgramManagement = async ({ params }: { params: { degree: number } }) => 
             {/* <div className="flex justify-between gap-3 items-end">
                 <HeaderEditor setting={setting} degree={degree} />
             </div> */}
-            {/* <div className="card mt-5">
+            <div className="card mt-5">
                 <DataTable
                     className="w-full"
-                    value={courses}
+                    value={programs}
                     paginator
                     rows={10}
                     rowsPerPageOptions={[5, 10, 25, 50]}
                 >
-                    <Column field="is_show" body={TableCheckbox}></Column>
-                    <Column field="_id" header="รหัสวิชา"></Column>
                     <Column field="name_th" header="ชื่อวิชา"></Column>
                     <Column body={Action}></Column>
                 </DataTable>
-            </div> */}
+            </div>
         </Section>
     );
 };
