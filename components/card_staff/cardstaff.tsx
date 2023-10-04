@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
     Card,
     CardHeader,
@@ -24,19 +24,26 @@ export const CardStaff = ({
         researchInterestArray = (
             staff as AcademicStaff
         ).research_interest.split(",");
+
     }
+
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+    const enableButton = () => {
+        setIsButtonDisabled(false);
+      };
+
     return (
         <div>
-            <div className="relative container mx-auto py-8 px-8">
-                <div className="relative flex flex-row xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row md:pl-10 lg:pl-20 xl:pl-40 ">
-                    <div className="">
+            <div className="relative container mx-auto py-8 px-8 ">
+                <div className="relative flex flex-row xxxs:flex-col md:flex-row md:pl-10 lg:pl-20 xl:pl-40 ">
+                    <div className="absolute pt-4 xxxs:pl-8 md:pl-0">
                     {type === "academic" ? (
                         staff.picture.includes("data:image") ? (
                             <img src={staff.picture} alt="" />
                         ) : (
                             <ImageNext
                                 alt={`picture of ${staff.picture}`}
-                                className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360]"
+                                className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 "
                                 width={0}
                                 height={0}
                                 // sizes="100vw"
@@ -44,20 +51,20 @@ export const CardStaff = ({
                             />
                         )
                     ) : staff.picture.includes("data:image") ? (
-                        <img src={staff.picture} className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360px]" alt={`picture of ${staff.picture}`} />
+                        <img src={staff.picture} className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 " alt={`picture of ${staff.picture}`} />
                     ) : (
                         <ImageNext
                             alt={`picture of ${staff.picture}`}
                             width={0}
                             height={0}
                             // sizes="100vw"
-                            className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto lg:h-[360]"
+                            className="rounded-xl object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto "
                             src={`https://cs-33ck.vercel.app/personal/staff${staff.picture}`}
                         />
                     )}
                     </div>
 
-                    <div className="relative col-span-7 px-20">
+                    <div className="relative xxxs:pt-60 md:pt-0 xxxs:pl-0 md:pl-60 overflow-auto">
                         <div className="flex flex-col gap-5">
                             <div className="">
                                 <h6 className="text-[24px] font-bold">
@@ -78,17 +85,19 @@ export const CardStaff = ({
                                     );
                                 })}
                             </div>
-                            <div className="flex flex-wrap gap-x-2 gap-y-2">
+                            <div className="flex flex-wrap gap-x-2 gap-y-2 ">
                                 {type === "academic" ? (
                                     researchInterestArray.map((value, index) =>
                                         value !== "" ? (
-                                            <Chip
+                                            <button 
+                                                onClick={enableButton}
+                                                disabled={isButtonDisabled} 
                                                 key={index}
                                                 color="primary"
-                                                className="text-[#0E80E9] text-[14px] gap-8 bg-[#E7F6FD] "
+                                                className="text-[#0E80E9] text-sm gap-8 bg-[#E7F6FD] rounded-2xl px-2 py-2  "
                                             >
                                                 {value.trim()}
-                                            </Chip>
+                                            </button>
                                         ) : (
                                             <></>
                                         )
@@ -106,7 +115,7 @@ export const CardStaff = ({
                                         <div key={index}>{value}</div>
                                     ))}
                                 </div>
-                                <div className="flex flex-row  gap-4">
+                                <div className="flex flex-row gap-4 overflow-auto">
                                     <div>
                                         <Image alt="Mail" src="/Mail.svg" />
                                     </div>
