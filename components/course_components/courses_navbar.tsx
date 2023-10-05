@@ -63,14 +63,14 @@ function CourseNavbar({ setting }: { setting: SettingCourse }) {
                         />
                     </div>
                     <div className="lg:w-1/2">
-                        {/* Search Input */}
+                        {/* Search Input
                         <div className="search_bar">
                             <Input
                                 className="search-input"
                                 placeholder="Search..."
                                 width="200px"
                             />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="border_line"></div>
