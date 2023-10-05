@@ -42,7 +42,10 @@ const Courses = async ({ params }: Props) => {
                         <div className="flex-grow overflow-y-auto">
                             <Courses_navbar setting={setting} />
                             <div className="p-8">
-                                <Table_courses courses={courses} />
+                                <Table_courses
+                                    setting={setting}
+                                    courses={courses}
+                                />
                             </div>
                         </div>
                     </div>
