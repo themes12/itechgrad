@@ -88,11 +88,11 @@ export const Announcement_card = () => {
                     />
                 <div className="md:ml-auto md:mr-auto flex flex-wrap items-center">
                     <div className="items-right w-[365px] py-1 px-3 lg:ml-auto mb-5 md:items-left lg:order-2">
-                        <Input
+                        {/*<Input
                             type="text"
                             variant="bordered"
                             placeholder="Search..."
-                        />
+                        />*/}
                     </div>
                     <div className="lg:order-1">
                         <Button radius="full" variant="light" style={buttonStyles} className="Button_announ">{t("button1")}</Button>
