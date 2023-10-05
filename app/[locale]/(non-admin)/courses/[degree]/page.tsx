@@ -22,6 +22,7 @@ const Courses = async ({ params }: Props) => {
             `${process.env.NEXT_PUBLIC_API_URL}/setting/academic-year`
         )
     ).data.academic_year;
+    console.log(courses);
     return (
         <section className="bg-gradient-to-r from-[#d1e0d8] to-[#76b9cd] py-12">
             <header className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9">

@@ -1,47 +1,20 @@
-import React from "react";
-import { Button, ButtonGroup } from "@nextui-org/react";
-import Program_navbar from "@/components/program_component/program_navbar";
-import Program_button from "@/components/program_component/program_button";
-import degreeJson from "@/utils/degree.json";
-import { Degree } from "@/types/course";
+import axios from "axios";
+import { Program } from "@/types/program";
+import Display_types from "@/components/program_component/display_types";
 
 type Props = { params: { degree: string } };
 
-const page = ({ params }: Props) => {
+const Page = async ({ params }: Props) => {
     const { degree } = params;
-    const degreeText = degreeJson[degree as keyof Degree];
 
-    return (
-        <div>
-            <section className="bg-whaite py-12 pt-0 relative">
-                <section className="bg-gradient-to-r from-[#d1e0d8] to-[#76b9cd] py-12 max-w-full max-h-300px  relative">
-                    <header className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9 relative">
-                        <h1 className="text-[64px] font-bold">
-                            {degreeText} Program
-                        </h1>
-                        <h5 className="text-[25px] font-[300] text-[#7D7D7D] pt-5 pb-10">
-                            Master of Science Program in Computer Science
-                        </h5>
-                    </header>
-                </section>
-                <div className="pt-10 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9 relative">
-                    <div
-                        className="flex flex-col relative overflow-hidden text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2
-            shadow-small rounded-large transition-transform-background motion-reduce:transition-none border-none bg-white w-full pb-10
-            lg:w-auto transform translate-y-[-10%]"
-                    >
-                        <div className="flex-grow overflow-y-auto pt-5 py-5 px-10">
-                            <Program_navbar degree={degreeText} />
-                            <div className="p-8">
-                                <Program_button degree={degreeText} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    );
+    const programs = (
+        await axios.get<{ programs: Program[] }>(
+            `${process.env.NEXT_PUBLIC_API_URL}/program/${degree}`
+        )
+    ).data.programs;
+
+    return <Display_types data={programs} params={params} />;
 };
-export default page;
+export default Page;
 
 // <section className="bg-gradient-to-r from-[#d1e0d8] to-[#76b9cd] py-12 max-w-screen-2xl max-h-300px relative"></section>

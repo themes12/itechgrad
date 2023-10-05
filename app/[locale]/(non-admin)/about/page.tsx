@@ -1,11 +1,11 @@
 import React from "react";
-import  ArrowRightIcon  from "@heroicons/react/24/outline/ArrowRightIcon";
-import { useTranslations } from "next-intl";
-
+import ArrowRightIcon from "@heroicons/react/24/outline/ArrowRightIcon";
+import { useLocale, useTranslations } from "next-intl";
 
 type Props = {};
 
 const Page = (props: Props) => {
+    const locale = useLocale();
     const t = useTranslations("Aboutus");
     return (
         <>
@@ -30,11 +30,16 @@ const Page = (props: Props) => {
                         {t("body2")}&quot;
                     </p>
 
-                    <button className="transition ease-in-out delay-150 hover:translate-x-1 duration-300
-                    flex cursor-pointer md:ml-8 mt-10 bg-[#0E80E9] text-white px-4 py-4 rounded-[2rem] font-normal text-sm items-center justify-between">
+                    <a
+                        href={`/program/master-degree`}
+                        className="transition ease-in-out delay-150 hover:translate-x-1 duration-300 w-fit
+                    flex cursor-pointer md:ml-8 mt-10 bg-[#0E80E9] text-white px-4 py-4 rounded-[2rem] font-normal text-sm items-center justify-between"
+                    >
                         <span>{t("button1")}&nbsp;&nbsp;</span>
-                        <span><ArrowRightIcon className="h-4 w-4 text-white" /></span>
-                    </button>
+                        <span>
+                            <ArrowRightIcon className="h-4 w-4 text-white" />
+                        </span>
+                    </a>
                 </div>
 
                 <div className="z-0 -ml-80 xxxs:hidden lg:block">
@@ -72,11 +77,16 @@ const Page = (props: Props) => {
                         &quot;{t("body3")}&quot;
                     </p>
 
-                    <button className="transition ease-in-out delay-150 hover:translate-x-1 duration-300
-                    flex cursor-pointer md:ml-8 mt-10 bg-[#AFDEF9] text-[#0E80E9] px-4 py-4 rounded-[2rem] font-normal text-sm items-center justify-between">
+                    <a
+                        href={`/program/phd`}
+                        className="transition ease-in-out delay-150 hover:translate-x-1 duration-300 w-fit
+                    flex cursor-pointer md:ml-8 mt-10 bg-[#AFDEF9] text-[#0E80E9] px-4 py-4 rounded-[2rem] font-normal text-sm items-center justify-between"
+                    >
                         <span>{t("button2")}&nbsp;&nbsp;</span>
-                        <span><ArrowRightIcon className="h-4 w-4 text-[#0E80E9]" /></span>
-                    </button>
+                        <span>
+                            <ArrowRightIcon className="h-4 w-4 text-[#0E80E9]" />
+                        </span>
+                    </a>
                 </div>
             </section>
         </>

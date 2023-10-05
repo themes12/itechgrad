@@ -10,6 +10,7 @@ export type ContentType = {
 };
 
 export type ProgramType = {
+    _id?: string;
     content?: Array<ContentType>;
     name_en: string;
     name_th: string;

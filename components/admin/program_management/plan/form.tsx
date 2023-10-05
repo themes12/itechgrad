@@ -15,6 +15,7 @@ import { PlusSmallIcon } from "@heroicons/react/24/outline";
 import { ContentType, ProgramType } from "@/types/program";
 import dynamic from "next/dynamic";
 import "suneditor/dist/css/suneditor.min.css"; // Import Sun Editor's CSS File
+import "./editor.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";

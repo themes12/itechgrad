@@ -8,6 +8,7 @@ import SectionText from "@/components/sectionText";
 import AnnouncementCard from "@/components/announcementCard";
 import Carousal from "@/components/carousal";
 import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 
 export default function Home() {
     const posts = [
@@ -66,6 +67,8 @@ export default function Home() {
                             my-2 lg:mt-10 px-7 text-xl font-regular text-white bg-[#515151] hover:bg-[#262626] rounded-3xl animate-fadeIn"
                             size="lg"
                             endContent={<ArrowRightIcon className="h-5 w-5" />}
+                            as={Link}
+                            href="/program/master-degree"
                         >
                             {t("button1")}
                         </Button>
