@@ -18,7 +18,7 @@ const Action = (rowData: Course) => {
     const handleDelete = async () => {
         try {
             const response = await axios.delete(
-                `${process.env.NEXT_PUBLIC_API_URL}/plan/${rowData._id}`
+                `${process.env.NEXT_PUBLIC_API_URL}/program/${degree}/${rowData._id}`
             );
         } catch (error) {
             toast.current?.show({
