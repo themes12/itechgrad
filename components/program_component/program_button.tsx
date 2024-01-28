@@ -33,11 +33,9 @@ function ProgramButton({
         console.log("update");
     }, [selectedProgram]);
 
-    console.log(data);
-
     return (
         <div>
-            <h2 className="text-[36px] pb-12 font-bold lg:px-12 pt-10 xxs:px-5">
+            <h2 className="text-lg xs:text-xl sm:text-2xl lg:text-4xl pb-12 font-bold lg:px-12 pt-10 xxs:px-5 px-0">
                 {locale === "th"
                     ? data[selectedProgram]?.name_th
                     : data[selectedProgram]?.name_en}
@@ -60,11 +58,10 @@ function ProgramButton({
                             <div className="flex-grow">
                                 <p
                                     className={`text-left font-bold lg:text-lg md:text-lg sm:text-lg xs:text-base xxs:text-sm xxs:px-1 xxxs:text-xs xxxs:px-0
-                            ${
-                                isButtonHovered(1)
-                                    ? "text-white"
-                                    : "text-blue-950"
-                            }`}
+                            ${isButtonHovered(1)
+                                            ? "text-white"
+                                            : "text-blue-950"
+                                        }`}
                                 >
                                     {locale === "th"
                                         ? value.name_th

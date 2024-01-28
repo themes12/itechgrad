@@ -5,6 +5,8 @@ import { Pagination, Button } from "@nextui-org/react";
 import { Course } from "@/types/course";
 import { SettingCourse } from "@/types/setting";
 import { useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
+import Header from "./header";
 
 export const Table_courses = ({
     courses,
@@ -13,8 +15,8 @@ export const Table_courses = ({
     courses: Course[];
     setting: SettingCourse;
 }) => {
-    const locale = useLocale();
-    console.log(setting);
+
+
     // const [page, setPage] = React.useState(1);
     // const rowsPerPage = 6;
 
@@ -39,12 +41,7 @@ export const Table_courses = ({
     return (
         <div>
             <div className="table-container">
-                <div className="inline-flex bg-[#3E99ED] lg:text-xl md:text-base sm:text-base xs:text-sm xxs:text-sm xxxs:text-xs font-normal pt-1.5 pb-1.5 px-20 mb-5 text-[#FFF] rounded-full">
-                    Recent courses {setting.semester}/
-                    {locale === "th"
-                        ? new Date(setting.year).getFullYear() + 543
-                        : new Date(setting.year).getFullYear()}
-                </div>
+                <Header setting={setting} />
                 <table>
                     <thead>
                         <tr className="table-header">

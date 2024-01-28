@@ -11,7 +11,7 @@ import {
 import { AcademicStaff, CardStaffProps, SupportStaff } from "@/types/staff";
 import Link from "next/link";
 import ImageNext from "next/image";
-import  ArrowRightIcon  from "@heroicons/react/24/outline/ArrowRightIcon";
+import ArrowRightIcon from "@heroicons/react/24/outline/ArrowRightIcon";
 
 export const CardStaff = ({
     type,
@@ -31,38 +31,14 @@ export const CardStaff = ({
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const enableButton = () => {
         setIsButtonDisabled(false);
-      };
+    };
 
     return (
         <div>
             <div className="relative container mx-auto py-8 px-8 ">
                 <div className="relative flex flex-row xxxs:flex-col md:flex-row md:pl-10 lg:pl-20 xl:pl-40 ">
                     <div className="absolute pt-4 xxxs:pl-8 md:pl-0">
-                    {type === "academic" ? (
-                        staff.picture.includes("data:image") ? (
-                            <img src={staff.picture} alt="" className="rounded-lg " />
-                        ) : (
-                            <ImageNext
-                                alt={`picture of ${staff.picture}`}
-                                className="rounded-lg  object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6  w-auto  "
-                                width={0}
-                                height={0}
-                                // sizes="100vw"
-                                src={`https://cs-33ck.vercel.app/personal/lecturers${staff.picture}`}
-                            />
-                        )
-                    ) : staff.picture.includes("data:image") ? (
-                        <img src={staff.picture} className="rounded-lg " alt={`picture of ${staff.picture}`} />
-                    ) : (
-                        <ImageNext
-                            alt={`picture of ${staff.picture}`}
-                            width={0}
-                            height={0}
-                            // sizes="100vw"
-                            className="rounded-lg  object-cover object-center xxxs:pb-6 xxs:pb-6 xs:pb-6 w-auto "
-                            src={`https://cs-33ck.vercel.app/personal/staff${staff.picture}`}
-                        />
-                    )}
+                        <img src={staff.picture} alt="" className="rounded-lg " />
                     </div>
 
                     <div className="relative xxxs:pt-60 md:pt-0 xxxs:pl-0 md:pl-60 overflow-auto">
@@ -90,9 +66,9 @@ export const CardStaff = ({
                                 {type === "academic" ? (
                                     researchInterestArray.map((value, index) =>
                                         value !== "" ? (
-                                            <button 
+                                            <button
                                                 onClick={enableButton}
-                                                disabled={isButtonDisabled} 
+                                                disabled={isButtonDisabled}
                                                 key={index}
                                                 color="primary"
                                                 className="text-[#0E80E9] text-sm gap-8 bg-[#E7F6FD] rounded-2xl px-2 py-2  "
@@ -132,9 +108,9 @@ export const CardStaff = ({
                                         href={
                                             (staff as AcademicStaff)
                                                 .personal_web
-                                                
+
                                         }
-                                        target= {"_blank"}
+                                        target={"_blank"}
                                         className="transition ease-in-out delay-150 hover:translate-x-1 duration-300 
                                         bg-[#0E80E9] text-white text-[15px]"
                                         radius="full"

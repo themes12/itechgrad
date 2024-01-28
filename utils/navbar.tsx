@@ -39,11 +39,11 @@ export const navItems: navbar[] = [
         type: "button",
         href: "/research",
     },
-    {
-        title: "announcement",
-        type: "button",
-        href: "/announcement",
-    },
+    // {
+    //     title: "announcement",
+    //     type: "button",
+    //     href: "/announcement",
+    // },
     {
         title: "staff",
         type: "dropdown",

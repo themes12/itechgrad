@@ -7,15 +7,20 @@ import HeaderEditor from "@/components/admin/course_management/header";
 import TableCheckbox from "@/components/admin/course_management/table_checkbox";
 import Action from "@/components/admin/course_management/action";
 import { SettingCourse } from "@/types/setting";
+import { useSession } from "next-auth/react";
 
 type Props = {};
 
 const CourseManagement = async ({ params }: { params: { degree: string } }) => {
     const { degree } = params;
-    // const { data: session } = useSession();
+    const { data: session } = useSession();
+    console.log(session)
     const courses = (
         await axios.get<{ courses: Course[] }>(
-            `${process.env.NEXT_PUBLIC_API_URL}/course/${degree}/all`
+            `${process.env.NEXT_PUBLIC_API_URL}/course/${degree}/all`,
+            // {
+            //     headers: { Authorization: `Bearer ${token}` }
+            // }
         )
     ).data.courses;
 

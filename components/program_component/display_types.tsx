@@ -12,16 +12,15 @@ const Display_types = ({ params, data }: Props) => {
     const { degree } = params;
     const degreeText = degreeJson[degree as keyof Degree];
     const [selectedProgram, setSelectedProgram] = useState<number>(0);
-    console.log(selectedProgram);
     return (
         <div>
             <section className="bg-whaite py-12 pt-0 relative">
                 <section className="bg-gradient-to-r from-[#d1e0d8] to-[#76b9cd] py-12 max-w-full max-h-300px  relative">
                     <header className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9 relative">
-                        <h1 className="text-[64px] font-bold">
+                        <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold">
                             {degreeText} Program
                         </h1>
-                        <h5 className="text-[25px] font-[300] text-[#7D7D7D] pt-5 pb-10">
+                        <h5 className="text-md xxs:text-lg xs:text-xl lg:text-2xl font-[300] text-[#7D7D7D] pt-5 pb-10">
                             Master of Science Program in Computer Science
                         </h5>
                     </header>
@@ -38,7 +37,7 @@ const Display_types = ({ params, data }: Props) => {
                                 degree={degreeText}
                                 setSelectedProgram={setSelectedProgram}
                             />
-                            <div className="p-8">
+                            <div className="p-0 lg:p-8">
                                 {selectedProgram !== null ? (
                                     <Program_button
                                         selectedProgram={selectedProgram}
