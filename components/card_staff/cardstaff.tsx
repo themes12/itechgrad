@@ -35,20 +35,20 @@ export const CardStaff = ({
 
     return (
         <div>
-            <div className="relative container mx-auto py-8 px-8 ">
-                <div className="relative flex flex-row xxxs:flex-col md:flex-row md:pl-10 lg:pl-20 xl:pl-40 ">
-                    <div className="absolute pt-4 xxxs:pl-8 md:pl-0">
-                        <img src={staff.picture} alt="" className="rounded-lg " />
+            <div className="container mx-auto py-8 px-8 ">
+                <div className="flex flex-col md:flex-row md:pl-10 lg:pl-20 xl:pl-40">
+                    <div className="pt-4 xxxs:pl-8 md:pl-0 flex justify-center items-center">
+                        <img src={staff.picture} alt="" className="rounded-lg" />
                     </div>
 
-                    <div className="relative xxxs:pt-60 md:pt-0 xxxs:pl-0 md:pl-60 overflow-auto">
+                    <div className="pt-4 md:pt-0 pl-0 md:pl-60 overflow-auto">
                         <div className="flex flex-col gap-5">
                             <div className="">
-                                <h6 className="text-[24px] font-bold">
+                                <h6 className="text-xl font-bold">
                                     {staff.affiliation} {staff.title}{" "}
                                     {staff.name}
                                 </h6>
-                                <h6 className="text-[24px] font-bold ">
+                                <h6 className="text-xl font-bold ">
                                     {staff.e_affiliation} {staff.e_title}{" "}
                                     {staff.e_name}
                                 </h6>
@@ -56,7 +56,7 @@ export const CardStaff = ({
                             <div>
                                 {staff.position && staff.position.map((value, index) => {
                                     return (
-                                        <p key={index} className="text-[18px]">
+                                        <p key={index} className="text-lg">
                                             {value}
                                         </p>
                                     );

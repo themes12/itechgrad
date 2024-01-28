@@ -36,6 +36,7 @@ const Display_types = ({ params, data }: Props) => {
                                 data={data}
                                 degree={degreeText}
                                 setSelectedProgram={setSelectedProgram}
+                                selectedProgram={selectedProgram}
                             />
                             <div className="p-0 lg:p-8">
                                 {selectedProgram !== null ? (

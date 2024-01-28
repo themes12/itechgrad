@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { Button, Input } from "@nextui-org/react";
-import "@/components/course_components/course_navbar.css";
 import { SettingCourse } from "@/types/setting";
 import { useLocale } from "next-intl";
 import { TabMenu } from "primereact/tabmenu";
@@ -52,19 +51,17 @@ function CourseNavbar({ setting }: { setting: SettingCourse }) {
 
     return (
         <>
-            <div>
-                <div className="navbar_course flex flex-col md:flex-row">
-                    <div className="lg:w-1/2">
-                        {/* TabMenu */}
-                        <TabMenu
-                            model={items}
-                            activeIndex={activeIndex}
-                            onTabChange={(e) => setActiveIndex(e.index)}
-                        />
-                    </div>
-                </div>
-                <div className="border_line"></div>
+            <div className="flex flex-col md:flex-row">
+                {/* <div className="lg:w-1/2"> */}
+                    {/* TabMenu */}
+                    <TabMenu
+                        model={items}
+                        activeIndex={activeIndex}
+                        onTabChange={(e) => setActiveIndex(e.index)}
+                    />
+                {/* </div> */}
             </div>
+            {/* <div className="border_line"></div> */}
         </>
     );
 }

@@ -9,7 +9,7 @@ function Header({ setting }: { setting: SettingCourse; }) {
     const locale = useLocale();
     const arrayOfLocale = pathname.split("/");
     return (
-        <div className="inline-flex bg-[#3E99ED] lg:text-xl md:text-base sm:text-base xs:text-sm xxs:text-sm xxxs:text-xs font-normal pt-1.5 pb-1.5 px-20 mb-5 text-[#FFF] rounded-full">
+        <div className="inline-flex bg-[#3E99ED] lg:text-xl sm:text-base xxs:text-sm text-xs font-normal pt-1.5 pb-1.5 px-20 mb-5 text-[#FFF] rounded-full">
             {
                 arrayOfLocale[arrayOfLocale.length - 1] === "all" ? <>All courses</> :
                     <>Recent courses {setting.semester}/
