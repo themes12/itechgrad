@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
 const { nextui } = require("@nextui-org/react");
+const withMT = require("@material-tailwind/react/utils/withMT");
 
-const config: Config = {
+const config: Config = withMT({
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -36,6 +37,9 @@ const config: Config = {
             // => @media (min-width: 1536px) { ... }
         },
         extend: {
+            fontFamily: {
+                sans: "--var(--font-noto-sans-thai)",
+            },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
                 "gradient-conic":
@@ -79,5 +83,5 @@ const config: Config = {
     },
     darkMode: "class",
     plugins: [nextui()],
-};
+});
 export default config;

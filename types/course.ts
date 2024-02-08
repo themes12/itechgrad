@@ -1,7 +1,7 @@
-export interface Degree {
-    "master-degree": string;
-    phd: string;
-}
+// export interface Degree {
+//     "master-degree": string;
+//     phd: string;
+// }
 
 export interface Course {
     _id: string;

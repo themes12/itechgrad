@@ -7,7 +7,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from "next/navigation";
 
 const locales = ["en", "th"];
-const inter = Noto_Sans_Thai({ subsets: ["thai"] });
+const inter = Noto_Sans_Thai({ subsets: ["thai"], variable: "--font-noto-sans-thai" });
 // const inter = Kanit({ subsets: ["thai"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
 export function generateStaticParams() {
