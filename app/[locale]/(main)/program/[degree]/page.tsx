@@ -2,9 +2,10 @@ import axios from "axios";
 import Display_types from "@/components/program_component/display_types";
 import { useLocale } from "next-intl";
 import { Degree } from "@/types/degree";
-import { strapi } from "../../layout";
+import Strapi from "strapi-sdk-js";
 
 type Props = { params: { degree: string } };
+const strapi = new Strapi()
 
 const Page = async ({ params }: Props) => {
     const { degree } = params;

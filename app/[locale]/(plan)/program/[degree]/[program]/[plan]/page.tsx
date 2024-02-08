@@ -3,7 +3,7 @@ import { useLocale } from "next-intl";
 import Section from "@/components/section";
 import PlanDisplay from "@/components/program_component/plan";
 import { Program } from "@/types/program";
-import { strapi } from "@/app/[locale]/(non-admin)/layout";
+import { strapi } from "@/app/[locale]/(main)/layout";
 
 type Props = { params: { degree: string, program: number; plan: number } };
 
@@ -19,6 +19,7 @@ const Page = async ({ params }: Props) => {
             "plans.sections.content.text",
             "plans.sections.content.header.columns.*",
             "plans.sections.content.rows.columns.*",
+            "localizations.plans"
         ]
     });
     
