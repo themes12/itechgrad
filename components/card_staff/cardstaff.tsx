@@ -20,13 +20,13 @@ export const CardStaff = ({
     type: CardStaffProps;
     staff: AcademicStaff | SupportStaff;
 }) => {
-    let researchInterestArray: Array<string> = [];
-    if (type === "academic") {
-        researchInterestArray = (
-            staff as AcademicStaff
-        ).research_interest.split(",");
+    // let researchInterestArray: Array<string> = [];
+    // if (type === "academic") {
+    //     researchInterestArray = (
+    //         staff as AcademicStaff
+    //     ).research_interest.split(",");
 
-    }
+    // }
 
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const enableButton = () => {

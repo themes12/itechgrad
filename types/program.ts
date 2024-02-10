@@ -1,4 +1,5 @@
 import { Degree } from "./degree";
+import { Localizations } from "./localizations_data";
 import { Plans } from "./plans";
 
 export interface ProgramAttributes {
@@ -21,22 +22,4 @@ export interface Program {
 
 export interface Programs {
     data: Program[];
-}
-
-export interface LocalizationAttributes {
-    name:        string;
-    createdAt:   Date;
-    updatedAt:   Date;
-    publishedAt: Date;
-    locale:      string;
-    plans:      Plans;
-}
-
-export interface Localization {
-    id:         number;
-    attributes: LocalizationAttributes;
-}
-
-export interface Localizations {
-    data: Localization[];
 }

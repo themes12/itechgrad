@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import React from "react";
 import { useLocale } from "next-intl";
 import Strapi from "strapi-sdk-js";
+import { Plan } from "@/types/plans";
 
 type Props = { params: { degree: string, program: number; plan: number } };
 
@@ -27,9 +28,15 @@ const Page = async ({ params }: Props) => {
         ]
     });
 
+    const planData = await strapi.findOne<Plan>('plans', `${plan}?locale=${locale}`, {
+        populate: [
+            "localizations"
+        ]
+    });
+
     return (
         <>
-            <Navbar programId={programData.data.attributes.localizations.data[0].id} planId={programData.data.attributes.localizations.data[0].attributes.plans.data[0].id} />
+            <Navbar programId={programData.data.attributes.localizations.data[0].id} planId={planData.data.attributes.localizations.data[0].id} />
             <Section>
                 <div className="bg-gradient-to-r from-[#d1e0d8] to-[#76b9cd]">
                     <Section className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9 py-8">

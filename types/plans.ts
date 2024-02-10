@@ -1,3 +1,4 @@
+import { Localizations } from "./localizations_data";
 import { Sections } from "./section";
 
 export interface PlansAttributes {
@@ -7,6 +8,7 @@ export interface PlansAttributes {
     publishedAt: Date;
     locale:      string;
     sections:    Sections;
+    localizations: Localizations;
 }
 
 export interface Plan {

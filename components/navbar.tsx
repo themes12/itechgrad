@@ -20,8 +20,6 @@ import {
 } from "@nextui-org/react";
 import {
     ChevronDownIcon,
-    Bars3Icon,
-    XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { navItems } from "@/utils/navbar";
@@ -37,11 +35,8 @@ const NavbarHeader = ({ programId, planId }: Props) => {
     const pathname = usePathname();
     const params = useParams();
 
-
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const [localeSwitch, setLocaleSwitch] = useState(locale === "th");
-    console.log(params)
-
+    console.log(programId, planId)
     return (
         <>
             <Navbar
@@ -56,7 +51,6 @@ const NavbarHeader = ({ programId, planId }: Props) => {
                     justify="center"
                 >
                     <NavbarMenuToggle
-                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         className="md:hidden"
                     />
                     <NavbarBrand className="justify-center">
@@ -179,7 +173,11 @@ const NavbarHeader = ({ programId, planId }: Props) => {
                         }
                         onValueChange={(value) => {
                             setLocaleSwitch((prev) => !prev);
-                            router.replace(pathname, { locale: value ? "th" : "en" });
+                            if(programId && planId) {
+                                router.replace(`/program/${params.degree}/${programId}/${planId}`, { locale: value ? "th" : "en" });
+                            }else {
+                                router.replace(pathname, { locale: value ? "th" : "en" });
+                            }
                         }}
                         size="lg"
                         color="default"

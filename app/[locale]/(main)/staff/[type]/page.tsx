@@ -15,11 +15,17 @@ const Page = async ({ params }: { params: StaffPageProps }) => {
     const { type } = params;
     const staffType = staffJson[type as keyof StaffTypes];
     const staffTypeAPI = type === "academic" ? "lecturers" : "staffs";
-    const response = (
-        await axios.get<AcademicStaff[] | SupportStaff[]>(
-            `https://cs-api-hw35.onrender.com/api/${staffTypeAPI}`
-        )
-    ).data;
+    // const response = (
+    //     await axios.get<AcademicStaff[] | SupportStaff[]>(
+    //         `https://cs-api-hw35.onrender.com/api/${staffTypeAPI}`
+    //     )
+    // ).data;
+
+    const planData = await strapi.findOne<Plan>('plans', `${plan}?locale=${locale}`, {
+        populate: [
+            "localizations"
+        ]
+    });
 
     return (
         <div>

@@ -6,7 +6,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from "next/navigation";
 
 const locales = ["en", "th"];
-const inter = Noto_Sans_Thai({ subsets: ["thai"], variable: "--font-noto-sans-thai" });
+const inter = Noto_Sans_Thai({ subsets: ["thai"], variable: "--font-noto-sans" });
 // const inter = Kanit({ subsets: ["thai"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
 export function generateStaticParams() {
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-    params: { locale },
+    params: {locale}
 }: {
     children: React.ReactNode;
-    params: any;
+    params: {locale: string};
 }) {
     // const messages = useMessages();
 
