@@ -4,7 +4,7 @@ import React from "react";
 import { useLocale, NextIntlClientProvider, useMessages, } from "next-intl";
 import Strapi from "strapi-sdk-js";
 
-type Props = {};
+type Props = { };
 
 export const strapi = new Strapi()
 
@@ -16,9 +16,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             messages={
                 messages
             }>
-            {/* <Navbar /> */}
             <div>{children}</div>
-            {/* <Footer /> */}
         </NextIntlClientProvider>
     );
 };

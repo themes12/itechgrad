@@ -27,16 +27,20 @@ import Image from "next/image";
 import { navItems } from "@/utils/navbar";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from '../navigation';
+import { useParams } from "next/navigation";
 
-type Props = {};
+type Props = {programId?: number, planId?: number};
 
-const NavbarHeader = (props: Props) => {
+const NavbarHeader = ({ programId, planId }: Props) => {
     const router = useRouter();
     const locale = useLocale();
     const pathname = usePathname();
+    const params = useParams();
+
 
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const [localeSwitch, setLocaleSwitch] = useState(locale === "th");
+    console.log(params)
 
     return (
         <>
@@ -92,7 +96,11 @@ const NavbarHeader = (props: Props) => {
                         }
                         onValueChange={(value) => {
                             setLocaleSwitch((prev) => !prev);
-                            router.replace(pathname, { locale: value ? "th" : "en" });
+                            if(programId && planId) {
+                                router.replace(`/program/${params.degree}/${programId}/${planId}`, { locale: value ? "th" : "en" });
+                            }else {
+                                router.replace(pathname, { locale: value ? "th" : "en" });
+                            }
                         }}
                         size="lg"
                         color="default"
