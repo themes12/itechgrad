@@ -4,6 +4,7 @@ import { Noto_Sans_Thai } from "next/font/google";
 import { Providers } from "./providers";
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from "next/navigation";
+import '@/utils/dayjs';
 
 const locales = ["en", "th"];
 const inter = Noto_Sans_Thai({ subsets: ["thai"], variable: "--font-noto-sans" });

@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import { Button, Input } from "@nextui-org/react";
-import { SettingCourse } from "@/types/setting";
 import { useLocale } from "next-intl";
 import { TabMenu } from "primereact/tabmenu";
 import { Link } from "@/navigation";
 import { useParams, usePathname } from "next/navigation";
+import { dayjsExt } from "@/utils/dayjs";
 
-function CourseNavbar({ setting }: { setting: SettingCourse }) {
+function CourseNavbar() {
     const locale = useLocale();
     const { degree } = useParams();
     const pathname = usePathname().split('/');
@@ -15,10 +15,7 @@ function CourseNavbar({ setting }: { setting: SettingCourse }) {
     const [activeIndex, setActiveIndex] = useState(0);
     const items = [
         {
-            label: `Recent courses ${setting?.semester}/${locale === "th"
-                ? new Date(setting.year).getFullYear() + 543
-                : new Date(setting.year).getFullYear()
-                }`,
+            label: `Recent courses ${locale === "th" ? dayjsExt().format('BBBB') : dayjsExt().format('YYYY')}`,
             template: (options: any) => (
                 <Button
                     as={Link}
