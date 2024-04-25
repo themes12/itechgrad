@@ -16,4 +16,5 @@ export interface DegreeAttributes {
     title:        string;
     sub_title:    string;
     programs?:     Programs;
+    general_name:   string;
 }

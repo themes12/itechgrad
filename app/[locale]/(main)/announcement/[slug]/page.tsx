@@ -9,9 +9,6 @@ import {
   Divider
 } from "@nextui-org/react";
 
-import { Navbar, NavbarBrand, NavbarContent, Input } from '@nextui-org/react';
-import Section from '@/components/section';
-
 type Props = {}
 
 const page = ({ params }: { params: { slug: string } }) => {

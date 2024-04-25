@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import {
     Navbar,
     NavbarBrand,
@@ -36,7 +36,8 @@ const NavbarHeader = ({ programId, planId }: Props) => {
     const params = useParams();
 
     const [localeSwitch, setLocaleSwitch] = useState(locale === "th");
-    console.log(programId, planId)
+    const [isMenuOpen, setIsMenuOpen] = useReducer((current) => !current, false);
+    console.log(isMenuOpen)
     return (
         <>
             <Navbar
@@ -45,6 +46,8 @@ const NavbarHeader = ({ programId, planId }: Props) => {
                 maxWidth="xl"
                 aria-label="navbar"
                 height="3.5rem"
+                isMenuOpen={isMenuOpen}
+                onMenuOpenChange={setIsMenuOpen}
             >
                 <NavbarContent
                     className="gap-4 w-full md:w-fit"
@@ -55,11 +58,11 @@ const NavbarHeader = ({ programId, planId }: Props) => {
                     />
                     <NavbarBrand className="justify-center">
                         <Image
-                            className="hidden xxxs:block xxxs:w-12 xxxs:h-12"
+                            className="hidden xxxs:block w-14 h-14 md:w-20 md:h-20"
                             src="/logo.svg"
                             alt="Logo CSCMU"
-                            width="80"
-                            height="80"
+                            width="100"
+                            height="100"
                         />
                         <h2 className="font-semibold text-base md:text-xl">
                             Computer Science CMU
@@ -120,14 +123,17 @@ const NavbarHeader = ({ programId, planId }: Props) => {
                                             <ListboxItem
                                                 className="p-1"
                                                 key={value.title}
-                                                onPress={() => router.replace(
-                                                    value.href ?? "#",
-                                                    {
-                                                        locale: localeSwitch
-                                                            ? "th"
-                                                            : "en",
-                                                    }
-                                                )}
+                                                onPress={() => {
+                                                    router.replace(
+                                                        value.href ?? "#",
+                                                        {
+                                                            locale: localeSwitch
+                                                                ? "th"
+                                                                : "en",
+                                                        }
+                                                    )
+                                                    setIsMenuOpen()
+                                                }}
                                             >
                                                 {value.title}
                                             </ListboxItem>
@@ -143,6 +149,7 @@ const NavbarHeader = ({ programId, planId }: Props) => {
                                     className="w-full text-black"
                                     href={item.href ?? "#"}
                                     size="lg"
+                                    onPress={() => setIsMenuOpen()}
                                 >
                                     {item.title}
                                 </Link>

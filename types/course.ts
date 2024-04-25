@@ -1,17 +1,3 @@
-export interface DegreeCourse {
-    id:         number;
-    attributes: DegreeCourseAttributes;
-}
-
-export interface DegreeCourseAttributes {
-    general_name:   string;
-    courses: Courses;
-}
-
-export interface Courses {
-    data: Course[];
-}
-
 export interface Course {
     id:         number;
     attributes: CourseAttributes;

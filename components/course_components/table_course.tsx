@@ -3,7 +3,7 @@
 import React from "react";
 import { MyModal } from "@/components/course_components/phdPageInner";
 import { Pagination, Button } from "@nextui-org/react";
-import { Course, Courses } from "@/types/course";
+import { Course } from "@/types/course";
 import { SettingCourse } from "@/types/setting";
 import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
@@ -14,7 +14,7 @@ export const Table_courses = ({
     courses,
     // setting,
 }: {
-    courses: Courses;
+    courses: Course[];
     // setting: SettingCourse;
 }) => {
     return (
@@ -27,7 +27,7 @@ export const Table_courses = ({
                     <TableColumn key="3" className="bg-[#DAF0FC] text-center font-normal text-base text-[#6E6E6E]"><></></TableColumn>
                 </TableHeader>
                 <TableBody>
-                    {courses.data.map((course: Course) =>
+                    {courses.map((course: Course) =>
                         <TableRow key={course.attributes.course_id}>
                             <TableCell className="text-center">
                                 <span className="bg-[#262626] rounded-xl px-4 py-1.5 font-medium xs:text-sm text-white text-xs">
