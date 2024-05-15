@@ -1,15 +1,17 @@
 import { Table_courses } from "@/components/course_components/table_course";
 import Courses_navbar from "@/components/course_components/courses_navbar";
 import { useLocale } from "next-intl";
-import Strapi from "strapi-sdk-js";
+import Strapi, { PaginationByPage } from "strapi-sdk-js";
 import { Course } from "@/types/course";
 import { Degree } from "@/types/degree";
+import { PaginationAttributes } from "@/types/pagination";
 
-type Props = { params: { degree: string } };
-const strapi = new Strapi()
+type Props = { params: { degree: string; }, searchParams?: { [key: string]: string | string[] | undefined }; };
+const strapi = new Strapi({url: "http://127.0.0.1:1337"})
 
-const Courses = async ({ params }: Props) => {
+const Courses = async ({ params, searchParams }: Props) => {
     const { degree } = params;
+    const page = parseInt(searchParams?.page as string ?? "1");
     const locale = useLocale();
 
     const degreeData = await strapi.findOne<Degree>("degrees", `${degree}?locale=${locale}`, {
@@ -26,8 +28,14 @@ const Courses = async ({ params }: Props) => {
         populate: [
             "credit",
             "degree",
-        ]
+        ],
+        pagination: {
+            page: page,
+            pageSize: 10,
+            withCount: true
+          } as PaginationByPage,
     });
+    const meta = courses.meta["pagination"] as PaginationAttributes;
     
     return (
         <section className="bg-gradient-to-r from-[#d1e0d8] to-[#76b9cd] py-12">
@@ -44,6 +52,7 @@ const Courses = async ({ params }: Props) => {
                             <div className="p-8">
                                 <Table_courses
                                     courses={courses.data}
+                                    meta={meta}
                                 />
                             </div>
                         </div>

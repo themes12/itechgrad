@@ -68,7 +68,7 @@ const Page = (props: Props) => {
                     />
                 </div>
 
-                <div className="rounded-md bg-white z-10 xxxs:mt-2 lg:mt-0 xl:mt-[17.5rem] lg:-ml-[10rem] xl:-ml-[5.6rem] xl:pt-6 animate-slideR">
+                <div className="rounded-md bg-white z-10 xxxs:mt-2 lg:mt-0 xl:mt-[17.5rem] xl:pt-6 animate-slideR">
                     <h2 className="flex justify-start font-bold text-[2rem] xxs:text-[2rem] xs:text-[2rem] sm:text-[2rem] md:text-[2rem] lg:text-[2rem] xl:text-[2rem] text-[#0E80E9] md:ml-8 ">
                         {t("header2")}
                     </h2>

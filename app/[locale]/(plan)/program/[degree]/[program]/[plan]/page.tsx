@@ -10,7 +10,7 @@ import { Plan } from "@/types/plans";
 
 type Props = { params: { degree: string, program: number; plan: number } };
 
-export const strapi = new Strapi()
+export const strapi = new Strapi({url: "http://127.0.0.1:1337"})
 
 const Page = async ({ params }: Props) => {
     const { program, plan, degree } = params;

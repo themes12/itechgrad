@@ -1,3 +1,5 @@
+import { Picture, Pictures } from "./staff";
+
 export interface Posts {
     data: Post[];
 }
@@ -15,4 +17,6 @@ export interface PostAttributes {
     locale:      string;
     content:     string;
     category:    string;
+    featured_image: Picture;
+    other_images?: Pictures;
 }

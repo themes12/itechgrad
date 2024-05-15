@@ -4,7 +4,7 @@ import { Announcement_card } from "@/components/announcement_component/announce_
 import { Divider } from "@nextui-org/react";
 import SelectableChip from "@/components/general/chip";
 import { useTranslations } from "next-intl";
-import ShowAnnouncement from "./show_announcement";
+// import ShowAnnouncement from "./show_announcement";
 import { useRouter } from "@/navigation";
 
 type Props = {}
@@ -40,7 +40,7 @@ const CategorySelect = (props: Props) => {
 
       useEffect(() => {
         const url = new URL(window.location.href);
-        url.searchParams.set('filters', chipStates.filter((chip) => chip.isSelected).map((chip) => chip.text).join(','));
+        url.searchParams.set('filters', chipStates.filter((chip) => chip.isSelected).map((chip) => chip.text.toLowerCase()).join(','));
         router.push(url.toString());
         const countIsSelected = chipStates.filter((value) => value.isSelected === true).length;
         if(countIsSelected === chipStates.length-1){

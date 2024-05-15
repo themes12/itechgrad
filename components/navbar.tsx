@@ -37,7 +37,7 @@ const NavbarHeader = ({ programId, planId }: Props) => {
 
     const [localeSwitch, setLocaleSwitch] = useState(locale === "th");
     const [isMenuOpen, setIsMenuOpen] = useReducer((current) => !current, false);
-    console.log(isMenuOpen)
+
     return (
         <>
             <Navbar
@@ -56,7 +56,7 @@ const NavbarHeader = ({ programId, planId }: Props) => {
                     <NavbarMenuToggle
                         className="md:hidden"
                     />
-                    <NavbarBrand className="justify-center">
+                    <NavbarBrand className="justify-center text-black" as={Link} href="/">
                         <Image
                             className="hidden xxxs:block w-14 h-14 md:w-20 md:h-20"
                             src="/logo.svg"

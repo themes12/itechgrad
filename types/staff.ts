@@ -43,6 +43,10 @@ export enum JobType {
     Support = "support",
 }
 
+export interface Pictures {
+    data: DataPicture[] | null;
+}
+
 export interface Picture {
     data: DataPicture | null;
 }

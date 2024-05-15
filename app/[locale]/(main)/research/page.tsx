@@ -98,28 +98,13 @@ const Research = (props: Props) => {
                     </div>
                 </div>
 
-                <div className="relative flex flex-row bg-[#262626] px-10 pt-24 pb-10 xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row ">
-                    <div
-                        id="image"
-                        className="rounded mx-auto my-auto xxxs:flex xxs:flex sm:flex md:hidden"
-                    >
-                        <img
-                            className="rounded object-scale-down w-max xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60 md:h-72 lg:h-72  xl:h-96  "
-                            src="/_DSC4254.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        id="image"
-                        className="rounded my-11 mr-10 ml-auto xxxs:hidden xxs:hidden sm:hidden md:flex"
-                    >
-                        <img
-                            className="rounded object-scale-down w-max xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60 md:h-72 lg:h-72  xl:h-96  "
-                            src="/_DSC4254.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div className=" font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl mx-auto xl:max-w-7xl 2xl:mr-auto 2xl:ml-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 bg-[#262626] px-10 pt-24 pb-10">
+                    <img
+                        className="rounded object-scale-down"
+                        src="/_DSC4254.jpg"
+                        alt=""
+                    />
+                    <div className="font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
                         Medical informatics
                         <p className="xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-light mt-3">
                             Smart medical devices and AI-based medical support
@@ -153,18 +138,8 @@ const Research = (props: Props) => {
                     </div>
                 </div>
 
-                <div className=" relative flex flex-row bg-[#ffffff] px-10 pt-14 pb-14 xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row ">
-                    <div
-                        id="image"
-                        className="rounded my-auto mx-auto xxxs:flex xxs:flex sm:flex md:hidden"
-                    >
-                        <img
-                            className="rounded object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-72 lg:h-72  xl:h-96"
-                            src="/_DSC4369.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div className=" font-semibold text-[#262626] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto 2xl:ml-auto 2xl:mr-28">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 bg-[#ffffff] px-10 pt-14 pb-14">
+                    <div className="font-semibold text-[#262626] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
                         Next generation
                         <br />
                         <span>computer network</span>
@@ -190,40 +165,20 @@ const Research = (props: Props) => {
                             <hr className="h-px mt-3 bg-[#FFFFFF] border-0" />
                         </div>
                     </div>
-                    <div
-                        id="image"
-                        className="rounded my-11 mr-auto ml-2 xxxs:hidden xxs:hidden sm:hidden md:flex"
-                    >
-                        <img
-                            className="rounded object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-60 lg:h-72  xl:h-96"
-                            src="/_DSC4369.jpg"
-                            alt=""
-                        />
-                    </div>
+                    <img
+                        className="rounded object-scale-down"
+                        src="/_DSC4369.jpg"
+                        alt=""
+                    />
                 </div>
 
-                <div className="relative flex flex-row bg-[#262626] px-10 pt-14 pb-14 xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
-                    <div
-                        id="image"
-                        className="rounded mx-auto my-auto xxxs:flex xxs:flex sm:flex md:hidden"
-                    >
-                        <img
-                            className="rounded object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-72 lg:h-72  xl:h-96"
-                            src="/_DSC4197.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        id="image"
-                        className="rounded my-11 ml-auto mr-10 xxxs:hidden xxs:hidden sm:hidden md:flex"
-                    >
-                        <img
-                            className="rounded object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-72 lg:h-72  xl:h-96"
-                            src="/_DSC4197.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div className=" font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto 2xl:mr-auto 2xl:ml-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 bg-[#262626] px-10 pt-24 pb-10">
+                    <img
+                        className="rounded object-scale-down"
+                        src="/_DSC4197.jpg"
+                        alt=""
+                    />
+                    <div className="font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
                         Computation Astronomy
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3 ">
@@ -251,18 +206,8 @@ const Research = (props: Props) => {
                     </div>
                 </div>
 
-                <div className=" relative flex flex-row bg-[#FFFFFF] px-10 pt-14 pb-14 xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row ">
-                    <div
-                        id="image"
-                        className="rounded mx-auto my-auto  xxxs:flex xxs:flex sm:flex md:hidden "
-                    >
-                        <img
-                            className="rounded object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-72 lg:h-72  xl:h-96"
-                            src="/_DSC4704.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div className=" font-semibold text-[#262626] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl mx-auto xl:max-w-7xl 2xl:ml-auto 2xl:mr-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 bg-[#ffffff] px-10 pt-14 pb-14">
+                    <div className="font-semibold text-[#262626] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
                         Augmented / Virtual reality
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#E9E9E9] rounded-md py-1 px-3 ">
@@ -288,40 +233,20 @@ const Research = (props: Props) => {
                             <hr className="h-px mt-3 bg-[#FFFFFF] border-0" />
                         </div>
                     </div>
-                    <div
-                        id="image"
-                        className="rounded my-11 mr-auto ml-10 xxxs:hidden xxs:hidden sm:hidden md:flex"
-                    >
-                        <img
-                            className="rounded object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-72 lg:h-72  xl:h-96"
-                            src="/_DSC4704.jpg"
-                            alt=""
-                        />
-                    </div>
+                    <img
+                        className="rounded object-scale-down"
+                        src="/_DSC4704.jpg"
+                        alt=""
+                    />
                 </div>
 
-                <div className="relative flex flex-row bg-[#262626] px-10 pt-14 pb-14 xxxs:flex-col xxs:flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row ">
-                    <div
-                        id="image"
-                        className="rounded mx-auto my-auto xxxs:flex xxs:flex sm:flex md:hidden"
-                    >
-                        <img
-                            className="rounded object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-72 lg:h-72  xl:h-96"
-                            src="/_DSC2867.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        id="image"
-                        className="rounded my-11 ml-auto mr-10 xxxs:hidden xxs:hidden sm:hidden md:flex "
-                    >
-                        <img
-                            className="rounded object-scale-down h-96 w-192 xxxs:h-40 xxs:h-60 xs:h-60 sm:h-60  md:h-60 lg:h-72  xl:h-96"
-                            src="/_DSC2867.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div className=" font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 mb-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto 2xl:mr-auto 2xl:ml-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 bg-[#262626] px-10 pt-24 pb-10">
+                    <img
+                        className="rounded object-scale-down"
+                        src="/_DSC2867.jpg"
+                        alt=""
+                    />
+                    <div className="font-semibold text-[#FFFFFF] text-xl xxs:text-2xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
                         Bioinformatics
                         <br />
                         <button className="text-sm xxxs:text-xs xxs:text-xs xs:text-xs sm:text-xs md:text-sm lg:text-base font-normal mt-7 bg-transparent border border-[#3B3B3B] rounded-md py-1 px-3 ">

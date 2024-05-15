@@ -5,7 +5,7 @@ import { Degree } from "@/types/degree";
 import Strapi from "strapi-sdk-js";
 
 type Props = { params: { degree: string } };
-const strapi = new Strapi()
+const strapi = new Strapi({url: "http://127.0.0.1:1337"})
 
 const Page = async ({ params }: Props) => {
     const { degree } = params;

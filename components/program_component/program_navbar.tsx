@@ -30,7 +30,7 @@ function ProgramNavbar({
             }
         }
     )
-    console.log(items)
+
     return (
         <div>
             <TabMenu

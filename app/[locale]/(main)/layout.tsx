@@ -6,7 +6,7 @@ import Strapi from "strapi-sdk-js";
 
 type Props = {};
 
-export const strapi = new Strapi()
+export const strapi = new Strapi({url: "http://127.0.0.1:1337"})
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     const messages = useMessages();

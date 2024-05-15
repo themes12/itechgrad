@@ -1,14 +1,28 @@
 "use client"
-import React from "react";
-import { Divider } from "@nextui-org/react";
+import { Divider, Pagination } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
-import ShowAnnouncement from "./show_announcement";
 import CategorySelect from "./category_select";
+import { Announcement_card } from "@/components/announcement_component/announce_card";
+import { Posts, Post } from "@/types/posts";
+import { PaginationAttributes } from "@/types/pagination";
+import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "@/navigation";
 
-type Props = {};
-
-const AnnoucementMain = (props: Props) => {
+const AnnoucementMain = ({ announcements, meta }: { announcements: Post[]; meta: PaginationAttributes }) => {
     const t = useTranslations("Annoucement");
+    const searchParams = useSearchParams()
+    const router = useRouter();
+ 
+    const page = searchParams.get('page')
+
+    const [currentPage, setCurrentPage] = useState(parseInt(page ?? "1"));
+
+    const handleChagePage = (value: number) => {
+        const url = new URL(window.location.href);
+        url.searchParams.set('page', value.toString());
+        router.push(url.toString());
+    }
 
     return (
         <div>
@@ -21,7 +35,12 @@ const AnnoucementMain = (props: Props) => {
                 <div className="flex flex-row gap-4 my-8">
                     <CategorySelect />
                 </div>
-                <ShowAnnouncement />
+                {announcements.map((value, index) => <Announcement_card key={index} post={value} />)}
+                
+            </div>
+            <div className="flex justify-end items-end">
+            <Pagination total={meta.pageCount} initialPage={currentPage} page={meta.page} size="md" onChange={handleChagePage} />
+
             </div>
         </div>
     );
