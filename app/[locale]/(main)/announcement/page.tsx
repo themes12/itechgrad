@@ -4,7 +4,7 @@ import AnnoucementMain from '@/components/announcement_component/announcement_ma
 import { Posts, Post } from '@/types/posts';
 import { PaginationAttributes } from '@/types/pagination';
 import {unstable_setRequestLocale} from 'next-intl/server';
-const strapi = new Strapi({url: "http://127.0.0.1:1337"})
+const strapi = new Strapi({url: process.env.NEXT_PUBLIC_BASE_URL})
 
 const Page = async ({
   searchParams,

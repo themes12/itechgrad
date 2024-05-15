@@ -7,7 +7,7 @@ import { Degree } from "@/types/degree";
 import { PaginationAttributes } from "@/types/pagination";
 
 type Props = { params: { degree: string; }, searchParams?: { [key: string]: string | string[] | undefined }; };
-const strapi = new Strapi({url: "http://127.0.0.1:1337"})
+const strapi = new Strapi({url: process.env.NEXT_PUBLIC_BASE_URL})
 
 const Courses = async ({ params, searchParams }: Props) => {
     const { degree } = params;

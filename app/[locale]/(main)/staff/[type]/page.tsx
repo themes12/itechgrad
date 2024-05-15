@@ -6,7 +6,7 @@ import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
 import Strapi from "strapi-sdk-js";
 import { JobType, Staff } from "@/types/staff";
-const strapi = new Strapi({url: "http://127.0.0.1:1337"})
+const strapi = new Strapi({url: process.env.NEXT_PUBLIC_BASE_URL})
 
 const Page = async ({ params }: { params: { type: JobType } }) => {
     const { type } = params;
