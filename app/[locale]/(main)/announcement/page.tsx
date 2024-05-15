@@ -3,15 +3,17 @@ import Strapi, { StrapiLocale, PaginationByPage } from 'strapi-sdk-js';
 import AnnoucementMain from '@/components/announcement_component/announcement_main';
 import { Posts, Post } from '@/types/posts';
 import { PaginationAttributes } from '@/types/pagination';
-import { useLocale } from 'next-intl';
+import {unstable_setRequestLocale} from 'next-intl/server';
 const strapi = new Strapi({url: "http://127.0.0.1:1337"})
 
 const Page = async ({
-  searchParams
+  searchParams,
+  params
 }: {
   searchParams?: { [key: string]: string | string[] | undefined };
+  params: { locale: string };
 }) => {
-  const locale = useLocale();
+  unstable_setRequestLocale(params.locale);
   const searchParamsFilters = searchParams?.filters as string;
   const filters = searchParamsFilters?.split(',');
   const page = parseInt(searchParams?.page as string ?? "1");
@@ -21,7 +23,7 @@ const Page = async ({
       category: filters
     },
     populate: "*",
-    locale: locale as StrapiLocale,
+    locale: params.locale as StrapiLocale,
     pagination: {
       page: page,
       pageSize: 10,
@@ -32,7 +34,7 @@ const Page = async ({
 
   const nullParams = {
     populate: "*",
-    locale: locale as StrapiLocale,
+    locale: params.locale as StrapiLocale,
     pagination: {
       page: page,
       pageSize: 10,

@@ -72,7 +72,7 @@ const TableContent = ({ content }: Props) => {
                             <TableBody>
                                 {content.rows.map((row) => <TableRow key={row.id}>
                                     {row.columns.map((column) => <TableCell key={column.id}>
-                                            <ReactMarkdown remarkPlugins={[remarkBreaks]} children={column.content?.replace(/\n/gi, "&nbsp; \n")} components={{ "a": (props) => <Link href={props.href} showAnchorIcon size="sm" underline="hover" isExternal>{props.children?.toString()}</Link> }}></ReactMarkdown>
+                                            <ReactMarkdown remarkPlugins={[remarkBreaks]} components={{ "a": (props) => <Link href={props.href} showAnchorIcon size="sm" underline="hover" isExternal>{props.children?.toString()}</Link> }}>{column.content?.replace(/\n/gi, "&nbsp; \n")}</ReactMarkdown>
                                         </TableCell>
                                     )}
                                     </TableRow>
@@ -97,7 +97,7 @@ const TableContent = ({ content }: Props) => {
                     <TableBody>
                         {content.rows.map((row) => <TableRow key={row.id}>
                             {row.columns.map((column) => <TableCell key={column.id}>
-                                    <ReactMarkdown remarkPlugins={[remarkBreaks]} children={column.content?.replace(/\n/gi, "&nbsp; \n")} components={{ "a": (props) => <Link href={props.href} showAnchorIcon size="sm" underline="hover" isExternal>{props.children?.toString()}</Link> }}></ReactMarkdown>
+                                    <ReactMarkdown remarkPlugins={[remarkBreaks]} components={{ "a": (props) => <Link href={props.href} showAnchorIcon size="sm" underline="hover" isExternal>{props.children?.toString()}</Link> }}>{column.content?.replace(/\n/gi, "&nbsp; \n")}</ReactMarkdown>
                                 </TableCell>
                             )}
                             </TableRow>

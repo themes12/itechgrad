@@ -26,7 +26,7 @@ export const Announcement_card = ({ post }: { post: Post }) => {
                         <div
                             className="font-[400] text-[15px] text-[#7D7D7D] leading-normal pt-[20px] pb-[20px] max-w-[85%] line-clamp-6"
                         >
-                            <ReactMarkdown remarkPlugins={[remarkBreaks]} children={post.attributes.content?.replace(/\n/gi, "&nbsp; \n")}></ReactMarkdown>
+                            <ReactMarkdown remarkPlugins={[remarkBreaks]}>{post.attributes.content?.replace(/\n/gi, "&nbsp; \n")}</ReactMarkdown>
                         </div>
                     </div>
                     <div className="col-span-6 md:col-span-6 flex items-center justify-center">
