@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import {
     Navbar,
     NavbarBrand,
@@ -20,23 +20,23 @@ import {
 } from "@nextui-org/react";
 import {
     ChevronDownIcon,
-    Bars3Icon,
-    XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { navItems } from "@/utils/navbar";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from '../navigation';
+import { useParams } from "next/navigation";
 
-type Props = {};
+type Props = {programId?: number, planId?: number};
 
-const NavbarHeader = (props: Props) => {
+const NavbarHeader = ({ programId, planId }: Props) => {
     const router = useRouter();
     const locale = useLocale();
     const pathname = usePathname();
+    const params = useParams();
 
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const [localeSwitch, setLocaleSwitch] = useState(locale === "th");
+    const [isMenuOpen, setIsMenuOpen] = useReducer((current) => !current, false);
 
     return (
         <>
@@ -46,22 +46,23 @@ const NavbarHeader = (props: Props) => {
                 maxWidth="xl"
                 aria-label="navbar"
                 height="3.5rem"
+                isMenuOpen={isMenuOpen}
+                onMenuOpenChange={setIsMenuOpen}
             >
                 <NavbarContent
                     className="gap-4 w-full md:w-fit"
                     justify="center"
                 >
                     <NavbarMenuToggle
-                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         className="md:hidden"
                     />
-                    <NavbarBrand className="justify-center">
+                    <NavbarBrand className="justify-center text-black" as={Link} href="/">
                         <Image
-                            className="hidden xxxs:block xxxs:w-12 xxxs:h-12"
+                            className="hidden xxxs:block w-14 h-14 md:w-20 md:h-20"
                             src="/logo.svg"
                             alt="Logo CSCMU"
-                            width="80"
-                            height="80"
+                            width="100"
+                            height="100"
                         />
                         <h2 className="font-semibold text-base md:text-xl">
                             Computer Science CMU
@@ -92,7 +93,11 @@ const NavbarHeader = (props: Props) => {
                         }
                         onValueChange={(value) => {
                             setLocaleSwitch((prev) => !prev);
-                            router.replace(pathname, { locale: value ? "th" : "en" });
+                            if(programId && planId) {
+                                router.replace(`/program/${params.degree}/${programId}/${planId}`, { locale: value ? "th" : "en" });
+                            }else {
+                                router.replace(pathname, { locale: value ? "th" : "en" });
+                            }
                         }}
                         size="lg"
                         color="default"
@@ -118,14 +123,17 @@ const NavbarHeader = (props: Props) => {
                                             <ListboxItem
                                                 className="p-1"
                                                 key={value.title}
-                                                onPress={() => router.replace(
-                                                    value.href ?? "#",
-                                                    {
-                                                        locale: localeSwitch
-                                                            ? "th"
-                                                            : "en",
-                                                    }
-                                                )}
+                                                onPress={() => {
+                                                    router.replace(
+                                                        value.href ?? "#",
+                                                        {
+                                                            locale: localeSwitch
+                                                                ? "th"
+                                                                : "en",
+                                                        }
+                                                    )
+                                                    setIsMenuOpen()
+                                                }}
                                             >
                                                 {value.title}
                                             </ListboxItem>
@@ -141,6 +149,7 @@ const NavbarHeader = (props: Props) => {
                                     className="w-full text-black"
                                     href={item.href ?? "#"}
                                     size="lg"
+                                    onPress={() => setIsMenuOpen()}
                                 >
                                     {item.title}
                                 </Link>
@@ -171,7 +180,11 @@ const NavbarHeader = (props: Props) => {
                         }
                         onValueChange={(value) => {
                             setLocaleSwitch((prev) => !prev);
-                            router.replace(pathname, { locale: value ? "th" : "en" });
+                            if(programId && planId) {
+                                router.replace(`/program/${params.degree}/${programId}/${planId}`, { locale: value ? "th" : "en" });
+                            }else {
+                                router.replace(pathname, { locale: value ? "th" : "en" });
+                            }
                         }}
                         size="lg"
                         color="default"

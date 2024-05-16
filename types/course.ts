@@ -1,21 +1,23 @@
-export interface Degree {
-    "master-degree": string;
-    phd: string;
+export interface Course {
+    id:         number;
+    attributes: CourseAttributes;
 }
 
-export interface Course {
-    _id: string;
-    degree?: string;
-    name_en: string;
-    name_th: string;
-    credit: {
-        total: number;
-        lecture: number;
-        lab: number;
-        independent_study: number;
-    };
-    prerequisite?: Array<string | Array<string>>;
-    description_en: string;
-    description_th: string;
-    is_show?: Boolean;
+export interface CourseAttributes {
+    course_id:      string;
+    name_en:        string;
+    name_th:        string;
+    prerequisite:   Array<string[] | string>;
+    description_en: null | string;
+    description_th: null | string;
+    is_open:        boolean;
+    credit:         Credit;
+}
+
+export interface Credit {
+    id:                number;
+    total:             number;
+    lecture:           number;
+    lab:               number;
+    independent_study: number;
 }

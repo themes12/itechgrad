@@ -14,7 +14,7 @@ export const formatArray = (arr: any) => {
       }
     }
 
-    return result;
+    return result === '' ? 'ไม่มี' : result;
   }
 export const customSort = (arr: any) => {
     return arr.sort((a: any, b: any) => {

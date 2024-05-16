@@ -3,14 +3,13 @@ import React, { useState } from "react";
 import Program_navbar from "@/components/program_component/program_navbar";
 import Program_button from "@/components/program_component/program_button";
 import degreeJson from "@/utils/degree.json";
-import { Degree } from "@/types/course";
+import { Degree } from "@/types/degree";
 import { Program } from "@/types/program";
 
-type Props = { params: { degree: string }; data: Program[] };
+type Props = { params: { degree: string }; data: Degree };
 
 const Display_types = ({ params, data }: Props) => {
     const { degree } = params;
-    const degreeText = degreeJson[degree as keyof Degree];
     const [selectedProgram, setSelectedProgram] = useState<number>(0);
     return (
         <div>
@@ -18,10 +17,10 @@ const Display_types = ({ params, data }: Props) => {
                 <section className="bg-gradient-to-r from-[#d1e0d8] to-[#76b9cd] py-12 max-w-full max-h-300px  relative">
                     <header className="pt-4 md:pt-8 lg:pt-10 md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-9 lg:px-9 relative">
                         <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold">
-                            {degreeText} Program
+                            {data.attributes.title}
                         </h1>
                         <h5 className="text-md xxs:text-lg xs:text-xl lg:text-2xl font-[300] text-[#7D7D7D] pt-5 pb-10">
-                            Master of Science Program in Computer Science
+                            {data.attributes.sub_title}
                         </h5>
                     </header>
                 </section>
@@ -33,21 +32,16 @@ const Display_types = ({ params, data }: Props) => {
                     >
                         <div className="flex-grow overflow-y-auto pt-5 py-5 px-10">
                             <Program_navbar
-                                data={data}
-                                degree={degreeText}
+                                data={data.attributes.programs?.data as Program[]}
                                 setSelectedProgram={setSelectedProgram}
                                 selectedProgram={selectedProgram}
                             />
                             <div className="p-0 lg:p-8">
-                                {selectedProgram !== null ? (
-                                    <Program_button
-                                        selectedProgram={selectedProgram}
-                                        data={data}
-                                        degree={degree}
-                                    />
-                                ) : (
-                                    <></>
-                                )}
+                                <Program_button
+                                    selectedProgram={selectedProgram}
+                                    data={data.attributes.programs?.data as Program[]}
+                                    degree={degree}
+                                />
                             </div>
                         </div>
                     </div>

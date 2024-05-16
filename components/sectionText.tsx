@@ -1,4 +1,4 @@
-import { SectionText as SectionTextProps } from "@/types/section";
+import { SectionAttributes as SectionTextProps } from "@/types/section";
 import React from "react";
 
 const sectionText = ({ name }: SectionTextProps) => {

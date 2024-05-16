@@ -1,25 +1,25 @@
-export type ContentType = {
-    en: {
-        name: string;
-        html: string;
-    };
-    th: {
-        name: string;
-        html: string;
-    };
-};
+import { Degree } from "./degree";
+import { Localizations } from "./localizations_data";
+import { Plans } from "./plans";
 
-export type ProgramType = {
-    _id?: string;
-    content?: Array<ContentType>;
-    name_en: string;
-    name_th: string;
-};
+export interface ProgramAttributes {
+    name: string;
+    createdAt?: Date;
+    updatedAt?: Date;
+    publishedAt?: Date;
+    locale?: string;
+    plans: Plans;
+    degree: {
+        data: Degree;
+    };
+    localizations: Localizations;
+}
 
 export interface Program {
-    _id?: string;
-    degree?: string;
-    type?: Array<ProgramType>;
-    name_en: string;
-    name_th: string;
+    id: number;
+    attributes: ProgramAttributes;
+}
+
+export interface Programs {
+    data: Program[];
 }

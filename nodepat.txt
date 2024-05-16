@@ -1,9 +1,0 @@
-
-
-Try changing tsconfig.json
-
-"jsx": "preserve" -> "jsx": "react"
-
-
-babel.config.js
-plugins: ['@babel/plugin-transform-react-jsx'],

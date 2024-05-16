@@ -5,6 +5,7 @@ import { PrimeReactProvider } from "primereact/api";
 import { usePassThrough } from 'primereact/passthrough';
 import Tailwind from "primereact/passthrough/tailwind";
 import { classNames } from 'primereact/utils';
+import { ThemeProvider } from "@material-tailwind/react";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const CustomTailwind = usePassThrough(
@@ -32,7 +33,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <PrimeReactProvider value={{ unstyled: true, pt: CustomTailwind }}>
       <NextUIProvider>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </NextUIProvider>
     </PrimeReactProvider>
   )
